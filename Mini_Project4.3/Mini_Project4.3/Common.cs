@@ -14,5 +14,6 @@ namespace Mini_Project4._3
         public static string DbPath = "Data Source = 222.235.141.8; " +
                 "Initial Catalog = AppDev;" +
                 "User ID=kfqs1;Password=1234";
+        internal static string Permission;
     }
 }

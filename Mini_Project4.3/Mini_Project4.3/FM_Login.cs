@@ -70,8 +70,8 @@ namespace Mini_Project4._3
 
 
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT PW,USERNAME FROM TB_USER_KBS WHERE " +
-               "USERID = '" + sLogid + "'", Connect);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT PW,USERCODE FROM 우리가 쓸 테이블  WHERE " +
+               "USERCODE = '" + sLogid + "'", Connect);
             //데이터를 담을 그릇
             DataTable DtTemp = new DataTable();
             //어댑터 실행 후 그릇의 데이터 담기
@@ -118,8 +118,9 @@ namespace Mini_Project4._3
             {
                 MessageBox.Show("환영합니다!");
                 Common.LogInID = txtUID.Text;
-                Common.LogInName = DtTemp.Rows[0]["USERNAME"].ToString();
-                this.Tag = DtTemp.Rows[0]["USERNAME"].ToString(); //요건 종료될때까지 살아있나? 아니다.
+                Common.LogInName = DtTemp.Rows[0]["USERCODE"].ToString();
+                Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
+                this.Tag = DtTemp.Rows[0]["PERMISSION"].ToString(); //요건 종료될때까지 살아있나? 아니다.
                 this.Close();
 
 
