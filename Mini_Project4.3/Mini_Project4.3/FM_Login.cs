@@ -46,7 +46,7 @@ namespace Mini_Project4._3
          
         }
         public int failcount = 0;
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
             string strCon = "Data Source = 222.235.141.8; " +
                 "Initial Catalog = AppDev;" +
@@ -131,6 +131,14 @@ namespace Mini_Project4._3
 
 
 
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login_Click(null, null);
+            }
         }
     }
 }
