@@ -90,5 +90,10 @@ namespace ApplicationDev_Do
         {
             openChildForm(new FM_Equipment());
         }
+
+        private void btnNotice_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FM_Notice());
+        }
     }
 }

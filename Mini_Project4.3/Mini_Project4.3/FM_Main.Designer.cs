@@ -92,6 +92,7 @@ namespace ApplicationDev_Do
             this.btnNotice.Text = "알림장";
             this.btnNotice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotice.UseVisualStyleBackColor = true;
+            this.btnNotice.Click += new System.EventHandler(this.btnNotice_Click);
             // 
             // btnDiary
             // 
@@ -217,7 +218,6 @@ namespace ApplicationDev_Do
             // 
             // panelLogo
             // 
-        
             this.panelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -236,12 +236,12 @@ namespace ApplicationDev_Do
             // 
             // FM_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 731);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
-            this.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("맑은 고딕", 10F);
             this.Name = "FM_Main";
             this.Text = "FM_Main";
             this.panelSideMenu.ResumeLayout(false);
