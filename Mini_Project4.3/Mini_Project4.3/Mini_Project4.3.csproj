@@ -47,16 +47,43 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="FM_Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Equipment.Designer.cs">
+      <DependentUpon>FM_Equipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FM_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FM_Login.Designer.cs">
       <DependentUpon>FM_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="FM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Main.Designer.cs">
+      <DependentUpon>FM_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FM_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_STUDENT.Designer.cs">
+      <DependentUpon>FM_Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FM_Equipment.resx">
+      <DependentUpon>FM_Equipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FM_Login.resx">
       <DependentUpon>FM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_Main.resx">
+      <DependentUpon>FM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_STUDENT.resx">
+      <DependentUpon>FM_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
