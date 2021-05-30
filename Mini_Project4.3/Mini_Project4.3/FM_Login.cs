@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Mini_Project4._3;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mini_Project4._3
+
+namespace ApplicationDev_Do
 {
     public partial class FM_Login : Form
     {
@@ -41,16 +38,10 @@ namespace Mini_Project4._3
             }
         }
 
-        private void Form1_DoubleClick(object sender, EventArgs e)
-        {
-         
-        }
         public int failcount = 0;
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string strCon = "Data Source = 222.235.141.8; " +
-                "Initial Catalog = AppDev;" +
-                "User ID=kfqs1;Password=1234";
+            string strCon = "Data Source=DESKTOP-DDVAMMM; Initial Catalog=ITAcademyDB; User ID=jonghun; Password=1234";
             Connect = new SqlConnection(strCon);
 
             Connect.Open();//데이터베이스에 접속한다.
@@ -62,16 +53,16 @@ namespace Mini_Project4._3
             }
 
 
-            String sLogid = string.Empty;
+            String sLogInId = string.Empty;
             string sPerPw = string.Empty;
+            
 
-            sLogid = txtUID.Text;
+            sLogInId = txtUID.Text;
             sPerPw = txtPW.Text;
 
 
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT PW,USERCODE FROM 우리가 쓸 테이블  WHERE " +
-               "USERCODE = '" + sLogid + "'", Connect);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT PW,USERNAME FROM TB_5_USER WHERE USERID = '" + sLogInId + "'", Connect);
             //데이터를 담을 그릇
             DataTable DtTemp = new DataTable();
             //어댑터 실행 후 그릇의 데이터 담기
@@ -107,23 +98,19 @@ namespace Mini_Project4._3
                     Application.Exit();
                     return;
                 }
-
-
             }
-
-
-
 
             else if ((DtTemp.Rows[0]["PW"].ToString() == sPerPw))
             {
                 MessageBox.Show("환영합니다!");
                 Common.LogInID = txtUID.Text;
-                Common.LogInName = DtTemp.Rows[0]["USERCODE"].ToString();
-                Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
-                this.Tag = DtTemp.Rows[0]["PERMISSION"].ToString(); //요건 종료될때까지 살아있나? 아니다.
+                Common.LogInName = DtTemp.Rows[0]["USERNAME"].ToString();
+                //Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
+                //this.Tag = DtTemp.Rows[0]["PERMISSION"].ToString(); //요건 종료될때까지 살아있나? 아니다.
+                this.Tag = DtTemp.Rows[0]["USERNAME"].ToString();
                 this.Close();
 
-
+                Connect.Close();
 
             }
 

@@ -1,22 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mini_Project4._3
+namespace ApplicationDev_Do
 {
     static class Program
     {
         /// <summary>
-        /// 해당 애플리케이션의 주 진입점입니다.
+        ///  The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
+       
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FM_Login());
+            Application.Run(new FM_Main());
         }
     }
 }
