@@ -105,8 +105,8 @@ namespace ApplicationDev_Do
                 MessageBox.Show("환영합니다!");
                 Common.LogInID = txtUID.Text;
                 Common.LogInName = DtTemp.Rows[0]["USERNAME"].ToString();
-                //Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
-                //this.Tag = DtTemp.Rows[0]["PERMISSION"].ToString(); //요건 종료될때까지 살아있나? 아니다.
+                Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
+                //요건 종료될때까지 살아있나? 아니다.
                 this.Tag = DtTemp.Rows[0]["USERNAME"].ToString();
                 this.Close();
 
