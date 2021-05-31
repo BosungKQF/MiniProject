@@ -25,7 +25,8 @@ namespace ApplicationDev_Do
                 btnTeacher.Visible = false;
                 btnDiary.Visible = false;
                 btnEquipment.Visible = false;
-                btnNotice.Visible = false;
+                btnSend_noti.Visible = false;
+
 
             }
 
@@ -126,6 +127,13 @@ namespace ApplicationDev_Do
         private void btnSearch_noti_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+        }
+
+        private void btnAttend_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FM_Atte());
+            hideSubMenu();
+
         }
     }
 }

@@ -246,6 +246,7 @@ namespace ApplicationDev_Do
             this.btnAttend.Text = "출결관리";
             this.btnAttend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAttend.UseVisualStyleBackColor = true;
+            this.btnAttend.Click += new System.EventHandler(this.btnAttend_Click);
             // 
             // panelLogo
             // 
