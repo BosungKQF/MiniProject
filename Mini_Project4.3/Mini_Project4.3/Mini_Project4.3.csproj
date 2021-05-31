@@ -71,6 +71,12 @@
     <Compile Include="FM_Notice.Designer.cs">
       <DependentUpon>FM_Notice.cs</DependentUpon>
     </Compile>
+    <Compile Include="FM_NoticeSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_NoticeSend.Designer.cs">
+      <DependentUpon>FM_NoticeSend.cs</DependentUpon>
+    </Compile>
     <Compile Include="FM_Student.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FM_Notice.resx">
       <DependentUpon>FM_Notice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FM_NoticeSend.resx">
+      <DependentUpon>FM_NoticeSend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FM_STUDENT.resx">
       <DependentUpon>FM_Student.cs</DependentUpon>

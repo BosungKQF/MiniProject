@@ -16,15 +16,15 @@ namespace ApplicationDev_Do
         {
             InitializeComponent();
             customizeDesign();
-            FM_Login Login = new FM_Login();
+            //FM_Login Login = new FM_Login();
 
-            Login.ShowDialog();
+            //Login.ShowDialog();
 
-            //tssUserName.Text = Login.Tag.ToString();
-            if (Login.Tag.ToString() == "FAIL")
-            {
-                System.Environment.Exit(0);
-            }
+            ////tssUserName.Text = Login.Tag.ToString();
+            //if (Login.Tag.ToString() == "FAIL")
+            //{
+            //    System.Environment.Exit(0);
+            //}
         }
 
         #region customizeDesign
