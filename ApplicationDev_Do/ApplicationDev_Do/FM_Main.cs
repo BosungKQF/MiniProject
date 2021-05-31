@@ -18,7 +18,7 @@ namespace ApplicationDev_Do
             {
                 System.Environment.Exit(0);
             }
-             }
+        
 
             if (Common.Permission == "S")
             {
@@ -37,11 +37,11 @@ namespace ApplicationDev_Do
                 btnTeacher.Visible = false;
                 
             }
-            }
         }
+    
 
 
-        }
+      
 
         #region customizeDesign
 
@@ -112,17 +112,19 @@ namespace ApplicationDev_Do
 
         private void btnNotice_Click(object sender, EventArgs e)
         {
+            openChildForm(new FM_Notice());
             showSubMenu(panelNoticeSubMenu);
         }
 
         private void btnSend_noti_Click(object sender, EventArgs e)
         {
+            openChildForm(new FM_NoticeSend());
             hideSubMenu();
         }
 
         private void btnSearch_noti_Click(object sender, EventArgs e)
         {
-            openChildForm(new FM_NoticeSend());
+            openChildForm(new FM_Notice());
             hideSubMenu();
         }
 
