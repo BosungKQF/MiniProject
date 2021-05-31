@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common.cs" />
+    <Compile Include="FM_Diary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FM_Diary.Designer.cs">
+      <DependentUpon>FM_Diary.cs</DependentUpon>
+    </Compile>
     <Compile Include="FM_Equipment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,13 +77,18 @@
     <Compile Include="FM_Notice.Designer.cs">
       <DependentUpon>FM_Notice.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_NoticeSend.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FM_NoticeSend.Designer.cs">
-      <DependentUpon>FM_NoticeSend.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FM_Student.cs">
+	  <Compile Include="FM_Score.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="FM_Score.Designer.cs">
+		  <DependentUpon>FM_Score.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="FM_NoticeSend.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="FM_NoticeSend.Designer.cs">
+		  <DependentUpon>FM_NoticeSend.cs</DependentUpon>
+	  </Compile>    <Compile Include="FM_Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FM_STUDENT.Designer.cs">
@@ -85,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FM_Diary.resx">
+      <DependentUpon>FM_Diary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FM_Equipment.resx">
       <DependentUpon>FM_Equipment.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,11 +110,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FM_Notice.resx">
       <DependentUpon>FM_Notice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FM_NoticeSend.resx">
-      <DependentUpon>FM_NoticeSend.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FM_STUDENT.resx">
+    </EmbeddedResource>    <EmbeddedResource Include="FM_STUDENT.resx">
       <DependentUpon>FM_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

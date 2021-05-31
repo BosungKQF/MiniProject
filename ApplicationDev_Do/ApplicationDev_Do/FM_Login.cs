@@ -63,8 +63,9 @@ namespace ApplicationDev_Do
 
 
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT PERMISSION,NAME,PASSWORD,USERID FROM TB_5_USER WHERE USERID = '" + sLogInId + "'", Connect);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT CLASS,PERMISSION,NAME,PASSWORD,USERID,USERCODE FROM TB_5_USER WHERE USERID = '" + sLogInId + "'", Connect);
             //데이터를 담을 그릇
+
             DataTable DtTemp = new DataTable();
             //어댑터 실행 후 그릇의 데이터 담기
             adapter.Fill(DtTemp);
@@ -107,6 +108,8 @@ namespace ApplicationDev_Do
                 Common.LogInId = txtUID.Text;
                 Common.LogInName = DtTemp.Rows[0]["NAME"].ToString();
                 Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
+                Common.Ucode = DtTemp.Rows[0]["USERCODE"].ToString();
+                Common.Class = DtTemp.Rows[0]["CLASS"].ToString();
                 //this.Tag = DtTemp.Rows[0]["PERMISSION"].ToString(); //요건 종료될때까지 살아있나? 아니다.
                 this.Tag = DtTemp.Rows[0]["NAME"].ToString();
                 this.Close();
