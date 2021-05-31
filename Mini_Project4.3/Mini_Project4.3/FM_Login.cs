@@ -41,7 +41,9 @@ namespace ApplicationDev_Do
         public int failcount = 0;
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string strCon = "Data Source=DESKTOP-DDVAMMM; Initial Catalog=ITAcademyDB; User ID=jonghun; Password=1234";
+            string strCon = "Data Source = 222.235.141.8; " +
+                "Initial Catalog = AppDev;" +
+                "User ID=kfqs1;Password=1234";
             Connect = new SqlConnection(strCon);
 
             Connect.Open();//데이터베이스에 접속한다.
@@ -62,7 +64,7 @@ namespace ApplicationDev_Do
 
 
 
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT PW,USERNAME FROM TB_5_USER WHERE USERID = '" + sLogInId + "'", Connect);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT PERMISSION,NAME,PASSWORD,USERID FROM TB_5_USER WHERE USERID = '" + sLogInId + "'", Connect);
             //데이터를 담을 그릇
             DataTable DtTemp = new DataTable();
             //어댑터 실행 후 그릇의 데이터 담기
@@ -86,7 +88,7 @@ namespace ApplicationDev_Do
 
             }
 
-            else if (DtTemp.Rows[0]["PW"].ToString() != sPerPw)//row는 이름을 때릴 수 있다네?
+            else if (DtTemp.Rows[0]["PASSWORD"].ToString() != sPerPw)//row는 이름을 때릴 수 있다네?
             {
 
                 MessageBox.Show("ID 또는 비밀번호가 일치하지 않습니다.");
@@ -100,14 +102,14 @@ namespace ApplicationDev_Do
                 }
             }
 
-            else if ((DtTemp.Rows[0]["PW"].ToString() == sPerPw))
+            else if ((DtTemp.Rows[0]["PASSWORD"].ToString() == sPerPw))
             {
                 MessageBox.Show("환영합니다!");
                 Common.LogInID = txtUID.Text;
-                Common.LogInName = DtTemp.Rows[0]["USERNAME"].ToString();
-                //Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
+                Common.LogInName = DtTemp.Rows[0]["NAME"].ToString();
+                Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
                 //this.Tag = DtTemp.Rows[0]["PERMISSION"].ToString(); //요건 종료될때까지 살아있나? 아니다.
-                this.Tag = DtTemp.Rows[0]["USERNAME"].ToString();
+                this.Tag = DtTemp.Rows[0]["NAME"].ToString();
                 this.Close();
 
                 Connect.Close();

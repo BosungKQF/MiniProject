@@ -38,28 +38,25 @@ namespace ApplicationDev_Do
             // 
             // txtUID
             // 
-            this.txtUID.Location = new System.Drawing.Point(79, 576);
-            this.txtUID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUID.Location = new System.Drawing.Point(70, 432);
             this.txtUID.Name = "txtUID";
-            this.txtUID.Size = new System.Drawing.Size(237, 27);
+            this.txtUID.Size = new System.Drawing.Size(211, 25);
             this.txtUID.TabIndex = 0;
             // 
             // txtPW
             // 
-            this.txtPW.Location = new System.Drawing.Point(79, 611);
-            this.txtPW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPW.Location = new System.Drawing.Point(70, 458);
             this.txtPW.Name = "txtPW";
             this.txtPW.PasswordChar = '*';
-            this.txtPW.Size = new System.Drawing.Size(237, 27);
+            this.txtPW.Size = new System.Drawing.Size(211, 25);
             this.txtPW.TabIndex = 1;
             this.txtPW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPW_KeyDown);
             // 
             // btn_login
             // 
-            this.btn_login.Location = new System.Drawing.Point(141, 667);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_login.Location = new System.Drawing.Point(125, 500);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(119, 32);
+            this.btn_login.Size = new System.Drawing.Size(106, 24);
             this.btn_login.TabIndex = 2;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
@@ -69,9 +66,9 @@ namespace ApplicationDev_Do
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("바탕", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("바탕", 19.8F);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(79, 98);
+            this.label1.Location = new System.Drawing.Point(70, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(246, 33);
             this.label1.TabIndex = 3;
@@ -81,27 +78,26 @@ namespace ApplicationDev_Do
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(372, 12);
+            this.label2.Location = new System.Drawing.Point(331, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 20);
+            this.label2.Size = new System.Drawing.Size(16, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FM_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            
+            this.BackgroundImage = global::Mini_Project4._3.Properties.Resources.LoginDesign002;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(404, 768);
+            this.ClientSize = new System.Drawing.Size(359, 576);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txtPW);
             this.Controls.Add(this.txtUID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FM_Login";
             this.Text = "Form1";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);

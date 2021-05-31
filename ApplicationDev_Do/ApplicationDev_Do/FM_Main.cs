@@ -18,6 +18,32 @@ namespace ApplicationDev_Do
             {
                 System.Environment.Exit(0);
             }
+
+            if (Common.Permission == "S")
+            {
+                btnStudent.Visible = false;
+                btnTeacher.Visible = false;
+                btnDiary.Visible = false;
+                btnEquipment.Visible = false;
+                btnNotice.Visible = false;
+
+            }
+
+            else if (Common.Permission == "T")
+            {
+                
+                btnTeacher.Visible = false;
+                
+            }
+
+
+
+
+
+
+
+
+
         }
 
         #region customizeDesign
@@ -75,13 +101,13 @@ namespace ApplicationDev_Do
         }
         #endregion
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnStudent_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Student());
             hideSubMenu();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnequipment_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Equipment());
             hideSubMenu();
@@ -92,12 +118,12 @@ namespace ApplicationDev_Do
             showSubMenu(panelNoticeSubMenu);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSend_noti_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSearch_noti_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }

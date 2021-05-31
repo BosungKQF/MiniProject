@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mini_Project4._3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace ApplicationDev_Do
 
             Login.ShowDialog();
 
+            
             //tssUserName.Text = Login.Tag.ToString();
             if (Login.Tag.ToString() == "FAIL")
             {
