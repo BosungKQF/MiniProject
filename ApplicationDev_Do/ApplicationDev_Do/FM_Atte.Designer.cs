@@ -30,22 +30,22 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.lblStudent = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtpStart_atte = new System.Windows.Forms.DateTimePicker();
-            this.dtpEnd_atte = new System.Windows.Forms.DateTimePicker();
-            this.cmbClass_atte = new System.Windows.Forms.ComboBox();
             this.cmbStudent_atte = new System.Windows.Forms.ComboBox();
+            this.cmbClass_atte = new System.Windows.Forms.ComboBox();
+            this.dtpEnd_atte = new System.Windows.Forms.DateTimePicker();
+            this.dtpStart_atte = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblStudent = new System.Windows.Forms.Label();
+            this.lblClass = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Groupbox_ATTE = new System.Windows.Forms.GroupBox();
-            this.btnSearch_Atte = new System.Windows.Forms.Button();
             this.btnAtte_Atte = new System.Windows.Forms.Button();
+            this.btnSearch_Atte = new System.Windows.Forms.Button();
             this.btnSave_Atte = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtExtra = new System.Windows.Forms.TextBox();
-            this.rbAtte = new System.Windows.Forms.RadioButton();
             this.rbAbs = new System.Windows.Forms.RadioButton();
+            this.rbAtte = new System.Windows.Forms.RadioButton();
+            this.txtExtra = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Groupbox_ATTE.SuspendLayout();
@@ -68,23 +68,40 @@ namespace ApplicationDev_Do
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // lblClass
+            // cmbStudent_atte
             // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(54, 26);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(24, 20);
-            this.lblClass.TabIndex = 0;
-            this.lblClass.Text = "반";
+            this.cmbStudent_atte.FormattingEnabled = true;
+            this.cmbStudent_atte.Location = new System.Drawing.Point(505, 20);
+            this.cmbStudent_atte.Name = "cmbStudent_atte";
+            this.cmbStudent_atte.Size = new System.Drawing.Size(226, 28);
+            this.cmbStudent_atte.TabIndex = 6;
             // 
-            // lblStudent
+            // cmbClass_atte
             // 
-            this.lblStudent.AutoSize = true;
-            this.lblStudent.Location = new System.Drawing.Point(447, 23);
-            this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(39, 20);
-            this.lblStudent.TabIndex = 1;
-            this.lblStudent.Text = "학생";
+            this.cmbClass_atte.FormattingEnabled = true;
+            this.cmbClass_atte.Items.AddRange(new object[] {
+            "스마트팩토리",
+            "빅데이터"});
+            this.cmbClass_atte.Location = new System.Drawing.Point(86, 20);
+            this.cmbClass_atte.Name = "cmbClass_atte";
+            this.cmbClass_atte.Size = new System.Drawing.Size(329, 28);
+            this.cmbClass_atte.TabIndex = 5;
+            // 
+            // dtpEnd_atte
+            // 
+            this.dtpEnd_atte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEnd_atte.Location = new System.Drawing.Point(618, 61);
+            this.dtpEnd_atte.Name = "dtpEnd_atte";
+            this.dtpEnd_atte.Size = new System.Drawing.Size(152, 27);
+            this.dtpEnd_atte.TabIndex = 4;
+            // 
+            // dtpStart_atte
+            // 
+            this.dtpStart_atte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStart_atte.Location = new System.Drawing.Point(449, 61);
+            this.dtpStart_atte.Name = "dtpStart_atte";
+            this.dtpStart_atte.Size = new System.Drawing.Size(144, 27);
+            this.dtpStart_atte.TabIndex = 3;
             // 
             // label3
             // 
@@ -95,35 +112,23 @@ namespace ApplicationDev_Do
             this.label3.TabIndex = 2;
             this.label3.Text = "날짜";
             // 
-            // dtpStart_atte
+            // lblStudent
             // 
-            this.dtpStart_atte.Location = new System.Drawing.Point(449, 61);
-            this.dtpStart_atte.Name = "dtpStart_atte";
-            this.dtpStart_atte.Size = new System.Drawing.Size(144, 27);
-            this.dtpStart_atte.TabIndex = 3;
+            this.lblStudent.AutoSize = true;
+            this.lblStudent.Location = new System.Drawing.Point(447, 23);
+            this.lblStudent.Name = "lblStudent";
+            this.lblStudent.Size = new System.Drawing.Size(39, 20);
+            this.lblStudent.TabIndex = 1;
+            this.lblStudent.Text = "학생";
             // 
-            // dtpEnd_atte
+            // lblClass
             // 
-            this.dtpEnd_atte.Location = new System.Drawing.Point(618, 61);
-            this.dtpEnd_atte.Name = "dtpEnd_atte";
-            this.dtpEnd_atte.Size = new System.Drawing.Size(152, 27);
-            this.dtpEnd_atte.TabIndex = 4;
-            // 
-            // cmbClass_atte
-            // 
-            this.cmbClass_atte.FormattingEnabled = true;
-            this.cmbClass_atte.Location = new System.Drawing.Point(86, 20);
-            this.cmbClass_atte.Name = "cmbClass_atte";
-            this.cmbClass_atte.Size = new System.Drawing.Size(329, 28);
-            this.cmbClass_atte.TabIndex = 5;
-            // 
-            // cmbStudent_atte
-            // 
-            this.cmbStudent_atte.FormattingEnabled = true;
-            this.cmbStudent_atte.Location = new System.Drawing.Point(505, 20);
-            this.cmbStudent_atte.Name = "cmbStudent_atte";
-            this.cmbStudent_atte.Size = new System.Drawing.Size(226, 28);
-            this.cmbStudent_atte.TabIndex = 6;
+            this.lblClass.AutoSize = true;
+            this.lblClass.Location = new System.Drawing.Point(54, 26);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(24, 20);
+            this.lblClass.TabIndex = 0;
+            this.lblClass.Text = "반";
             // 
             // dataGridView1
             // 
@@ -147,23 +152,25 @@ namespace ApplicationDev_Do
             this.Groupbox_ATTE.TabIndex = 2;
             this.Groupbox_ATTE.TabStop = false;
             // 
-            // btnSearch_Atte
-            // 
-            this.btnSearch_Atte.Location = new System.Drawing.Point(8, 23);
-            this.btnSearch_Atte.Name = "btnSearch_Atte";
-            this.btnSearch_Atte.Size = new System.Drawing.Size(243, 50);
-            this.btnSearch_Atte.TabIndex = 0;
-            this.btnSearch_Atte.Text = "조회";
-            this.btnSearch_Atte.UseVisualStyleBackColor = true;
-            // 
             // btnAtte_Atte
             // 
-            this.btnAtte_Atte.Location = new System.Drawing.Point(259, 23);
+            this.btnAtte_Atte.Location = new System.Drawing.Point(291, 23);
             this.btnAtte_Atte.Name = "btnAtte_Atte";
             this.btnAtte_Atte.Size = new System.Drawing.Size(240, 50);
             this.btnAtte_Atte.TabIndex = 1;
             this.btnAtte_Atte.Text = "출석";
             this.btnAtte_Atte.UseVisualStyleBackColor = true;
+            this.btnAtte_Atte.Click += new System.EventHandler(this.btnAtte_Atte_Click);
+            // 
+            // btnSearch_Atte
+            // 
+            this.btnSearch_Atte.Location = new System.Drawing.Point(25, 23);
+            this.btnSearch_Atte.Name = "btnSearch_Atte";
+            this.btnSearch_Atte.Size = new System.Drawing.Size(243, 50);
+            this.btnSearch_Atte.TabIndex = 0;
+            this.btnSearch_Atte.Text = "조회";
+            this.btnSearch_Atte.UseVisualStyleBackColor = true;
+            this.btnSearch_Atte.Click += new System.EventHandler(this.btnSearch_Atte_Click);
             // 
             // btnSave_Atte
             // 
@@ -187,12 +194,16 @@ namespace ApplicationDev_Do
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // txtExtra
+            // rbAbs
             // 
-            this.txtExtra.Location = new System.Drawing.Point(233, 45);
-            this.txtExtra.Name = "txtExtra";
-            this.txtExtra.Size = new System.Drawing.Size(298, 27);
-            this.txtExtra.TabIndex = 3;
+            this.rbAbs.AutoSize = true;
+            this.rbAbs.Location = new System.Drawing.Point(25, 49);
+            this.rbAbs.Name = "rbAbs";
+            this.rbAbs.Size = new System.Drawing.Size(60, 24);
+            this.rbAbs.TabIndex = 5;
+            this.rbAbs.TabStop = true;
+            this.rbAbs.Text = "결석";
+            this.rbAbs.UseVisualStyleBackColor = true;
             // 
             // rbAtte
             // 
@@ -205,16 +216,12 @@ namespace ApplicationDev_Do
             this.rbAtte.Text = "출석";
             this.rbAtte.UseVisualStyleBackColor = true;
             // 
-            // rbAbs
+            // txtExtra
             // 
-            this.rbAbs.AutoSize = true;
-            this.rbAbs.Location = new System.Drawing.Point(25, 49);
-            this.rbAbs.Name = "rbAbs";
-            this.rbAbs.Size = new System.Drawing.Size(60, 24);
-            this.rbAbs.TabIndex = 5;
-            this.rbAbs.TabStop = true;
-            this.rbAbs.Text = "결석";
-            this.rbAbs.UseVisualStyleBackColor = true;
+            this.txtExtra.Location = new System.Drawing.Point(233, 45);
+            this.txtExtra.Name = "txtExtra";
+            this.txtExtra.Size = new System.Drawing.Size(298, 27);
+            this.txtExtra.TabIndex = 3;
             // 
             // FM_Atte
             // 
@@ -228,6 +235,7 @@ namespace ApplicationDev_Do
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FM_Atte";
             this.Text = "FM_Atte";
+            this.Load += new System.EventHandler(this.FM_Atte_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
