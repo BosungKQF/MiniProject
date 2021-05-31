@@ -48,12 +48,12 @@ namespace ApplicationDev_Do
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.dgvGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridView1Grid = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1Grid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -222,7 +222,7 @@ namespace ApplicationDev_Do
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.dgvGrid);
+            this.groupBox3.Controls.Add(this.dataGridView1Grid);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(0, 197);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -277,19 +277,19 @@ namespace ApplicationDev_Do
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // dgvGrid
+            // dataGridView1Grid
             // 
-            this.dgvGrid.AllowUserToAddRows = false;
-            this.dgvGrid.AllowUserToDeleteRows = false;
-            this.dgvGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvGrid.Location = new System.Drawing.Point(3, 174);
-            this.dgvGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvGrid.Name = "dgvGrid";
-            this.dgvGrid.RowHeadersWidth = 51;
-            this.dgvGrid.RowTemplate.Height = 27;
-            this.dgvGrid.Size = new System.Drawing.Size(1936, 368);
-            this.dgvGrid.TabIndex = 17;
+            this.dataGridView1Grid.AllowUserToAddRows = false;
+            this.dataGridView1Grid.AllowUserToDeleteRows = false;
+            this.dataGridView1Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1Grid.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1Grid.Location = new System.Drawing.Point(3, 174);
+            this.dataGridView1Grid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1Grid.Name = "dataGridView1Grid";
+            this.dataGridView1Grid.RowHeadersWidth = 51;
+            this.dataGridView1Grid.RowTemplate.Height = 27;
+            this.dataGridView1Grid.Size = new System.Drawing.Size(1936, 368);
+            this.dataGridView1Grid.TabIndex = 17;
             // 
             // FM_Student
             // 
@@ -308,7 +308,7 @@ namespace ApplicationDev_Do
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1Grid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,6 +334,6 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridView dgvGrid;
+        private System.Windows.Forms.DataGridView dataGridView1Grid;
     }
 }

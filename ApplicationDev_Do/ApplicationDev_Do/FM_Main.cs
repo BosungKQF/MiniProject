@@ -129,9 +129,6 @@ namespace ApplicationDev_Do
 
         }
 
-        private void btnAttend_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
