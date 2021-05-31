@@ -37,13 +37,6 @@ namespace ApplicationDev_Do
             }
 
 
-
-
-
-
-
-
-
         }
 
         #region customizeDesign
@@ -126,6 +119,11 @@ namespace ApplicationDev_Do
         private void btnSearch_noti_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+        }
+
+        private void btnAttend_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
