@@ -60,9 +60,8 @@ namespace ApplicationDev_Do
 
         private void button9_Click(object sender, EventArgs e)
         {
-            //
-            //
-            //...
+            openChildForm(new FM_Score());
+
             hideSubMenu();
         }
 
@@ -96,6 +95,12 @@ namespace ApplicationDev_Do
         private void btnNotice_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Notice());
+        }
+
+        private void btnDiary_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FM_Diary());
+
         }
     }
 }

@@ -25,21 +25,21 @@ namespace ApplicationDev_Do
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DataRow Dr = ((DataTable)dgvGrid.DataSource).NewRow();
-            ((DataTable)dgvGrid.DataSource).Rows.Add(Dr);
-            dgvGrid.Columns["USERCODE"].ReadOnly = false;
+            DataRow Dr = ((DataTable)dataGridView1Grid.DataSource).NewRow();
+            ((DataTable)dataGridView1Grid.DataSource).Rows.Add(Dr);
+            dataGridView1Grid.Columns["USERCODE"].ReadOnly = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (dgvGrid.Rows.Count == 0) return;
+            if (dataGridView1Grid.Rows.Count == 0) return;
             if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
             #region Variable Init
-            string studCode = dgvGrid.CurrentRow.Cells["USERCODE"].Value.ToString();
-            string studName = dgvGrid.CurrentRow.Cells["NAME"].Value.ToString();
-            string sClass = dgvGrid.CurrentRow.Cells["CLASS"].Value.ToString();
-            string firstDate = dgvGrid.CurrentRow.Cells["FIRSTDATE"].Value.ToString();
+            string studCode = dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
+            string studName = dataGridView1Grid.CurrentRow.Cells["NAME"].Value.ToString();
+            string sClass = dataGridView1Grid.CurrentRow.Cells["CLASS"].Value.ToString();
+            string firstDate = dataGridView1Grid.CurrentRow.Cells["FIRSTDATE"].Value.ToString();
 
             if (studCode == "" || firstDate == "")
             {
@@ -85,7 +85,7 @@ namespace ApplicationDev_Do
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (this.dgvGrid.Rows.Count == 0) return;
+            if (this.dataGridView1Grid.Rows.Count == 0) return;
             if (MessageBox.Show("선택된 데이터를 삭제하시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
             #region Transaction Decl
@@ -106,7 +106,7 @@ namespace ApplicationDev_Do
 
             try
             {
-                string delCustCode = dgvGrid.CurrentRow.Cells["USERCODE"].Value.ToString();
+                string delCustCode = dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
 
                 #region Transaction Commit
                 Cmd.CommandText = $"DELETE TB_5_STUDENT WHERE CUSTCODE = '{delCustCode}'";
@@ -178,33 +178,33 @@ namespace ApplicationDev_Do
                 if (DtTemp.Rows.Count == 0)
                 {
                     MessageBox.Show("검색 조건에 맞는 데이터가 없습니다.");
-                    dgvGrid.DataSource = null;
+                    dataGridView1Grid.DataSource = null;
                     return;
                 }
-                dgvGrid.DataSource = DtTemp;
+                dataGridView1Grid.DataSource = DtTemp;
                 #endregion
 
                 #region Column Set
-                dgvGrid.Columns["USERCODE"].HeaderText = "학생코드";
-                dgvGrid.Columns["NAME"].HeaderText = "학생명";
-                dgvGrid.Columns["CLASS"].HeaderText = "반";
-                dgvGrid.Columns["FIRSTDATE"].HeaderText = "수강일자";
-                dgvGrid.Columns["MAKEDATE"].HeaderText = "등록일시";
-                dgvGrid.Columns["MAKER"].HeaderText = "등록자";
-                dgvGrid.Columns["EDITDATE"].HeaderText = "수정일시";
-                dgvGrid.Columns["EDITOR"].HeaderText = "수정자";
+                dataGridView1Grid.Columns["USERCODE"].HeaderText = "학생코드";
+                dataGridView1Grid.Columns["NAME"].HeaderText = "학생명";
+                dataGridView1Grid.Columns["CLASS"].HeaderText = "반";
+                dataGridView1Grid.Columns["FIRSTDATE"].HeaderText = "수강일자";
+                dataGridView1Grid.Columns["MAKEDATE"].HeaderText = "등록일시";
+                dataGridView1Grid.Columns["MAKER"].HeaderText = "등록자";
+                dataGridView1Grid.Columns["EDITDATE"].HeaderText = "수정일시";
+                dataGridView1Grid.Columns["EDITOR"].HeaderText = "수정자";
 
-                dgvGrid.Columns[0].Width = 100;
-                dgvGrid.Columns[1].Width = 100;
-                dgvGrid.Columns[2].Width = 200;
-                dgvGrid.Columns[3].Width = 200;
-                dgvGrid.Columns[4].Width = 100;
+                dataGridView1Grid.Columns[0].Width = 100;
+                dataGridView1Grid.Columns[1].Width = 100;
+                dataGridView1Grid.Columns[2].Width = 200;
+                dataGridView1Grid.Columns[3].Width = 200;
+                dataGridView1Grid.Columns[4].Width = 100;
 
-                dgvGrid.Columns["USERCODE"].ReadOnly = true;
-                dgvGrid.Columns["MAKER"].ReadOnly = true;
-                dgvGrid.Columns["MAKEDATE"].ReadOnly = true;
-                dgvGrid.Columns["EDITOR"].ReadOnly = true;
-                dgvGrid.Columns["EDITDATE"].ReadOnly = true;
+                dataGridView1Grid.Columns["USERCODE"].ReadOnly = true;
+                dataGridView1Grid.Columns["MAKER"].ReadOnly = true;
+                dataGridView1Grid.Columns["MAKEDATE"].ReadOnly = true;
+                dataGridView1Grid.Columns["EDITOR"].ReadOnly = true;
+                dataGridView1Grid.Columns["EDITDATE"].ReadOnly = true;
                 #endregion
             }
             catch (Exception ex)

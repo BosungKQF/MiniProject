@@ -14,7 +14,8 @@ using Mini_Project4._3;
 namespace Mini_Project4._3
 {
     public partial class FM_Score : Form
-    {
+    {            
+ 
         #region Connection Init
         private SqlConnection Conn = null;
         private string ConnInfo = Common.DbPath;
@@ -22,6 +23,13 @@ namespace Mini_Project4._3
         public FM_Score()
         {
             InitializeComponent();
+            if (Common.Permission == "S")
+            {
+                btnSave.Visible = false;
+                btnDelete.Visible = false;
+                btnAdd.Visible = false;
+            }
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -42,26 +50,37 @@ namespace Mini_Project4._3
                 #endregion
 
                 #region Variable Init
+                string StName = "";
+                if (Common.Permission == "S")
+                {
+                    StName = Common.LogInName;
+                    txtName.Text = StName;
+                }
+                else
+                {
+                    StName = txtName.Text;
+                }
 
-                string StCode = txtName.Text;
                 string sSemester = CbSemester.Text;
 
 
                 #endregion
 
                 #region Fill Data
-                SqlDataAdapter Adapter = new SqlDataAdapter("SELECT USERCODE," +
-                                                                   "SEMESTER," +
-                                                                   "HW," +
-                                                                   "PROJECT," +
-                                                                   "FINAL," +
-                                                                   "ATTENDANCE," +
-                                                                   "SCORE," +
-                                                                   "GRADE " +
-                                                                   "FROM TB_5_SCORE WITH(NOLOCK) " +
-                                                                   "WHERE USERCODE LIKE '%" + StCode + "%' " +
-                                                                   "AND SEMESTER LIKE '%" + sSemester + "%' "
-                                                                   , Conn);
+                String sSql = "SELECT A.USERCODE," +
+                                                                   " B.NAME," +
+                                                                   " A.SEMESTER," +
+                                                                   " A.HW," +
+                                                                   " A.PROJECT," +
+                                                                   " A.FINAL," +
+                                                                   " A.ATTENDANCE," +
+                                                                   " A.SCORE," +
+                                                                   " A.GRADE " +
+                                                                   " FROM TB_5_SCORE A WITH(NOLOCK) " +
+                                                                   " LEFT JOIN TB_5_STUDENT B WITH (NOLOCK) ON A.USERCODE = B.USERCODE" +
+                                                                   " WHERE B.NAME LIKE '%" + StName + "%' " +
+                                                                   " AND A.SEMESTER LIKE '%" + sSemester + "%' ";
+                SqlDataAdapter Adapter = new SqlDataAdapter(sSql , Conn);
                 DataTable DtTemp = new DataTable();
                 Adapter.Fill(DtTemp);
                 #endregion
@@ -78,13 +97,15 @@ namespace Mini_Project4._3
 
                 #region Column Set
                 dgvScore.Columns["USERCODE"].HeaderText = "학생 코드";
+                dgvScore.Columns["NAME"].HeaderText = "학생 이름";
                 dgvScore.Columns["SEMESTER"].HeaderText = "분기";
-                dgvScore.Columns["HW"].HeaderText = "과제";
-                dgvScore.Columns["PROJECT"].HeaderText = "프로젝트";
-                dgvScore.Columns["FINAL"].HeaderText = "최종시험";
-                dgvScore.Columns["ATTENDANCE"].HeaderText = "출결";
-                dgvScore.Columns["SCORE"].HeaderText = "총점";
+                dgvScore.Columns["HW"].HeaderText = "과제(20)";
+                dgvScore.Columns["PROJECT"].HeaderText = "프로젝트(30)";
+                dgvScore.Columns["FINAL"].HeaderText = "최종시험(40)";
+                dgvScore.Columns["ATTENDANCE"].HeaderText = "출결(10)";
+                dgvScore.Columns["SCORE"].HeaderText = "총점(100)";
                 dgvScore.Columns["GRADE"].HeaderText = "등급";
+                
 
 
                 dgvScore.Columns[0].Width = 100;
@@ -131,8 +152,6 @@ namespace Mini_Project4._3
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            {
-
                 if (dgvScore.Rows.Count == 0) return;
                 if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
@@ -146,6 +165,17 @@ namespace Mini_Project4._3
                 string sSCORE = dgvScore.CurrentRow.Cells["SCORE"].Value.ToString();
                 string sGRADE = dgvScore.CurrentRow.Cells["GRADE"].Value.ToString();
 
+
+               if (int.Parse(sHW) > 20 || int.Parse(sPROJECT) > 30 || int.Parse(sFINAL) > 40 || int.Parse(sATTENDANCE) > 10)
+            {
+                MessageBox.Show("최대 점수보다 높습니다.");
+                    return;
+            }
+
+
+
+
+
                 if (sSTCODE == "" || sSEMESTER == "")
                 {
                     MessageBox.Show("'학생 코드', '분기'는 빈칸으로 남겨둘 수 없습니다.");
@@ -154,10 +184,20 @@ namespace Mini_Project4._3
 
                 if (sSEMESTER == "") sSEMESTER = "1";
 
-                #endregion
+            if (int.Parse(sSCORE) >= 90) sGRADE = "A";
+            else if (int.Parse(sSCORE) >= 80) sGRADE = "B";
+            else if (int.Parse(sSCORE) >= 70) sGRADE = "C";
+            else if (int.Parse(sSCORE) >= 60) sGRADE = "D";
+            else sGRADE = "F";
 
-                #region Transaction Decl
-                SqlCommand Cmd = new SqlCommand();
+
+
+
+
+            #endregion
+
+            #region Transaction Decl
+            SqlCommand Cmd = new SqlCommand();
                 SqlTransaction Txn;
                 #endregion
 
@@ -194,7 +234,7 @@ namespace Mini_Project4._3
                 MessageBox.Show("성공적으로 저장하였습니다.");
                 Conn.Close();
             }
-        }
+        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
