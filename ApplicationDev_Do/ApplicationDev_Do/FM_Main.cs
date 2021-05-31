@@ -1,12 +1,4 @@
-﻿using Mini_Project4._3;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ApplicationDev_Do
@@ -21,12 +13,37 @@ namespace ApplicationDev_Do
 
             Login.ShowDialog();
 
-            
             //tssUserName.Text = Login.Tag.ToString();
             if (Login.Tag.ToString() == "FAIL")
             {
                 System.Environment.Exit(0);
             }
+
+            if (Common.Permission == "S")
+            {
+                btnStudent.Visible = false;
+                btnTeacher.Visible = false;
+                btnDiary.Visible = false;
+                btnEquipment.Visible = false;
+                btnNotice.Visible = false;
+
+            }
+
+            else if (Common.Permission == "T")
+            {
+                
+                btnTeacher.Visible = false;
+                
+            }
+
+
+
+
+
+
+
+
+
         }
 
         #region customizeDesign
@@ -34,6 +51,7 @@ namespace ApplicationDev_Do
         private void customizeDesign()
         {
             panelInfoSubMenu.Visible = false;
+            panelNoticeSubMenu.Visible = false;
         }
         private void hideSubMenu()
         {
@@ -83,19 +101,31 @@ namespace ApplicationDev_Do
         }
         #endregion
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnStudent_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Student());
+            hideSubMenu();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnequipment_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Equipment());
+            hideSubMenu();
         }
 
         private void btnNotice_Click(object sender, EventArgs e)
         {
-            openChildForm(new FM_Notice());
+            showSubMenu(panelNoticeSubMenu);
+        }
+
+        private void btnSend_noti_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void btnSearch_noti_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
         }
     }
 }
