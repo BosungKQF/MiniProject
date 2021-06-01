@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace ApplicationDev_Do
 {
-    public partial class Form1 : Form
+    public partial class FM_Credit : Form
     {
-        public Form1()
+        public FM_Credit()
         {
             InitializeComponent();
         }
 
-        private void Form1_Click(object sender, EventArgs e)
+        private void FM_Credit_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FM_Credit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

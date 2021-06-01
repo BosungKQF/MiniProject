@@ -132,10 +132,11 @@ namespace ApplicationDev_Do
                 btn_login_Click(null, null);
             }
         }
-
+       
         private void label3_Click(object sender, EventArgs e)
         {
-            Show(FM_Credit)
+            FM_Credit credit = new();
+            credit.Show();
         }
     }
 }
