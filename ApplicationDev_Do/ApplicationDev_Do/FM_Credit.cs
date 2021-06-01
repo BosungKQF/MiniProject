@@ -17,14 +17,26 @@ namespace ApplicationDev_Do
             InitializeComponent();
         }
 
-        private void FM_Credit_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void FM_Credit_Click(object sender, EventArgs e)
+        
+        private void Form1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private Point mousePoint;
+
+        private void FM_Credit_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void FM_Credit_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
         }
     }
 }

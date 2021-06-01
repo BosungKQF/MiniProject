@@ -30,29 +30,29 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(149, 98);
+            this.label1.Location = new System.Drawing.Point(104, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(524, 31);
+            this.label1.Size = new System.Drawing.Size(461, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "만든 사람: 박상섭, 김보성, 임종훈, 홍건의, 강현업";
+            this.label1.Text = "제작자: 박상섭,김보성,임종훈,홍건의,강현업";
             // 
             // FM_Credit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 247);
+            this.ClientSize = new System.Drawing.Size(667, 199);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FM_Credit";
-            this.Text = "FM_Credit";
-            this.Load += new System.EventHandler(this.FM_Credit_Load);
-            this.Click += new System.EventHandler(this.FM_Credit_Click);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Click += new System.EventHandler(this.Form1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -61,5 +61,6 @@ namespace ApplicationDev_Do
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
