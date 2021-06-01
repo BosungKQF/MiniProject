@@ -1,4 +1,6 @@
 ﻿using System;
+
+
 using System.Windows.Forms;
 
 namespace ApplicationDev_Do
@@ -9,7 +11,7 @@ namespace ApplicationDev_Do
         {
             InitializeComponent();
             customizeDesign();
-           /* FM_Login Login = new FM_Login();
+            FM_Login Login = new FM_Login();
 
             Login.ShowDialog();
 
@@ -17,7 +19,7 @@ namespace ApplicationDev_Do
             if (Login.Tag.ToString() == "FAIL")
             {
                 System.Environment.Exit(0);
-            }*/
+            }
         
 
             if (Common.Permission == "S")

@@ -13,6 +13,8 @@ namespace ApplicationDev_Do
         /// </summary>
         [STAThread]
         static void Main()
+        
+        
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
