@@ -52,7 +52,7 @@ namespace ApplicationDev_Do
                     MessageBox.Show("데이터 베이스 연결에 실패 하였습니다.");
                     return;
                 }
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT NAME,STUDENTCODE,CLASS,ATTE,ATTEDATE,EXTRA FROM TB_5_ATT", connect);
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT NAME FROM TB_5_ATT GROUP BY NAME", connect);
                 DataTable dtTemp = new DataTable();
                 adapter.Fill(dtTemp);
 
