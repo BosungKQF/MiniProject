@@ -76,7 +76,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Size = new System.Drawing.Size(1267, 197);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "학생 조회";
+            this.groupBox1.Text = "교사 조회";
             // 
             // txtUserCode
             // 
@@ -231,7 +231,7 @@ namespace ApplicationDev_Do
             this.groupBox3.Size = new System.Drawing.Size(1267, 546);
             this.groupBox3.TabIndex = 32;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "학생 정보";
+            this.groupBox3.Text = "교사 정보";
             // 
             // groupBox4
             // 
