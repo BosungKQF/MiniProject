@@ -183,6 +183,7 @@ namespace ApplicationDev_Do
             this.btnTeacher.Text = "교사관리";
             this.btnTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeacher.UseVisualStyleBackColor = true;
+            this.btnTeacher.Click += new System.EventHandler(this.btnTeacher_Click);
             // 
             // btnStudent
             // 

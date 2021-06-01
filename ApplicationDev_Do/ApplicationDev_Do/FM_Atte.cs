@@ -259,22 +259,22 @@ namespace ApplicationDev_Do
                     //없으면 이 이벤트 종-료
                     dataGridView1.DataSource = dtTemp2; // 데이터 그리드 뷰에 (아까 채운) 데이터 테이블 등록
 
-                    // 그리드뷰의 헤더 명칭 선언
-
-                    dataGridView1.Columns["NAME"].HeaderText = "이름";
-                    dataGridView1.Columns["CLASS"].HeaderText = "반";
-
-
-                    dataGridView1.Columns["ATTEDATE"].HeaderText = "출석일자";
-                    dataGridView1.Columns["EXTRA"].HeaderText = "비고";
-                    // 그리드 뷰의 폭 지정
-                    dataGridView1.Columns[0].Width = 100;
-                    dataGridView1.Columns[1].Width = 200;
-                    dataGridView1.Columns[2].Width = 200;
-                    dataGridView1.Columns[3].Width = 200;
-                    dataGridView1.Columns[4].Width = 200;
-
-
+                // 그리드뷰의 헤더 명칭 선언
+                
+                dataGridView1.Columns["NAME"].HeaderText = "이름";
+                dataGridView1.Columns["CLASS"].HeaderText = "반";
+                
+                dataGridView1.Columns["ATTE"].HeaderText = "출석여부";
+                dataGridView1.Columns["ATTEDATE"].HeaderText = "출석일자";
+                dataGridView1.Columns["EXTRA"].HeaderText = "비고";
+                // 그리드 뷰의 폭 지정
+                dataGridView1.Columns[0].Width = 100;
+                dataGridView1.Columns[1].Width = 200;
+                dataGridView1.Columns[2].Width = 200;
+                dataGridView1.Columns[3].Width = 200;
+                dataGridView1.Columns[4].Width = 200;
+               
+           
 
                     // 컬럼의 수정 여부를 지정 한다
 
