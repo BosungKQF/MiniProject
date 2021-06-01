@@ -129,6 +129,10 @@ namespace ApplicationDev_Do
 
         }
 
-        
+        private void btnTeacher_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FM_Teacher());
+            hideSubMenu();
+        }
     }
 }

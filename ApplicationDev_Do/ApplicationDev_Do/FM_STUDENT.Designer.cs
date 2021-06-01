@@ -256,6 +256,7 @@ namespace ApplicationDev_Do
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // btnDelete
             // 
@@ -266,6 +267,7 @@ namespace ApplicationDev_Do
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // btnSave
             // 
@@ -276,6 +278,7 @@ namespace ApplicationDev_Do
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "저장";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // dataGridView1Grid
             // 
