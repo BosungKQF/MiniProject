@@ -26,8 +26,10 @@ namespace Mini_Project4._3
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+           
             try
             {
+
                 #region Connection Open
                 Conn = new SqlConnection(ConnInfo);
                 Conn.Open();
@@ -40,22 +42,26 @@ namespace Mini_Project4._3
                 #endregion
 
                 #region Variable Init
-                string StName = txtName.Text;
+
+                string StCode = txtName.Text;
                 string sSemester = CbSemester.Text;
+
+
                 #endregion
 
                 #region Fill Data
-                SqlDataAdapter Adapter = new SqlDataAdapter("SELECT StCode" +
-                                                                   "SEMESTER" +
-                                                                   "HW" +
-                                                                   "PROJECT" +
-                                                                   "FINAL" +
-                                                                   "ATTENDANCE" +
-                                                                   "SCORE" +
-                                                                   "GRADE" +
+                SqlDataAdapter Adapter = new SqlDataAdapter("SELECT USERCODE," +
+                                                                   "SEMESTER," +
+                                                                   "HW," +
+                                                                   "PROJECT," +
+                                                                   "FINAL," +
+                                                                   "ATTENDANCE," +
+                                                                   "SCORE," +
+                                                                   "GRADE " +
                                                                    "FROM TB_5_SCORE WITH(NOLOCK) " +
-                                                                   $"WHERE STNAME LIKE '%{StName}%' " +
-                                                                   $"AND SEMESTER LIKE '%{sSemester}%' ", Conn);
+                                                                   "WHERE USERCODE LIKE '%" + StCode + "%' " +
+                                                                   "AND SEMESTER LIKE '%" + sSemester + "%' "
+                                                                   , Conn);
                 DataTable DtTemp = new DataTable();
                 Adapter.Fill(DtTemp);
                 #endregion
@@ -71,7 +77,7 @@ namespace Mini_Project4._3
                 #endregion
 
                 #region Column Set
-                dgvScore.Columns["StCode"].HeaderText = "학생 코드";
+                dgvScore.Columns["USERCODE"].HeaderText = "학생 코드";
                 dgvScore.Columns["SEMESTER"].HeaderText = "분기";
                 dgvScore.Columns["HW"].HeaderText = "과제";
                 dgvScore.Columns["PROJECT"].HeaderText = "프로젝트";
@@ -87,16 +93,32 @@ namespace Mini_Project4._3
                 dgvScore.Columns[3].Width = 200;
                 dgvScore.Columns[4].Width = 100;
 
-                dgvScore.Columns["STCODE"].ReadOnly = true;
-                dgvScore.Columns["SEMESTER"].ReadOnly = true;
-                dgvScore.Columns["HW"].ReadOnly = true;
-                dgvScore.Columns["PROJECT"].ReadOnly = true;
-                dgvScore.Columns["FINAL"].ReadOnly = true;
-                dgvScore.Columns["ATTENDANCE"].ReadOnly = true;
-                dgvScore.Columns["SCORE"].ReadOnly = true;
-                dgvScore.Columns["GRADE"].ReadOnly = true;
-                #endregion
+
+                if (Common.Permission == "S")
+                {
+                    dgvScore.Columns["USERCODE"].ReadOnly = true;
+                    dgvScore.Columns["SEMESTER"].ReadOnly = true;
+                    dgvScore.Columns["HW"].ReadOnly = true;
+                    dgvScore.Columns["PROJECT"].ReadOnly = true;
+                    dgvScore.Columns["FINAL"].ReadOnly = true;
+                    dgvScore.Columns["ATTENDANCE"].ReadOnly = true;
+                    dgvScore.Columns["SCORE"].ReadOnly = true;
+                    dgvScore.Columns["GRADE"].ReadOnly = true;
+                }
+                else
+                {
+                    dgvScore.Columns["USERCODE"].ReadOnly = false;
+                    dgvScore.Columns["SEMESTER"].ReadOnly = false;
+                    dgvScore.Columns["HW"].ReadOnly = false;
+                    dgvScore.Columns["PROJECT"].ReadOnly = false;
+                    dgvScore.Columns["FINAL"].ReadOnly = false;
+                    dgvScore.Columns["ATTENDANCE"].ReadOnly = false;
+                    dgvScore.Columns["SCORE"].ReadOnly = false;
+                    dgvScore.Columns["GRADE"].ReadOnly = false;
+                }
             }
+            #endregion
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -115,7 +137,7 @@ namespace Mini_Project4._3
                 if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
                 #region Variable Init
-                string sSTCODE = dgvScore.CurrentRow.Cells["STCODE"].Value.ToString();
+                string sSTCODE = dgvScore.CurrentRow.Cells["USERCODE"].Value.ToString();
                 string sSEMESTER = dgvScore.CurrentRow.Cells["SEMESTER"].Value.ToString();
                 string sHW = dgvScore.CurrentRow.Cells["HW"].Value.ToString();
                 string sPROJECT = dgvScore.CurrentRow.Cells["PROJECT"].Value.ToString();
@@ -151,20 +173,20 @@ namespace Mini_Project4._3
                 #endregion
 
                 #region Transaction Commit
-                Cmd.CommandText = "UPDATE TB_CUST_HGU                     " +
-                                 $"   SET STCODE      = '{sSTCODE}',       " +
+                Cmd.CommandText = "UPDATE TB_5_SCORE                     " +
+                                 $"   SET USERCODE      = '{sSTCODE}',       " +
                                  $"       SEMESTER    = '{sSEMESTER}',       " +
                                  $"       HW          = '{sHW}',        " +
                                  $"       PROJECT     = '{sPROJECT}',        " +
                                  $"       FINAL       = '{sFINAL}',      " +
                                  $"       ATTENDANCE  = '{sATTENDANCE}'," +
-                                 $"       SCORE       = '{sSCORE}'           " +
+                                 $"       SCORE       = '{sSCORE}' ,          " +
                                  $"       GRADE       = '{sGRADE}'           " +
-                                 $" WHERE STCODE      = '{sSTCODE}'         " + 
-                                 $"   AND SEMSETER    = '{sSEMESTER}',         " + 
+                                 $" WHERE USERCODE      = '{sSTCODE}'         " + 
+                                 $"   AND SEMESTER    = '{sSEMESTER}'         " + 
                                  " IF (@@ROWCOUNT =0)                     " +
-                                 " INSERT INTO TB_5_SCORE (STCODE,     SEMESTER,     HW,     PROJECT,     FINAL,     ATTENDANCE,     SCORE,   GRADE) " +
-                                 $"VALUES (               '{sSTCODE}' , '{sSEMESTER}', '{sHW}', '{sPROJECT}', '{sFINAL}', '{sATTENDANCE}', '{sSCORE}', '{sGRADE})";
+                                 " INSERT INTO TB_5_SCORE (USERCODE,SEMESTER,HW,PROJECT,FINAL,ATTENDANCE,SCORE,GRADE)" +
+                                 $"VALUES ('{sSTCODE}','{sSEMESTER}','{sHW}','{sPROJECT}','{sFINAL}','{sATTENDANCE}','{sSCORE}','{sGRADE}')";
                 Cmd.ExecuteNonQuery();
                 Txn.Commit();
                 #endregion
@@ -172,6 +194,62 @@ namespace Mini_Project4._3
                 MessageBox.Show("성공적으로 저장하였습니다.");
                 Conn.Close();
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            DataRow Dr = ((DataTable)dgvScore.DataSource).NewRow();
+            ((DataTable)dgvScore.DataSource).Rows.Add(Dr);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (this.dgvScore.Rows.Count == 0) return;
+            if (MessageBox.Show("선택된 데이터를 삭제하시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No) return;
+
+            #region Transaction Decl
+            SqlCommand Cmd = new SqlCommand();
+            SqlTransaction Txn;
+            #endregion
+
+            #region Connection Open
+            Conn = new SqlConnection(ConnInfo);
+            Conn.Open();
+            #endregion
+
+            #region Transaction Init
+            Txn = Conn.BeginTransaction("Begin Transaction");
+            Cmd.Transaction = Txn;
+            Cmd.Connection = Conn;
+            #endregion
+
+            try
+            {
+                string delCode = dgvScore.CurrentRow.Cells["USERCODE"].Value.ToString();
+
+                #region Transaction Commit
+                Cmd.CommandText = $"DELETE TB_5_SCORE WHERE USERCODE = '{delCode}'";
+                Cmd.ExecuteNonQuery();
+                Txn.Commit();
+                #endregion
+
+                MessageBox.Show("성공적으로 데이터를 삭제하였습니다.");
+                btnSearch_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                Txn.Rollback();
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+        private void dgvScore_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

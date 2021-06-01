@@ -37,6 +37,8 @@ namespace Mini_Project4._3
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.dgvScore = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,9 +73,9 @@ namespace Mini_Project4._3
             // 
             // CbSemester
             // 
+            this.CbSemester.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CbSemester.FormattingEnabled = true;
             this.CbSemester.Items.AddRange(new object[] {
-            "전체",
             "1분기",
             "2분기",
             "3분기",
@@ -81,7 +83,7 @@ namespace Mini_Project4._3
             this.CbSemester.Location = new System.Drawing.Point(130, 94);
             this.CbSemester.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CbSemester.Name = "CbSemester";
-            this.CbSemester.Size = new System.Drawing.Size(138, 23);
+            this.CbSemester.Size = new System.Drawing.Size(138, 26);
             this.CbSemester.TabIndex = 5;
             // 
             // btnSearch
@@ -98,7 +100,7 @@ namespace Mini_Project4._3
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(458, 94);
+            this.btnSave.Location = new System.Drawing.Point(105, 38);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 29);
@@ -109,7 +111,6 @@ namespace Mini_Project4._3
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.label1);
@@ -127,28 +128,52 @@ namespace Mini_Project4._3
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSave);
+            this.groupBox2.Controls.Add(this.btnDelete);
+            this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.dgvScore);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 175);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(914, 279);
+            this.groupBox2.Size = new System.Drawing.Size(914, 356);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "성적";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(197, 38);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 29);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(24, 38);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 29);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "추가";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // dgvScore
             // 
             this.dgvScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvScore.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvScore.Location = new System.Drawing.Point(3, 22);
+            this.dgvScore.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvScore.Location = new System.Drawing.Point(3, 75);
             this.dgvScore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvScore.Name = "dgvScore";
             this.dgvScore.RowHeadersWidth = 51;
             this.dgvScore.RowTemplate.Height = 23;
-            this.dgvScore.Size = new System.Drawing.Size(908, 210);
+            this.dgvScore.Size = new System.Drawing.Size(908, 277);
             this.dgvScore.TabIndex = 0;
+            this.dgvScore.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScore_CellClick);
             // 
             // FM_Score
             // 
@@ -181,5 +206,7 @@ namespace Mini_Project4._3
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvScore;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

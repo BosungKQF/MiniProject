@@ -46,6 +46,7 @@ namespace ApplicationDev_Do
             this.rbAbs = new System.Windows.Forms.RadioButton();
             this.rbAtte = new System.Windows.Forms.RadioButton();
             this.txtExtra = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Groupbox_ATTE.SuspendLayout();
@@ -54,6 +55,7 @@ namespace ApplicationDev_Do
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cmbStudent_atte);
             this.groupBox1.Controls.Add(this.cmbClass_atte);
             this.groupBox1.Controls.Add(this.dtpEnd_atte);
@@ -180,6 +182,7 @@ namespace ApplicationDev_Do
             this.btnSave_Atte.TabIndex = 2;
             this.btnSave_Atte.Text = "변경사항 저장";
             this.btnSave_Atte.UseVisualStyleBackColor = true;
+            this.btnSave_Atte.Click += new System.EventHandler(this.btnSave_Atte_Click);
             // 
             // groupBox2
             // 
@@ -223,6 +226,15 @@ namespace ApplicationDev_Do
             this.txtExtra.Size = new System.Drawing.Size(298, 27);
             this.txtExtra.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(592, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "~";
+            // 
             // FM_Atte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -265,5 +277,6 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.RadioButton rbAbs;
         private System.Windows.Forms.RadioButton rbAtte;
         private System.Windows.Forms.TextBox txtExtra;
+        private System.Windows.Forms.Label label1;
     }
 }
