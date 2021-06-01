@@ -8,14 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Mini_Project4._3;
 
-
-namespace Mini_Project4._3
+namespace ApplicationDev_Do
 {
-    public partial class FM_Score : Form
-    {            
  
+    public partial class FM_Score : Form
+    {
+
         #region Connection Init
         private SqlConnection Conn = null;
         private string ConnInfo = Common.DbPath;
@@ -34,7 +33,7 @@ namespace Mini_Project4._3
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
 
@@ -80,7 +79,7 @@ namespace Mini_Project4._3
                                                                    " LEFT JOIN TB_5_STUDENT B WITH (NOLOCK) ON A.USERCODE = B.USERCODE" +
                                                                    " WHERE B.NAME LIKE '%" + StName + "%' " +
                                                                    " AND A.SEMESTER LIKE '%" + sSemester + "%' ";
-                SqlDataAdapter Adapter = new SqlDataAdapter(sSql , Conn);
+                SqlDataAdapter Adapter = new SqlDataAdapter(sSql, Conn);
                 DataTable DtTemp = new DataTable();
                 Adapter.Fill(DtTemp);
                 #endregion
@@ -105,7 +104,7 @@ namespace Mini_Project4._3
                 dgvScore.Columns["ATTENDANCE"].HeaderText = "출결(10)";
                 dgvScore.Columns["SCORE"].HeaderText = "총점(100)";
                 dgvScore.Columns["GRADE"].HeaderText = "등급";
-                
+
 
 
                 dgvScore.Columns[0].Width = 100;
@@ -152,37 +151,37 @@ namespace Mini_Project4._3
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-                if (dgvScore.Rows.Count == 0) return;
-                if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
+            if (dgvScore.Rows.Count == 0) return;
+            if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
-                #region Variable Init
-                string sSTCODE = dgvScore.CurrentRow.Cells["USERCODE"].Value.ToString();
-                string sSEMESTER = dgvScore.CurrentRow.Cells["SEMESTER"].Value.ToString();
-                string sHW = dgvScore.CurrentRow.Cells["HW"].Value.ToString();
-                string sPROJECT = dgvScore.CurrentRow.Cells["PROJECT"].Value.ToString();
-                string sFINAL = dgvScore.CurrentRow.Cells["FINAL"].Value.ToString();
-                string sATTENDANCE = dgvScore.CurrentRow.Cells["ATTENDANCE"].Value.ToString();
-                string sSCORE = dgvScore.CurrentRow.Cells["SCORE"].Value.ToString();
-                string sGRADE = dgvScore.CurrentRow.Cells["GRADE"].Value.ToString();
+            #region Variable Init
+            string sSTCODE = dgvScore.CurrentRow.Cells["USERCODE"].Value.ToString();
+            string sSEMESTER = dgvScore.CurrentRow.Cells["SEMESTER"].Value.ToString();
+            string sHW = dgvScore.CurrentRow.Cells["HW"].Value.ToString();
+            string sPROJECT = dgvScore.CurrentRow.Cells["PROJECT"].Value.ToString();
+            string sFINAL = dgvScore.CurrentRow.Cells["FINAL"].Value.ToString();
+            string sATTENDANCE = dgvScore.CurrentRow.Cells["ATTENDANCE"].Value.ToString();
+            string sSCORE = dgvScore.CurrentRow.Cells["SCORE"].Value.ToString();
+            string sGRADE = dgvScore.CurrentRow.Cells["GRADE"].Value.ToString();
 
 
-               if (int.Parse(sHW) > 20 || int.Parse(sPROJECT) > 30 || int.Parse(sFINAL) > 40 || int.Parse(sATTENDANCE) > 10)
+            if (int.Parse(sHW) > 20 || int.Parse(sPROJECT) > 30 || int.Parse(sFINAL) > 40 || int.Parse(sATTENDANCE) > 10)
             {
                 MessageBox.Show("최대 점수보다 높습니다.");
-                    return;
+                return;
             }
 
 
 
 
 
-                if (sSTCODE == "" || sSEMESTER == "")
-                {
-                    MessageBox.Show("'학생 코드', '분기'는 빈칸으로 남겨둘 수 없습니다.");
-                    return;
-                }
+            if (sSTCODE == "" || sSEMESTER == "")
+            {
+                MessageBox.Show("'학생 코드', '분기'는 빈칸으로 남겨둘 수 없습니다.");
+                return;
+            }
 
-                if (sSEMESTER == "") sSEMESTER = "1";
+            if (sSEMESTER == "") sSEMESTER = "1";
 
             if (int.Parse(sSCORE) >= 90) sGRADE = "A";
             else if (int.Parse(sSCORE) >= 80) sGRADE = "B";
@@ -198,43 +197,43 @@ namespace Mini_Project4._3
 
             #region Transaction Decl
             SqlCommand Cmd = new SqlCommand();
-                SqlTransaction Txn;
-                #endregion
+            SqlTransaction Txn;
+            #endregion
 
-                #region Connection Open
-                Conn = new SqlConnection(ConnInfo);
-                Conn.Open();
-                #endregion
+            #region Connection Open
+            Conn = new SqlConnection(ConnInfo);
+            Conn.Open();
+            #endregion
 
-                #region Transaction Init
-                Txn = Conn.BeginTransaction("Test Transaction");
-                Cmd.Transaction = Txn;
-                Cmd.Connection = Conn;
-                #endregion
+            #region Transaction Init
+            Txn = Conn.BeginTransaction("Test Transaction");
+            Cmd.Transaction = Txn;
+            Cmd.Connection = Conn;
+            #endregion
 
-                #region Transaction Commit
-                Cmd.CommandText = "UPDATE TB_5_SCORE                     " +
-                                 $"   SET USERCODE      = '{sSTCODE}',       " +
-                                 $"       SEMESTER    = '{sSEMESTER}',       " +
-                                 $"       HW          = '{sHW}',        " +
-                                 $"       PROJECT     = '{sPROJECT}',        " +
-                                 $"       FINAL       = '{sFINAL}',      " +
-                                 $"       ATTENDANCE  = '{sATTENDANCE}'," +
-                                 $"       SCORE       = '{sSCORE}' ,          " +
-                                 $"       GRADE       = '{sGRADE}'           " +
-                                 $" WHERE USERCODE      = '{sSTCODE}'         " + 
-                                 $"   AND SEMESTER    = '{sSEMESTER}'         " + 
-                                 " IF (@@ROWCOUNT =0)                     " +
-                                 " INSERT INTO TB_5_SCORE (USERCODE,SEMESTER,HW,PROJECT,FINAL,ATTENDANCE,SCORE,GRADE)" +
-                                 $"VALUES ('{sSTCODE}','{sSEMESTER}','{sHW}','{sPROJECT}','{sFINAL}','{sATTENDANCE}','{sSCORE}','{sGRADE}')";
-                Cmd.ExecuteNonQuery();
-                Txn.Commit();
-                #endregion
+            #region Transaction Commit
+            Cmd.CommandText = "UPDATE TB_5_SCORE                     " +
+                             $"   SET USERCODE      = '{sSTCODE}',       " +
+                             $"       SEMESTER    = '{sSEMESTER}',       " +
+                             $"       HW          = '{sHW}',        " +
+                             $"       PROJECT     = '{sPROJECT}',        " +
+                             $"       FINAL       = '{sFINAL}',      " +
+                             $"       ATTENDANCE  = '{sATTENDANCE}'," +
+                             $"       SCORE       = '{sSCORE}' ,          " +
+                             $"       GRADE       = '{sGRADE}'           " +
+                             $" WHERE USERCODE      = '{sSTCODE}'         " +
+                             $"   AND SEMESTER    = '{sSEMESTER}'         " +
+                             " IF (@@ROWCOUNT =0)                     " +
+                             " INSERT INTO TB_5_SCORE (USERCODE,SEMESTER,HW,PROJECT,FINAL,ATTENDANCE,SCORE,GRADE)" +
+                             $"VALUES ('{sSTCODE}','{sSEMESTER}','{sHW}','{sPROJECT}','{sFINAL}','{sATTENDANCE}','{sSCORE}','{sGRADE}')";
+            Cmd.ExecuteNonQuery();
+            Txn.Commit();
+            #endregion
 
-                MessageBox.Show("성공적으로 저장하였습니다.");
-                Conn.Close();
-            }
-        
+            MessageBox.Show("성공적으로 저장하였습니다.");
+            Conn.Close();
+        }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {

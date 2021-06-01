@@ -23,111 +23,6 @@ namespace ApplicationDev_Do
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            DataRow Dr = ((DataTable)dataGridView1Grid.DataSource).NewRow();
-            ((DataTable)dataGridView1Grid.DataSource).Rows.Add(Dr);
-            dataGridView1Grid.Columns["USERCODE"].ReadOnly = false;
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1Grid.Rows.Count == 0) return;
-            if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
-
-            #region Variable Init
-            string studCode = dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
-            string studName = dataGridView1Grid.CurrentRow.Cells["NAME"].Value.ToString();
-            string sClass = dataGridView1Grid.CurrentRow.Cells["CLASS"].Value.ToString();
-            string firstDate = dataGridView1Grid.CurrentRow.Cells["FIRSTDATE"].Value.ToString();
-
-            if (studCode == "" || firstDate == "")
-            {
-                MessageBox.Show("'거래처 코드', '수강일자' 는 빈칸으로 남겨둘 수 없습니다.");
-                return;
-            }
-            #endregion
-
-            #region Transaction Decl
-            SqlCommand Cmd = new SqlCommand();
-            SqlTransaction Txn;
-            #endregion
-
-            #region Connection Open
-            Conn = new SqlConnection(ConnInfo);
-            Conn.Open();
-            #endregion
-
-            #region Transaction Init
-            Txn = Conn.BeginTransaction("Test Transaction");
-            Cmd.Transaction = Txn;
-            Cmd.Connection = Conn;
-            #endregion
-
-            #region Transaction Commit
-            Cmd.CommandText = "UPDATE TB_5_STUDENT                      " +
-                             $"   SET NAME   = '{studName}',       " +
-                             $"       CLASS   = '{sClass}',       " +
-                             $"       FIRSTDATE  = '{firstDate}',      " +
-                             $"       EDITOR     = '{Common.LogInId}'," +
-                             $"       EDITDATE   = GETDATE()           " +
-                             $" WHERE USERCODE  = '{studCode}'         " +
-                             " IF (@@ROWCOUNT =0)                     " +
-                             " INSERT INTO TB_5_STUDENT (USERCODE,     NAME,     CLASS,    FIRSTDATE,   MAKEDATE,   MAKER) " +
-                             $"VALUES (               '{studCode}','{studName}', '{sClass}', '{firstDate}', GETDATE(), '{Common.LogInId}')";
-            Cmd.ExecuteNonQuery();
-            Txn.Commit();
-            #endregion
-
-            MessageBox.Show("성공적으로 저장하였습니다.");
-            Conn.Close();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (this.dataGridView1Grid.Rows.Count == 0) return;
-            if (MessageBox.Show("선택된 데이터를 삭제하시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No) return;
-
-            #region Transaction Decl
-            SqlCommand Cmd = new SqlCommand();
-            SqlTransaction Txn;
-            #endregion
-
-            #region Connection Open
-            Conn = new SqlConnection(ConnInfo);
-            Conn.Open();
-            #endregion
-
-            #region Transaction Init
-            Txn = Conn.BeginTransaction("Begin Transaction");
-            Cmd.Transaction = Txn;
-            Cmd.Connection = Conn;
-            #endregion
-
-            try
-            {
-                string delCustCode = dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
-
-                #region Transaction Commit
-                Cmd.CommandText = $"DELETE TB_5_STUDENT WHERE CUSTCODE = '{delCustCode}'";
-                Cmd.ExecuteNonQuery();
-                Txn.Commit();
-                #endregion
-
-                MessageBox.Show("성공적으로 데이터를 삭제하였습니다.");
-                btnSearch_Click_1(null, null);
-            }
-            catch (Exception ex)
-            {
-                Txn.Rollback();
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
-            }
-        }
-
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
             try
@@ -215,6 +110,120 @@ namespace ApplicationDev_Do
             {
                 Conn.Close();
             }
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            DataRow Dr = ((DataTable)dataGridView1Grid.DataSource).NewRow();
+            ((DataTable)dataGridView1Grid.DataSource).Rows.Add(Dr);
+            dataGridView1Grid.Columns["USERCODE"].ReadOnly = false;
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView1Grid.Rows.Count == 0) return;
+            if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
+
+            #region Variable Init
+            string studCode = dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
+            string studName = dataGridView1Grid.CurrentRow.Cells["NAME"].Value.ToString();
+            string sClass = dataGridView1Grid.CurrentRow.Cells["CLASS"].Value.ToString();
+            string firstDate = dataGridView1Grid.CurrentRow.Cells["FIRSTDATE"].Value.ToString();
+
+            if (studCode == "" || firstDate == "")
+            {
+                MessageBox.Show("'학생코드', '수강일자' 는 빈칸으로 남겨둘 수 없습니다.");
+                return;
+            }
+            #endregion
+
+            #region Transaction Decl
+            SqlCommand Cmd = new SqlCommand();
+            SqlTransaction Txn;
+            #endregion
+
+            #region Connection Open
+            Conn = new SqlConnection(ConnInfo);
+            Conn.Open();
+            #endregion
+
+            #region Transaction Init
+            Txn = Conn.BeginTransaction("Test Transaction");
+            Cmd.Transaction = Txn;
+            Cmd.Connection = Conn;
+            #endregion
+
+            #region Transaction Commit
+            string sDate = firstDate.Substring(0,10);
+            Cmd.CommandText = "UPDATE TB_5_STUDENT                      " +
+                             $"   SET NAME   = '{studName}',       " +
+                             $"       CLASS   = '{sClass}',       " +
+                             $"       FIRSTDATE  = '{sDate}',      " +
+                             $"       EDITOR     = '{Common.LogInId}'," +
+                             $"       EDITDATE   = GETDATE()           " +
+                             $" WHERE USERCODE  = '{studCode}'         " +
+                             " IF (@@ROWCOUNT =0)                     " +
+                             " INSERT INTO TB_5_STUDENT (USERCODE,     NAME,     CLASS,    FIRSTDATE,   MAKEDATE,   MAKER) " +
+                             $"VALUES (               '{studCode}','{studName}', '{sClass}', '{sDate}', GETDATE(), '{Common.LogInId}')";
+            Cmd.ExecuteNonQuery();
+            Txn.Commit();
+            #endregion
+
+            MessageBox.Show("성공적으로 저장하였습니다.");
+            Conn.Close();
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (this.dataGridView1Grid.Rows.Count == 0) return;
+            if (MessageBox.Show("선택된 데이터를 삭제하시겠습니까?", "Delete", MessageBoxButtons.YesNo) == DialogResult.No) return;
+
+            #region Transaction Decl
+            SqlCommand Cmd = new SqlCommand();
+            SqlTransaction Txn;
+            #endregion
+
+            #region Connection Open
+            Conn = new SqlConnection(ConnInfo);
+            Conn.Open();
+            #endregion
+
+            #region Transaction Init
+            Txn = Conn.BeginTransaction("Begin Transaction");
+            Cmd.Transaction = Txn;
+            Cmd.Connection = Conn;
+            #endregion
+
+            try
+            {
+                string delUserCode = dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
+
+                #region Transaction Commit
+                Cmd.CommandText = $"DELETE TB_5_STUDENT WHERE USERCODE = '{delUserCode}'";
+                Cmd.ExecuteNonQuery();
+                Txn.Commit();
+                #endregion
+
+                MessageBox.Show("성공적으로 데이터를 삭제하였습니다.");
+                btnSearch_Click_1(null, null);
+            }
+            catch (Exception ex)
+            {
+                Txn.Rollback();
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Conn.Close();
+            }
+        }
+
+        private void dataGridView1Grid_DoubleClick(object sender, EventArgs e)
+        {
+            Common.sCode = this.dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
+
+            FM_GradeChart grade = new FM_GradeChart();
+            grade.ShowDialog();
         }
     }
 }

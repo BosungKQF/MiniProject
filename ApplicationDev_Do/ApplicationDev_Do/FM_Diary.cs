@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace Mini_Project4._3
-{
 
+namespace ApplicationDev_Do
+{
     public partial class FM_Diary : Form
     {
         #region Connection Init
@@ -47,7 +47,7 @@ namespace Mini_Project4._3
                                                                    "DIARYDATE, " +
                                                                    "CLASS, " +
                                                                    "DIARY, " +
-                                                                   "MAKEDATE, " + 
+                                                                   "MAKEDATE, " +
                                                                    "MAKER,  " +
                                                                    "EDITDATE, " +
                                                                    "EDITOR " +
@@ -77,7 +77,7 @@ namespace Mini_Project4._3
                 dgvDiary.Columns["MAKER"].HeaderText = "작성자";
                 dgvDiary.Columns["EDITDATE"].HeaderText = "수정 일자";
                 dgvDiary.Columns["EDITOR"].HeaderText = "수정자";
-                
+
                 dgvDiary.Columns[0].Width = 100;
                 dgvDiary.Columns[1].Width = 100;
                 dgvDiary.Columns[2].Width = 200;
@@ -158,7 +158,7 @@ namespace Mini_Project4._3
                              $"       EDITOR     = '{Common.LogInName}'," +
                              $"       EDITDATE   = GETDATE()           " +
                              $" WHERE USERCODE  = '{sTEACHERCODE}' AND DIARYDATE = '{sDIARYDATE}' " +
-                             " IF (@@ROWCOUNT =0)                     " +   
+                             " IF (@@ROWCOUNT =0)                     " +
                              " INSERT INTO TB_5_DIARY (USERCODE,     DIARYDATE,     CLASS,     DIARY,     MAKER,     MAKEDATE) " +
                              $"VALUES (               '{sTEACHERCODE}', '{sDIARYDATE}', '{sCLASS}', '{txtDiary.Text}', '{Common.LogInName}', GETDATE())";
             Cmd.ExecuteNonQuery();
@@ -216,7 +216,7 @@ namespace Mini_Project4._3
 
         private void dgvDiary_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
         }
     }
 }

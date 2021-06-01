@@ -34,6 +34,7 @@ namespace ApplicationDev_Do
             this.btn_login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUID
@@ -88,6 +89,17 @@ namespace ApplicationDev_Do
             this.label2.Text = "X";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(12, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "만든 사람";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // FM_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -95,6 +107,7 @@ namespace ApplicationDev_Do
             this.BackgroundImage = global::ApplicationDev_Do.Properties.Resources.LoginDesign;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(404, 768);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_login);
@@ -118,6 +131,7 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

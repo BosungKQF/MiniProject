@@ -14,5 +14,6 @@ namespace ApplicationDev_Do
         public static string DbPath = "Data Source=222.235.141.8; Initial Catalog=AppDev;User ID=kfqs1;Password=1234";
         public static string Permission = string.Empty;
         public static string Ucode = string.Empty;
+        public static string sCode = string.Empty;
     }
 }

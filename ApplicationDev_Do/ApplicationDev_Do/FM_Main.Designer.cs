@@ -63,7 +63,7 @@ namespace ApplicationDev_Do
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 731);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 775);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panelNoticeSubMenu
@@ -139,6 +139,7 @@ namespace ApplicationDev_Do
             this.btnDiary.Text = "근무일지";
             this.btnDiary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiary.UseVisualStyleBackColor = true;
+            this.btnDiary.Click += new System.EventHandler(this.btnDiary_Click);
             // 
             // panelInfoSubMenu
             // 
@@ -183,6 +184,7 @@ namespace ApplicationDev_Do
             this.btnTeacher.Text = "교사관리";
             this.btnTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeacher.UseVisualStyleBackColor = true;
+            this.btnTeacher.Click += new System.EventHandler(this.btnTeacher_Click);
             // 
             // btnStudent
             // 
@@ -264,14 +266,14 @@ namespace ApplicationDev_Do
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1010, 731);
+            this.panelChildForm.Size = new System.Drawing.Size(1144, 775);
             this.panelChildForm.TabIndex = 1;
             // 
             // FM_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 731);
+            this.ClientSize = new System.Drawing.Size(1394, 775);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

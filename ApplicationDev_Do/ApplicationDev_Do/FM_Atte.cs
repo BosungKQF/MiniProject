@@ -112,13 +112,24 @@ namespace ApplicationDev_Do
             transaction = connect.BeginTransaction("TESTTRAN");
             cmd.Transaction = transaction;
             cmd.Connection = connect;
-            cmd.CommandText = "INSERT INTO TB_5_ATT(STUDENTCODE, NAME, CLASS, ATTE,ATTEDATE,EXTRA) " +
+            try
+            {
+                cmd.CommandText = "INSERT INTO TB_5_ATT(STUDENTCODE, NAME, CLASS, ATTE,ATTEDATE,EXTRA) " +
                                       $"VALUES('{sSC}','{sSN}','{sCL}','{sAT}','{sDate}','{extra}')";
+                cmd.ExecuteNonQuery(); //CRUD 실행함수
+                                       //성공 시 DB COMMIT
+                transaction.Commit();
+                MessageBox.Show("성공입니다");
+            }
+            catch (Exception)
+            {
 
-            cmd.ExecuteNonQuery(); //CRUD 실행함수
-            //성공 시 DB COMMIT
-            transaction.Commit();
-            MessageBox.Show("성공입니다");
+                MessageBox.Show("오늘 이미 출석하셨습니다");
+            }
+           
+
+            
+            
             connect.Close();
             
         }
@@ -169,7 +180,7 @@ namespace ApplicationDev_Do
 
                                                             "   AND CLASS LIKE '%" + sClass + "%' " +
 
-                                                            "   AND ATTEDATE BETWEEN'" + sSD + "'AND'" + sED + "'"
+                                                            "   AND ATTEDATE BETWEEN '" + sSD + "' AND '" + sED + "'"
 
                                                             , connect);
                 //해당 sql문을 connect 스트링에 적혀있는 주소로 쿼리해줄 객체 생성
@@ -192,8 +203,6 @@ namespace ApplicationDev_Do
 
                 dataGridView1.Columns["NAME"].HeaderText = "이름";
                 dataGridView1.Columns["CLASS"].HeaderText = "반";
-
-
                 dataGridView1.Columns["ATTEDATE"].HeaderText = "출석일자";
                 dataGridView1.Columns["EXTRA"].HeaderText = "비고";
                 // 그리드 뷰의 폭 지정
@@ -261,22 +270,22 @@ namespace ApplicationDev_Do
                     //없으면 이 이벤트 종-료
                     dataGridView1.DataSource = dtTemp2; // 데이터 그리드 뷰에 (아까 채운) 데이터 테이블 등록
 
-                    // 그리드뷰의 헤더 명칭 선언
-
-                    dataGridView1.Columns["NAME"].HeaderText = "이름";
-                    dataGridView1.Columns["CLASS"].HeaderText = "반";
-
-
-                    dataGridView1.Columns["ATTEDATE"].HeaderText = "출석일자";
-                    dataGridView1.Columns["EXTRA"].HeaderText = "비고";
-                    // 그리드 뷰의 폭 지정
-                    dataGridView1.Columns[0].Width = 100;
-                    dataGridView1.Columns[1].Width = 200;
-                    dataGridView1.Columns[2].Width = 200;
-                    dataGridView1.Columns[3].Width = 200;
-                    dataGridView1.Columns[4].Width = 200;
-
-
+                // 그리드뷰의 헤더 명칭 선언
+                
+                dataGridView1.Columns["NAME"].HeaderText = "이름";
+                dataGridView1.Columns["CLASS"].HeaderText = "반";
+                
+                
+                dataGridView1.Columns["ATTEDATE"].HeaderText = "출석일자";
+                dataGridView1.Columns["EXTRA"].HeaderText = "비고";
+                // 그리드 뷰의 폭 지정
+                dataGridView1.Columns[0].Width = 100;
+                dataGridView1.Columns[1].Width = 200;
+                dataGridView1.Columns[2].Width = 200;
+                dataGridView1.Columns[3].Width = 200;
+                dataGridView1.Columns[4].Width = 200;
+               
+           
 
                     // 컬럼의 수정 여부를 지정 한다
 
@@ -308,20 +317,19 @@ namespace ApplicationDev_Do
 
         }
         private void btnSave_Atte_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("등록 ㄱㄱ?", "데이터 등록", MessageBoxButtons.YesNo) == DialogResult.No) return; //VCVC
+        
+            {
+                if (MessageBox.Show("등록 ㄱㄱ?", "데이터 등록", MessageBoxButtons.YesNo) == DialogResult.No) return; //VCVC
 
             
 
             
             string sName = dataGridView1.CurrentRow.Cells["NAME"].Value.ToString();
             string sClass = dataGridView1.CurrentRow.Cells["CLASS"].Value.ToString();
-            
+            string Date = dataGridView1.CurrentRow.Cells["ATTEDATE"].Value.ToString();
             string bAttend = null;
-            string sSD = dtpStart_atte.Text.ToString(); //date-time picker
-            string sED = dtpEnd_atte.Text.ToString();
-            string sNow = DateTime.Now.ToString();
-            string sExtra = null;
+           
+            
             
             
 
@@ -333,7 +341,7 @@ namespace ApplicationDev_Do
             {
                 bAttend = "N";
             }
-            sExtra = txtExtra.Text;
+            string sExtra = txtExtra.Text;
             
 
             
@@ -355,9 +363,9 @@ namespace ApplicationDev_Do
                                                 $"NAME = '{sName}',"          +
                                                 $"CLASS = '{sClass}',"        +
                                                 $"ATTE = '{bAttend}',"        +
-                                                $"ATTEDATE = ATTEDATE,"       +
+                                                $"ATTEDATE = '{Date}',"       +
                                                 $"EXTRA = '{sExtra}' "        +
-                                      $"  WHERE NAME = '{sName}' ";
+                                      $"  WHERE NAME = '{sName}'  AND ATTEDATE = '{Date}' ";
 
 
             cmd.ExecuteNonQuery(); //CRUD 실행함수
