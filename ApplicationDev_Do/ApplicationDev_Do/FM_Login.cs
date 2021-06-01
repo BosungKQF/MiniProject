@@ -118,11 +118,6 @@ namespace ApplicationDev_Do
 
             }
 
-
-
-
-
-
         }
 
         private void txtPW_KeyDown(object sender, KeyEventArgs e)
@@ -136,7 +131,8 @@ namespace ApplicationDev_Do
 
         private void label3_Click(object sender, EventArgs e)
         {
-            
+            FM_Credit credit = new FM_Credit();
+            credit.ShowDialog();
         }
     }
 }
