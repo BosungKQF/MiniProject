@@ -77,13 +77,18 @@
     <Compile Include="FM_Notice.Designer.cs">
       <DependentUpon>FM_Notice.cs</DependentUpon>
     </Compile>
-    <Compile Include="FM_Score.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FM_Score.Designer.cs">
-      <DependentUpon>FM_Score.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FM_Student.cs">
+	  <Compile Include="FM_Score.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="FM_Score.Designer.cs">
+		  <DependentUpon>FM_Score.cs</DependentUpon>
+	  </Compile>
+	  <Compile Include="FM_NoticeSend.cs">
+		  <SubType>Form</SubType>
+	  </Compile>
+	  <Compile Include="FM_NoticeSend.Designer.cs">
+		  <DependentUpon>FM_NoticeSend.cs</DependentUpon>
+	  </Compile>    <Compile Include="FM_Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FM_STUDENT.Designer.cs">
@@ -105,11 +110,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FM_Notice.resx">
       <DependentUpon>FM_Notice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FM_Score.resx">
-      <DependentUpon>FM_Score.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FM_STUDENT.resx">
+    </EmbeddedResource>    <EmbeddedResource Include="FM_STUDENT.resx">
       <DependentUpon>FM_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
