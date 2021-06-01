@@ -50,6 +50,7 @@ namespace ApplicationDev_Do
 
                 #region Variable Init
                 string StName = "";
+                string sAttendance = "";
                 if (Common.Permission == "S")
                 {
                     StName = Common.LogInName;
