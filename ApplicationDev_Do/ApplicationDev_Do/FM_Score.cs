@@ -164,10 +164,22 @@ namespace ApplicationDev_Do
             string sSCORE = dgvScore.CurrentRow.Cells["SCORE"].Value.ToString();
             string sGRADE = dgvScore.CurrentRow.Cells["GRADE"].Value.ToString();
 
-
-            if (int.Parse(sHW) > 20 || int.Parse(sPROJECT) > 30 || int.Parse(sFINAL) > 40 || int.Parse(sATTENDANCE) > 10)
+            try
             {
-                MessageBox.Show("최대 점수보다 높습니다.");
+                if (sSCORE == "") sSCORE = "0";
+                if (sHW == "") sHW = "0";
+                if (sPROJECT == "") sPROJECT = "0";
+                if (sFINAL == "") sFINAL = "0";
+                if (sATTENDANCE == "") sATTENDANCE = "0";
+                if (int.Parse(sHW) > 20 || int.Parse(sPROJECT) > 30 || int.Parse(sFINAL) > 40 || int.Parse(sATTENDANCE) > 10)
+                {
+                    MessageBox.Show("최대 점수보다 높습니다.");
+                    return;
+                }
+            }
+            catch  
+            {
+                MessageBox.Show("숫자로만 입력하세요");
                 return;
             }
 
