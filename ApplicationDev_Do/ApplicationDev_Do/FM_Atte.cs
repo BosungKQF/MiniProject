@@ -112,13 +112,24 @@ namespace ApplicationDev_Do
             transaction = connect.BeginTransaction("TESTTRAN");
             cmd.Transaction = transaction;
             cmd.Connection = connect;
-            cmd.CommandText = "INSERT INTO TB_5_ATT(STUDENTCODE, NAME, CLASS, ATTE,ATTEDATE,EXTRA) " +
+            try
+            {
+                cmd.CommandText = "INSERT INTO TB_5_ATT(STUDENTCODE, NAME, CLASS, ATTE,ATTEDATE,EXTRA) " +
                                       $"VALUES('{sSC}','{sSN}','{sCL}','{sAT}','{sDate}','{extra}')";
+                cmd.ExecuteNonQuery(); //CRUD 실행함수
+                                       //성공 시 DB COMMIT
+                transaction.Commit();
+                MessageBox.Show("성공입니다");
+            }
+            catch (Exception)
+            {
 
-            cmd.ExecuteNonQuery(); //CRUD 실행함수
-            //성공 시 DB COMMIT
-            transaction.Commit();
-            MessageBox.Show("성공입니다");
+                MessageBox.Show("오늘 이미 출석하셨습니다");
+            }
+           
+
+            
+            
             connect.Close();
             
         }
@@ -264,7 +275,7 @@ namespace ApplicationDev_Do
                 dataGridView1.Columns["NAME"].HeaderText = "이름";
                 dataGridView1.Columns["CLASS"].HeaderText = "반";
                 
-                dataGridView1.Columns["ATTE"].HeaderText = "출석여부";
+                
                 dataGridView1.Columns["ATTEDATE"].HeaderText = "출석일자";
                 dataGridView1.Columns["EXTRA"].HeaderText = "비고";
                 // 그리드 뷰의 폭 지정
@@ -317,10 +328,8 @@ namespace ApplicationDev_Do
             string sClass = dataGridView1.CurrentRow.Cells["CLASS"].Value.ToString();
             string Date = dataGridView1.CurrentRow.Cells["ATTEDATE"].Value.ToString();
             string bAttend = null;
-            string sSD = dtpStart_atte.Text.ToString(); //date-time picker
-            string sED = dtpEnd_atte.Text.ToString();
-            string sNow = DateTime.Now.ToString();
-            string sExtra = null;
+           
+            
             
             
 
@@ -332,7 +341,7 @@ namespace ApplicationDev_Do
             {
                 bAttend = "N";
             }
-            sExtra = txtExtra.Text;
+            string sExtra = txtExtra.Text;
             
 
             

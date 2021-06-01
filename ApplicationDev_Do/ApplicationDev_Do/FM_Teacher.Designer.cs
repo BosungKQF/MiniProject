@@ -76,7 +76,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Size = new System.Drawing.Size(1267, 197);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "학생 조회";
+            this.groupBox1.Text = "교사 관리";
             // 
             // txtUserCode
             // 
