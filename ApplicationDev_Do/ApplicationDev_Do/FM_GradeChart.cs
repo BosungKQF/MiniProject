@@ -23,10 +23,27 @@ namespace ApplicationDev_Do
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private Point mousePoint;
+
+        private void FM_GradeChart_MouseDown_1(object sender, MouseEventArgs e)
         {
-            this.Close();
+            if (e.Button == MouseButtons.Left)
+            {
+                mousePoint.X = e.X;
+                mousePoint.Y = e.Y;
+            }
         }
+
+        private void FM_GradeChart_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Location = new Point(this.Location.X + (e.X - mousePoint.X),
+
+                this.Location.Y + (e.Y - mousePoint.Y));
+            }
+        }
+
 
         private void FM_GradeChart_Load(object sender, EventArgs e)
         {
@@ -100,6 +117,11 @@ namespace ApplicationDev_Do
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
