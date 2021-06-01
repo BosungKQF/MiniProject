@@ -37,17 +37,23 @@ namespace Mini_Project4._3
                     return;
                 }
                 #endregion
+                string sCLASS = "";
+
+                if (rdB1.Checked == true) sCLASS = "스마트팩토리";
+                else if (rdB2.Checked == true) sCLASS = "빅데이터";
 
                 #region Fill Data
                 SqlDataAdapter Adapter = new SqlDataAdapter("SELECT USERCODE, " +
                                                                    "DIARYDATE, " +
                                                                    "CLASS, " +
                                                                    "DIARY, " +
-                                                                   "MAKEDATE, " +
+                                                                   "MAKEDATE, " + 
                                                                    "MAKER,  " +
                                                                    "EDITDATE, " +
                                                                    "EDITOR " +
-                                                                   "FROM TB_5_DIARY WITH(NOLOCK) ", Conn);
+                                                                   "FROM TB_5_DIARY WITH(NOLOCK) " +
+                                                                   " WHERE CLASS LIKE '%" + sCLASS + "%' ", Conn);
+
                 DataTable DtTemp = new DataTable();
                 Adapter.Fill(DtTemp);
                 #endregion
@@ -63,7 +69,7 @@ namespace Mini_Project4._3
                 #endregion
 
                 #region Column Set
-                dgvDiary.Columns["USERCODE"].HeaderText = "선생님 코드";
+                dgvDiary.Columns["USERCODE"].HeaderText = "선생님 이름";
                 dgvDiary.Columns["DIARYDATE"].HeaderText = "근무 일자";
                 dgvDiary.Columns["CLASS"].HeaderText = "반";
                 dgvDiary.Columns["DIARY"].HeaderText = "내용";
@@ -117,9 +123,9 @@ namespace Mini_Project4._3
             string sCLASS = "";
             string sMAKER = dgvDiary.CurrentRow.Cells["MAKER"].Value.ToString();
 
-            if (sTEACHERCODE == "" || sDIARYDATE == "")
+            if (txtDiary.Text == "")
             {
-                MessageBox.Show("'선생님 코드', '근무 일자', '반' 은 빈칸으로 남겨둘 수 없습니다.");
+                MessageBox.Show("근무 일지 내용을 비워둘 수 없습니다.");
                 return;
             }
 
@@ -149,11 +155,10 @@ namespace Mini_Project4._3
                              $"       DIARYDATE   = '{sDIARYDATE}',       " +
                              $"       CLASS    = '{sCLASS}',        " +
                              $"       DIARY  = '{txtDiary.Text}',      " +
-                             $"       MAKER    = '{sMAKER}',        " +
                              $"       EDITOR     = '{Common.LogInName}'," +
                              $"       EDITDATE   = GETDATE()           " +
-                             $" WHERE USERCODE  = '{sTEACHERCODE}'         " +
-                             " IF (@@ROWCOUNT =0)                     " +
+                             $" WHERE USERCODE  = '{sTEACHERCODE}' AND DIARYDATE = '{sDIARYDATE}' " +
+                             " IF (@@ROWCOUNT =0)                     " +   
                              " INSERT INTO TB_5_DIARY (USERCODE,     DIARYDATE,     CLASS,     DIARY,     MAKER,     MAKEDATE) " +
                              $"VALUES (               '{sTEACHERCODE}', '{sDIARYDATE}', '{sCLASS}', '{txtDiary.Text}', '{Common.LogInName}', GETDATE())";
             Cmd.ExecuteNonQuery();
@@ -163,7 +168,6 @@ namespace Mini_Project4._3
             MessageBox.Show("성공적으로 저장하였습니다.");
             Conn.Close();
         }
-
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -189,9 +193,9 @@ namespace Mini_Project4._3
             try
             {
                 string delCode = dgvDiary.CurrentRow.Cells["USERCODE"].Value.ToString();
-
+                string delCode2 = dgvDiary.CurrentRow.Cells["DIARYDATE"].Value.ToString();
                 #region Transaction Commit
-                Cmd.CommandText = $"DELETE TB_5_DIARY WHERE USERCODE = '{delCode}'";
+                Cmd.CommandText = $"DELETE TB_5_DIARY WHERE USERCODE = '{delCode}' AND DIARYDATE = '{delCode2}'";
                 Cmd.ExecuteNonQuery();
                 Txn.Commit();
                 #endregion
@@ -208,6 +212,11 @@ namespace Mini_Project4._3
             {
                 Conn.Close();
             }
+        }
+
+        private void dgvDiary_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
         }
     }
 }

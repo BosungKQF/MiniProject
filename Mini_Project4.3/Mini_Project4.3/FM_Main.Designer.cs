@@ -108,6 +108,7 @@ namespace ApplicationDev_Do
             this.btnDiary.Text = "근무일지";
             this.btnDiary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiary.UseVisualStyleBackColor = true;
+            this.btnDiary.Click += new System.EventHandler(this.btnDiary_Click);
             // 
             // panelInfoSubMenu
             // 
@@ -236,7 +237,7 @@ namespace ApplicationDev_Do
             // 
             // FM_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 731);
             this.Controls.Add(this.panelChildForm);
