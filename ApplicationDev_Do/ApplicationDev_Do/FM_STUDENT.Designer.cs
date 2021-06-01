@@ -293,6 +293,7 @@ namespace ApplicationDev_Do
             this.dataGridView1Grid.RowTemplate.Height = 27;
             this.dataGridView1Grid.Size = new System.Drawing.Size(1936, 368);
             this.dataGridView1Grid.TabIndex = 17;
+            this.dataGridView1Grid.DoubleClick += new System.EventHandler(this.dataGridView1Grid_DoubleClick);
             // 
             // FM_Student
             // 
