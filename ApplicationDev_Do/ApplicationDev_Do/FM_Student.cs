@@ -217,5 +217,13 @@ namespace ApplicationDev_Do
                 Conn.Close();
             }
         }
+
+        private void dataGridView1Grid_DoubleClick(object sender, EventArgs e)
+        {
+            Common.sCode = this.dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
+
+            FM_GradeChart grade = new FM_GradeChart();
+            grade.ShowDialog();
+        }
     }
 }

@@ -111,13 +111,13 @@ namespace Mini_Project4._3
             this.rdB2.Name = "rdB2";
             this.rdB2.Size = new System.Drawing.Size(88, 19);
             this.rdB2.TabIndex = 4;
-            this.rdB2.TabStop = true;
             this.rdB2.Text = "빅데이터";
             this.rdB2.UseVisualStyleBackColor = true;
             // 
             // rdB1
             // 
             this.rdB1.AutoSize = true;
+            this.rdB1.Checked = true;
             this.rdB1.Location = new System.Drawing.Point(117, 115);
             this.rdB1.Name = "rdB1";
             this.rdB1.Size = new System.Drawing.Size(118, 19);
@@ -157,6 +157,7 @@ namespace Mini_Project4._3
             this.dgvDiary.RowTemplate.Height = 23;
             this.dgvDiary.Size = new System.Drawing.Size(1170, 332);
             this.dgvDiary.TabIndex = 0;
+            this.dgvDiary.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiary_CellDoubleClick);
             // 
             // btnDelete
             // 
