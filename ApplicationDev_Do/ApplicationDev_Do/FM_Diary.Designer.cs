@@ -62,7 +62,7 @@ namespace ApplicationDev_Do
             this.txtDiary.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDiary.Multiline = true;
             this.txtDiary.Name = "txtDiary";
-            this.txtDiary.Size = new System.Drawing.Size(836, 261);
+            this.txtDiary.Size = new System.Drawing.Size(595, 261);
             this.txtDiary.TabIndex = 1;
             // 
             // groupBox1
@@ -79,7 +79,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1323, 372);
+            this.groupBox1.Size = new System.Drawing.Size(1086, 372);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "근무일지 작성";
@@ -145,7 +145,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox2.Size = new System.Drawing.Size(1323, 232);
+            this.groupBox2.Size = new System.Drawing.Size(1086, 232);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "근무일지 목록";
@@ -199,7 +199,8 @@ namespace ApplicationDev_Do
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1323, 960);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1086, 960);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox2);

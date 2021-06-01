@@ -10,16 +10,32 @@ using System.Windows.Forms;
 
 namespace ApplicationDev_Do
 {
-    public partial class Form1 : Form
+    public partial class FM_Credit : Form
     {
-        public Form1()
+        public FM_Credit()
         {
             InitializeComponent();
         }
 
-        private void Form1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private Point mousePoint;
+
+        private void FM_Credit_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void FM_Credit_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
         }
     }
 }
