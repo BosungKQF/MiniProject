@@ -132,10 +132,10 @@ namespace ApplicationDev_Do
                 btn_login_Click(null, null);
             }
         }
-
+       
         private void label3_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
