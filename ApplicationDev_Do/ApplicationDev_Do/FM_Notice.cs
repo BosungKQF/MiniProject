@@ -29,22 +29,23 @@ namespace ApplicationDev_Do
                     MessageBox.Show("데이터 베이스 연결에 실패 하였습니다.");
                     return;
                 }
-                
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT DISTINCT CLASS FROM TB_5_NOTICE", Conn);
+
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT N.NOTICEDATE" + 
+                                                            "     , N.USERNAME" + 
+                                                            "     , N.USERCODE" + 
+                                                            "     , S.CLASS" + 
+                                                            "     , N.MAKER" +
+                                                            "     , N.NOTICE " + 
+                                                            "  FROM TB_5_NOTICE AS N " + 
+                                                            "  LEFT OUTER JOIN TB_5_STUDENT AS S " +
+                                                            "    ON N.USERCODE = S.USERCODE", Conn);
                 DataTable dtTemp = new DataTable();
                 adapter.Fill(dtTemp);
 
-                
-
                 cboNoticeClass.DataSource = dtTemp;
                 cboNoticeClass.DisplayMember = "CLASS"; 
-                cboNoticeClass.ValueMember = "CLASS";   
-                cboNoticeClass.Text = "";
-
-                cboNoticeMaker.DataSource = dtTemp;
-                cboNoticeMaker.DisplayMember = "USERNAME"; 
-                cboNoticeMaker.ValueMember = "USERNAME";   
-                cboNoticeMaker.Text = "";
+                cboNoticeClass.ValueMember = "USERCODE";   
+  
 
 
                 dtpNoticStart.Text = string.Format("{0:yyyy-MM-01}", DateTime.Now);
@@ -85,7 +86,7 @@ namespace ApplicationDev_Do
                                                             "       CLASS,  " +
                                                             "       USERNAME,  " +
                                                             "       MAKER, " +
-                                                            "       NOTICE,  " +
+                                                            "       NOTICE  " +
                                                             "  FROM TB_5_NOTICE WITH(NOLOCK) " +
                                                             " WHERE CLASS LIKE '%" + sNoticeClass + "%' " +
                                                             "   AND MAKER LIKE '%" + sNoticeMaker + "%' " +

@@ -58,7 +58,7 @@ namespace ApplicationDev_Do
             // 
             // txtDiary
             // 
-            this.txtDiary.Location = new System.Drawing.Point(406, 63);
+            this.txtDiary.Location = new System.Drawing.Point(458, 63);
             this.txtDiary.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDiary.Multiline = true;
             this.txtDiary.Name = "txtDiary";
@@ -67,6 +67,9 @@ namespace ApplicationDev_Do
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.rdB2);
@@ -95,7 +98,7 @@ namespace ApplicationDev_Do
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(270, 275);
+            this.btnSave.Location = new System.Drawing.Point(336, 254);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 39);
@@ -107,7 +110,7 @@ namespace ApplicationDev_Do
             // rdB2
             // 
             this.rdB2.AutoSize = true;
-            this.rdB2.Location = new System.Drawing.Point(132, 213);
+            this.rdB2.Location = new System.Drawing.Point(38, 196);
             this.rdB2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdB2.Name = "rdB2";
             this.rdB2.Size = new System.Drawing.Size(90, 24);
@@ -119,7 +122,7 @@ namespace ApplicationDev_Do
             // 
             this.rdB1.AutoSize = true;
             this.rdB1.Checked = true;
-            this.rdB1.Location = new System.Drawing.Point(132, 153);
+            this.rdB1.Location = new System.Drawing.Point(38, 141);
             this.rdB1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdB1.Name = "rdB1";
             this.rdB1.Size = new System.Drawing.Size(120, 24);
@@ -164,7 +167,7 @@ namespace ApplicationDev_Do
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(270, 639);
+            this.btnDelete.Location = new System.Drawing.Point(336, 303);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(97, 39);
@@ -175,7 +178,7 @@ namespace ApplicationDev_Do
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(166, 639);
+            this.btnAdd.Location = new System.Drawing.Point(233, 301);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(97, 39);
@@ -186,7 +189,7 @@ namespace ApplicationDev_Do
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(63, 639);
+            this.btnSearch.Location = new System.Drawing.Point(233, 254);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(97, 39);
@@ -199,13 +202,13 @@ namespace ApplicationDev_Do
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1086, 960);
+            
+            
+            this.ClientSize = new System.Drawing.Size(1323, 960);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "FM_Diary";
