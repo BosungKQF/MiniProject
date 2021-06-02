@@ -117,6 +117,11 @@ namespace ApplicationDev_Do
             if (dgvDiary.Rows.Count == 0) return;
             if (MessageBox.Show("선택된 데이터를 저장하시겠습니까??", "Save", MessageBoxButtons.YesNo) == DialogResult.No) return;
 
+            if (rdB3.Checked == true)
+            {
+                MessageBox.Show("반을 선택해주세요.");
+                return;
+            }
             #region Variable Init
             string sTEACHERCODE = Common.LogInName;
             string sDIARYDATE = dtpDiary.Text;
@@ -214,9 +219,9 @@ namespace ApplicationDev_Do
             }
         }
 
-        private void dgvDiary_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvDiary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
+/*            txtDiary.Text = (string)dgvDiary.Columns.DataBoundItem;
+*/        }
     }
 }
