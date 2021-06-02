@@ -30,8 +30,6 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbStudent = new System.Windows.Forms.ListBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.cboNoticeClass = new System.Windows.Forms.ComboBox();
@@ -43,8 +41,6 @@ namespace ApplicationDev_Do
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.lbStudent);
             this.groupBox2.Controls.Add(this.btnSend);
             this.groupBox2.Controls.Add(this.cboNoticeClass);
@@ -60,29 +56,12 @@ namespace ApplicationDev_Do
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "받는 사람";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(96, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(587, 27);
-            this.textBox1.TabIndex = 12;
-            // 
             // lbStudent
             // 
             this.lbStudent.FormattingEnabled = true;
             this.lbStudent.ImeMode = System.Windows.Forms.ImeMode.On;
             this.lbStudent.ItemHeight = 20;
-            this.lbStudent.Location = new System.Drawing.Point(307, 28);
+            this.lbStudent.Location = new System.Drawing.Point(401, 37);
             this.lbStudent.Name = "lbStudent";
             this.lbStudent.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbStudent.Size = new System.Drawing.Size(136, 24);
@@ -107,7 +86,7 @@ namespace ApplicationDev_Do
             "전체",
             "스마트팩토리",
             "빅데이터"});
-            this.cboNoticeClass.Location = new System.Drawing.Point(96, 28);
+            this.cboNoticeClass.Location = new System.Drawing.Point(107, 37);
             this.cboNoticeClass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboNoticeClass.Name = "cboNoticeClass";
             this.cboNoticeClass.Size = new System.Drawing.Size(136, 28);
@@ -117,7 +96,7 @@ namespace ApplicationDev_Do
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 32);
+            this.label2.Location = new System.Drawing.Point(76, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 20);
             this.label2.TabIndex = 7;
@@ -126,7 +105,7 @@ namespace ApplicationDev_Do
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 32);
+            this.label1.Location = new System.Drawing.Point(356, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 6;
@@ -167,7 +146,5 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbStudent;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
