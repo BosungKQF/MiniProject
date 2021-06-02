@@ -57,6 +57,7 @@ namespace ApplicationDev_Do
 
         private void cboNoticeClass_SelectedValueChanged(object sender, EventArgs e)
         {
+            lbStudent.Items.Clear();
             #region Connection Open
             Conn = new SqlConnection(ConnInfo);
             Conn.Open();
