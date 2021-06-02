@@ -103,6 +103,7 @@ namespace ApplicationDev_Do
             this.dgvNotice.RowTemplate.Height = 23;
             this.dgvNotice.Size = new System.Drawing.Size(1022, 569);
             this.dgvNotice.TabIndex = 10;
+            this.dgvNotice.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNotice_CellMouseClick);
             // 
             // cboSNoticeClass
             // 

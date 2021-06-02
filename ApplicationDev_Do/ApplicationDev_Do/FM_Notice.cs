@@ -190,5 +190,11 @@ namespace ApplicationDev_Do
             }
             
         }
+
+        private void dgvNotice_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            NoticeDetail ND = new NoticeDetail();
+            ND.Show();
+        }
     }
 }
