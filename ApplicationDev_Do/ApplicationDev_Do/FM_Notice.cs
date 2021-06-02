@@ -30,9 +30,9 @@ namespace ApplicationDev_Do
                     return;
                 }
 
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT MAKER" +
-                                                            "     , CLASS" + 
-                                                            "     , MAKER" +
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT N.MAKER" +
+                                                            "     , S.CLASS" + 
+                                                            "   " +
                                                             "  FROM TB_5_STUDENT AS N " + 
                                                             "  LEFT OUTER JOIN TB_5_STUDENT AS S " +
                                                             "    ON N.USERCODE = S.USERCODE", Conn);
@@ -40,13 +40,13 @@ namespace ApplicationDev_Do
                 adapter.Fill(dtTemp);
 
                 cboNoticeClass.DataSource = dtTemp;
-                cboNoticeClass.DisplayMember = "CLASS"; 
-                cboNoticeClass.ValueMember = "CLASS";
-
+                cboNoticeClass.DisplayMember = "S.CLASS"; 
+                cboNoticeClass.ValueMember = "S.CLASS";
+                cboNoticeClass.Text = "";
                 cboNoticeMaker.DataSource = dtTemp;
-                cboNoticeMaker.DisplayMember = "MAKER";
-                cboNoticeMaker.ValueMember = "MAKER";
-
+                cboNoticeMaker.DisplayMember = "N.MAKER";
+                cboNoticeMaker.ValueMember = "N.MAKER";
+                cboNoticeMaker.Text = "";
 
 
                 dtpNoticStart.Text = string.Format("{0:yyyy-MM-01}", DateTime.Now);
