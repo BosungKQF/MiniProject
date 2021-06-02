@@ -22,36 +22,7 @@ namespace ApplicationDev_Do
         private void FM_Notice_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-
-                Conn = new SqlConnection(ConnInfo);
-                Conn.Open();
-
-                if (Conn.State != System.Data.ConnectionState.Open)
-                {
-                    MessageBox.Show("데이터 베이스 연결에 실패 하였습니다.");
-                    return;
-                }
-
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT DISTINCT CLASS FROM TB_5_STUDENT", Conn);
-                DataTable dtTemp = new DataTable();
-                adapter.Fill(dtTemp);
-
-
-                cboNoticeClass.DataSource = dtTemp;
-                cboNoticeClass.DisplayMember = "CLASS";
-                cboNoticeClass.ValueMember = "CLASS";
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-
-            }
+           
 
         }
 
@@ -93,7 +64,7 @@ namespace ApplicationDev_Do
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (rtxtNotice.Text.Length == 0) { MessageBox.Show("내용을 입력하세요"); return; }
-            if (MessageBox.Show("알림장을 보내시겠습니까?", "취소하였습니다",
+            if (MessageBox.Show("알림장을 보내시겠습니까?", "알림장전송",
                                  MessageBoxButtons.YesNo) == DialogResult.No) return;
 
 
@@ -101,6 +72,7 @@ namespace ApplicationDev_Do
             string sUserCode = string.Empty;
             string sMaker = string.Empty;
             string sNotice = string.Empty;
+            
             foreach (int i in lbStudent.SelectedIndices)
             {
 
