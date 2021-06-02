@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ApplicationDev_Do
@@ -58,10 +52,10 @@ namespace ApplicationDev_Do
 
 
 
-                cmbStudent_atte.DataSource = dtTemp;
-                cmbStudent_atte.DisplayMember = "NAME"; // 눈으로 보여줄 항목
-                cmbStudent_atte.ValueMember = "NAME"; // 실제 데이터를 처리할 코드 항목 
-                cmbStudent_atte.Text = "";
+                //cmbStudent_atte.DataSource = dtTemp;
+                //cmbStudent_atte.DisplayMember = "NAME"; // 눈으로 보여줄 항목
+                //cmbStudent_atte.ValueMember = "NAME"; // 실제 데이터를 처리할 코드 항목 
+                //cmbStudent_atte.Text = "";
 
             }
 
@@ -376,10 +370,38 @@ namespace ApplicationDev_Do
 
 
 
+        }
 
+        private void cmbClass_atte_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void cmbClass_atte_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            cmbStudent_atte.Items.Clear();
+            #region Connection Open
+            connect = new SqlConnection(strCon);
+            connect.Open();
+            #endregion
 
+            string sClass = cmbClass_atte.SelectedItem.ToString();
+            if (sClass == "전체") sClass = "";
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT  NAME FROM TB_5_STUDENT WHERE CLASS LIKE '%" + sClass + "%' ORDER BY CLASS, NAME", connect);
+            DataTable dtTemp = new DataTable();
+            adapter.Fill(dtTemp);
 
+            //lbStudent.DataSource = dtTemp;
+
+            //lbStudent.DisplayMember = "NAME";
+            //lbStudent.ValueMember = "NAME";
+
+            for (int i = 0; i < dtTemp.Rows.Count; i++)
+            {
+                cmbStudent_atte.Items.Add(dtTemp.Rows[i]["NAME"].ToString());
+            }
+
+            connect.Close();
         }
     }
 

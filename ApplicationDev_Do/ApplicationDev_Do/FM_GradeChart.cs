@@ -94,7 +94,7 @@ namespace ApplicationDev_Do
                 dgvGrade.Columns["FINAL"].HeaderText = "기말고사";
                 dgvGrade.Columns["ATTENDANCE"].HeaderText = "출석";
                 dgvGrade.Columns["SCORE"].HeaderText = "점수";
-                dgvGrade.Columns["GRADE"].HeaderText = "학점";
+                dgvGrade.Columns["GRADE"].HeaderText = "등급";
 
                 dgvGrade.Columns[0].Width = 100;
                 dgvGrade.Columns[1].Width = 100;

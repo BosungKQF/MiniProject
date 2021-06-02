@@ -28,7 +28,10 @@ namespace ApplicationDev_Do
                 btnDelete.Visible = false;
                 btnAdd.Visible = false;
             }
-
+            CbSemester.Items.Add("1분기");
+            CbSemester.Items.Add("2분기");
+            CbSemester.Items.Add("3분기");
+            CbSemester.Items.Add("4분기");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -63,6 +66,7 @@ namespace ApplicationDev_Do
                 }
 
                 string sSemester = CbSemester.Text;
+                
 
 
                 #endregion

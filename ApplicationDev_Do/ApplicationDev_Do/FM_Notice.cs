@@ -20,7 +20,7 @@ namespace ApplicationDev_Do
         {
             try
             {
-                
+
                 Conn = new SqlConnection(ConnInfo);
                 Conn.Open();
 
@@ -30,35 +30,23 @@ namespace ApplicationDev_Do
                     return;
                 }
 
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT MAKER" +
-                                                            "     , CLASS" + 
-                                                            "     , MAKER" +
-                                                            "  FROM TB_5_STUDENT AS N " + 
-                                                            "  LEFT OUTER JOIN TB_5_STUDENT AS S " +
-                                                            "    ON N.USERCODE = S.USERCODE", Conn);
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT DISTINCT CLASS FROM TB_5_STUDENT", Conn);
                 DataTable dtTemp = new DataTable();
                 adapter.Fill(dtTemp);
 
-                cboNoticeClass.DataSource = dtTemp;
-                cboNoticeClass.DisplayMember = "CLASS"; 
-                cboNoticeClass.ValueMember = "CLASS";
 
-                cboNoticeMaker.DataSource = dtTemp;
-                cboNoticeMaker.DisplayMember = "MAKER";
-                cboNoticeMaker.ValueMember = "MAKER";
+                cboSNoticeClass.DataSource = dtTemp;
+                cboSNoticeClass.DisplayMember = "CLASS";
+                cboSNoticeClass.ValueMember = "CLASS";
 
-
-
-                dtpNoticStart.Text = string.Format("{0:yyyy-MM-01}", DateTime.Now);
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
             finally
             {
-                Conn.Close();
+
             }
         }
 
@@ -77,8 +65,8 @@ namespace ApplicationDev_Do
                     return;
                 }
                 // 조회를 위한 파라매터 설정
-                string sNoticeClass = cboNoticeClass.Text;
-                string sNoticeMaker = cboNoticeMaker.Text;
+                string sNoticeClass = cboSNoticeClass.Text;
+                string sNoticeMaker = cboSNoticeMaker.Text;
                 string sNoticeStart = dtpNoticStart.Text;     
                 string sNoticeEnd = dtpNoticeEnd.Text;
                 
@@ -134,9 +122,26 @@ namespace ApplicationDev_Do
             }
         }
 
-        private void cboNoticeClass_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboSNoticeMaker_SelectedValueChanged(object sender, EventArgs e)
         {
+            #region Connection Open
+            Conn = new SqlConnection(ConnInfo);
+            Conn.Open();
+            #endregion
 
+            string sNoticeClass = cboSNoticeClass.SelectedItem.ToString();
+            if (sNoticeClass == "전체") sNoticeClass = "";
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT  NAME FROM TB_5_STUDENT WHERE CLASS LIKE '%" + sNoticeClass + "%' ORDER BY CLASS, NAME", Conn);
+            DataTable dtTemp = new DataTable();
+            adapter.Fill(dtTemp);
+
+
+            for (int i = 0; i < dtTemp.Rows.Count; i++)
+            {
+                cboSNoticeMaker.Items.Add(dtTemp.Rows[i]["STUDENT"].ToString());
+            }
+
+            Conn.Close();
         }
     }
 }
