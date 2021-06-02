@@ -47,13 +47,13 @@ namespace ApplicationDev_Do
                 adapter.Fill(dtTemp);
 
                 
-                cboNoticeClass.DataSource = dtTemp;
-                cboNoticeClass.DisplayMember = "CLASS"; 
-                cboNoticeClass.ValueMember = "CLASS";
+                cboSNoticeClass.DataSource = dtTemp;
+                cboSNoticeClass.DisplayMember = "CLASS"; 
+                cboSNoticeClass.ValueMember = "CLASS";
 
-                cboNoticeMaker.DataSource = dtTemp;
-                cboNoticeMaker.DisplayMember = "MAKER";
-                cboNoticeMaker.ValueMember = "MAKER";
+                cboSNoticeMaker.DataSource = dtTemp;
+                cboSNoticeMaker.DisplayMember = "MAKER";
+                cboSNoticeMaker.ValueMember = "MAKER";
 
 
 
@@ -95,7 +95,8 @@ namespace ApplicationDev_Do
                                                             "       USERNAME,  " +
                                                             "       MAKER, " +
                                                             "       NOTICE  " +
-                                                            "  FROM TB_5_NOTICE ", Conn);
+                                                            "  FROM TB_5_NOTICE " +
+                                                            $"WHERE CLASS = '{sNoticeClass}' AND MAKER = '{sNoticeMaker}'", Conn);
 
                 DataTable dtTemp = new DataTable();
                 Adapter.Fill(dtTemp);
