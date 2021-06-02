@@ -30,9 +30,9 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboSNoticeMaker = new System.Windows.Forms.ComboBox();
             this.btnNoticeSearch = new System.Windows.Forms.Button();
             this.dgvNotice = new System.Windows.Forms.DataGridView();
-            this.cboSNoticeMaker = new System.Windows.Forms.ComboBox();
             this.cboSNoticeClass = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,9 +46,9 @@ namespace ApplicationDev_Do
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboSNoticeMaker);
             this.groupBox1.Controls.Add(this.btnNoticeSearch);
             this.groupBox1.Controls.Add(this.dgvNotice);
-            this.groupBox1.Controls.Add(this.cboSNoticeMaker);
             this.groupBox1.Controls.Add(this.cboSNoticeClass);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -65,6 +65,14 @@ namespace ApplicationDev_Do
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "알림장 조회";
+            // 
+            // cboSNoticeMaker
+            // 
+            this.cboSNoticeMaker.FormattingEnabled = true;
+            this.cboSNoticeMaker.Location = new System.Drawing.Point(345, 46);
+            this.cboSNoticeMaker.Name = "cboSNoticeMaker";
+            this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 28);
+            this.cboSNoticeMaker.TabIndex = 12;
             // 
             // btnNoticeSearch
             // 
@@ -89,16 +97,6 @@ namespace ApplicationDev_Do
             this.dgvNotice.Size = new System.Drawing.Size(1022, 539);
             this.dgvNotice.TabIndex = 10;
             // 
-            // cboSNoticeMaker
-            // 
-            this.cboSNoticeMaker.FormattingEnabled = true;
-            this.cboSNoticeMaker.Location = new System.Drawing.Point(344, 48);
-            this.cboSNoticeMaker.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.cboSNoticeMaker.Name = "cboSNoticeMaker";
-            this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 28);
-            this.cboSNoticeMaker.TabIndex = 9;
-            this.cboSNoticeMaker.SelectedValueChanged += new System.EventHandler(this.cboSNoticeMaker_SelectedValueChanged);
-            // 
             // cboSNoticeClass
             // 
             this.cboSNoticeClass.FormattingEnabled = true;
@@ -111,6 +109,7 @@ namespace ApplicationDev_Do
             this.cboSNoticeClass.Name = "cboSNoticeClass";
             this.cboSNoticeClass.Size = new System.Drawing.Size(159, 28);
             this.cboSNoticeClass.TabIndex = 8;
+            this.cboSNoticeClass.SelectedValueChanged += new System.EventHandler(this.cboSNoticeClass_SelectedValueChanged);
             // 
             // label4
             // 
@@ -194,8 +193,8 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.DateTimePicker dtpNoticeEnd;
         private System.Windows.Forms.DateTimePicker dtpNoticStart;
         private System.Windows.Forms.DataGridView dgvNotice;
-        private System.Windows.Forms.ComboBox cboSNoticeMaker;
         private System.Windows.Forms.ComboBox cboSNoticeClass;
         private System.Windows.Forms.Button btnNoticeSearch;
+        private System.Windows.Forms.ComboBox cboSNoticeMaker;
     }
 }
