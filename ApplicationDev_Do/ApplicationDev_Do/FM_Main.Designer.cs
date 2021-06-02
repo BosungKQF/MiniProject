@@ -291,7 +291,7 @@ namespace ApplicationDev_Do
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "FM_Main";
-            this.Text = "FM_Main";
+            this.Text = "안가람IT 통합관리시스템";
             this.panelSideMenu.ResumeLayout(false);
             this.panelNoticeSubMenu.ResumeLayout(false);
             this.panelInfoSubMenu.ResumeLayout(false);
