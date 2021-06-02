@@ -207,7 +207,7 @@ namespace ApplicationDev_Do
             this.dgvDiary.RowTemplate.Height = 23;
             this.dgvDiary.Size = new System.Drawing.Size(1386, 448);
             this.dgvDiary.TabIndex = 0;
-            this.dgvDiary.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiary_CellDoubleClick);
+            this.dgvDiary.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiary_CellClick);
             // 
             // FM_Diary
             // 

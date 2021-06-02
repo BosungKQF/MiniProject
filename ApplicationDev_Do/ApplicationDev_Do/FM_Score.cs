@@ -24,6 +24,7 @@ namespace ApplicationDev_Do
             InitializeComponent();
             if (Common.Permission == "S")
             {
+                txtName.Enabled = false;
                 btnSave.Visible = false;
                 btnDelete.Visible = false;
                 btnAdd.Visible = false;
