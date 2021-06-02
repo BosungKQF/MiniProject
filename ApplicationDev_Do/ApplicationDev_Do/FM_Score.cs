@@ -51,6 +51,7 @@ namespace ApplicationDev_Do
                 #region Variable Init
                 string StName = "";
                 string sAttendance = "";
+                string sScore = "";
                 if (Common.Permission == "S")
                 {
                     StName = Common.LogInName;
@@ -108,10 +109,10 @@ namespace ApplicationDev_Do
 
 
 
-                dgvScore.Columns[0].Width = 100;
-                dgvScore.Columns[1].Width = 100;
-                dgvScore.Columns[2].Width = 200;
-                dgvScore.Columns[3].Width = 200;
+                dgvScore.Columns[0].Width = 150;
+                dgvScore.Columns[1].Width = 150;
+                dgvScore.Columns[2].Width = 100;
+                dgvScore.Columns[3].Width = 100;
                 dgvScore.Columns[4].Width = 100;
 
 
@@ -175,6 +176,7 @@ namespace ApplicationDev_Do
                 if (int.Parse(sHW) > 20 || int.Parse(sPROJECT) > 30 || int.Parse(sFINAL) > 40 || int.Parse(sATTENDANCE) > 10)
                 {
                     MessageBox.Show("최대 점수보다 높습니다.");
+
                     return;
                 }
             }
@@ -191,17 +193,24 @@ namespace ApplicationDev_Do
             if (sSTCODE == "" || sSEMESTER == "")
             {
                 MessageBox.Show("'학생 코드', '분기'는 빈칸으로 남겨둘 수 없습니다.");
+
                 return;
             }
 
             if (sSEMESTER == "") sSEMESTER = "1";
-
-            if (int.Parse(sSCORE) >= 90) sGRADE = "A";
-            else if (int.Parse(sSCORE) >= 80) sGRADE = "B";
-            else if (int.Parse(sSCORE) >= 70) sGRADE = "C";
-            else if (int.Parse(sSCORE) >= 60) sGRADE = "D";
-            else sGRADE = "F";
-
+            try
+            {
+                if (int.Parse(sSCORE) >= 90) sGRADE = "A";
+                else if (int.Parse(sSCORE) >= 80) sGRADE = "B";
+                else if (int.Parse(sSCORE) >= 70) sGRADE = "C";
+                else if (int.Parse(sSCORE) >= 60) sGRADE = "D";
+                else sGRADE = "F";
+            }
+            catch
+            {
+                MessageBox.Show("숫자로만 입력하세요");
+                return;
+            }
 
 
 
