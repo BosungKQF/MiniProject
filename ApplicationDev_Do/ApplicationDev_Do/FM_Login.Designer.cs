@@ -106,7 +106,7 @@ namespace ApplicationDev_Do
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApplicationDev_Do.Properties.Resources.LoginDesign;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(404, 768);
+            this.ClientSize = new System.Drawing.Size(399, 768);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

@@ -30,15 +30,34 @@ namespace ApplicationDev_Do
                     return;
                 }
 
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT DISTINCT CLASS FROM TB_5_STUDENT", Conn);
+
+
+
+
+
+
+                
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT MAKER" +
+                                                            "     , CLASS" + 
+                                                            "     , MAKER" +
+                                                            "  FROM TB_5_STUDENT AS N " + 
+                                                            "  LEFT OUTER JOIN TB_5_STUDENT AS S " +
+                                                            "    ON N.USERCODE = S.USERCODE", Conn);
                 DataTable dtTemp = new DataTable();
                 adapter.Fill(dtTemp);
 
-
+                
                 cboSNoticeClass.DataSource = dtTemp;
-                cboSNoticeClass.DisplayMember = "CLASS";
+                cboSNoticeClass.DisplayMember = "CLASS"; 
                 cboSNoticeClass.ValueMember = "CLASS";
 
+                cboSNoticeMaker.DataSource = dtTemp;
+                cboSNoticeMaker.DisplayMember = "MAKER";
+                cboSNoticeMaker.ValueMember = "MAKER";
+
+
+
+                dtpNoticStart.Text = string.Format("{0:yyyy-MM-01}", DateTime.Now);
             }
             catch (Exception ex)
             {
@@ -76,7 +95,8 @@ namespace ApplicationDev_Do
                                                             "       USERNAME,  " +
                                                             "       MAKER, " +
                                                             "       NOTICE  " +
-                                                            "  FROM TB_5_NOTICE ", Conn);
+                                                            "  FROM TB_5_NOTICE " +
+                                                            $"WHERE CLASS = '{sNoticeClass}' AND MAKER = '{sNoticeMaker}'", Conn);
 
                 DataTable dtTemp = new DataTable();
                 Adapter.Fill(dtTemp);
