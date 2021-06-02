@@ -58,20 +58,20 @@ namespace ApplicationDev_Do
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(914, 549);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox1.Size = new System.Drawing.Size(1028, 732);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "알림장 조회";
             // 
             // btnNoticeSearch
             // 
-            this.btnNoticeSearch.Location = new System.Drawing.Point(405, 84);
-            this.btnNoticeSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnNoticeSearch.Location = new System.Drawing.Point(456, 112);
+            this.btnNoticeSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnNoticeSearch.Name = "btnNoticeSearch";
-            this.btnNoticeSearch.Size = new System.Drawing.Size(111, 35);
+            this.btnNoticeSearch.Size = new System.Drawing.Size(125, 47);
             this.btnNoticeSearch.TabIndex = 11;
             this.btnNoticeSearch.Text = "조회";
             this.btnNoticeSearch.UseVisualStyleBackColor = true;
@@ -81,95 +81,96 @@ namespace ApplicationDev_Do
             // 
             this.dgvNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotice.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvNotice.Location = new System.Drawing.Point(3, 141);
-            this.dgvNotice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvNotice.Location = new System.Drawing.Point(3, 188);
+            this.dgvNotice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvNotice.Name = "dgvNotice";
             this.dgvNotice.RowHeadersWidth = 51;
             this.dgvNotice.RowTemplate.Height = 23;
-            this.dgvNotice.Size = new System.Drawing.Size(908, 404);
+            this.dgvNotice.Size = new System.Drawing.Size(1022, 539);
             this.dgvNotice.TabIndex = 10;
             // 
             // cboNoticeMaker
             // 
             this.cboNoticeMaker.FormattingEnabled = true;
-            this.cboNoticeMaker.Location = new System.Drawing.Point(306, 36);
-            this.cboNoticeMaker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboNoticeMaker.Location = new System.Drawing.Point(344, 48);
+            this.cboNoticeMaker.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cboNoticeMaker.Name = "cboNoticeMaker";
-            this.cboNoticeMaker.Size = new System.Drawing.Size(142, 23);
+            this.cboNoticeMaker.Size = new System.Drawing.Size(159, 28);
             this.cboNoticeMaker.TabIndex = 9;
             // 
             // cboNoticeClass
             // 
             this.cboNoticeClass.FormattingEnabled = true;
-            this.cboNoticeClass.Location = new System.Drawing.Point(65, 35);
-            this.cboNoticeClass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboNoticeClass.Location = new System.Drawing.Point(73, 47);
+            this.cboNoticeClass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cboNoticeClass.Name = "cboNoticeClass";
-            this.cboNoticeClass.Size = new System.Drawing.Size(142, 23);
+            this.cboNoticeClass.Size = new System.Drawing.Size(159, 28);
             this.cboNoticeClass.TabIndex = 8;
+            this.cboNoticeClass.SelectedIndexChanged += new System.EventHandler(this.cboNoticeClass_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(710, 42);
+            this.label4.Location = new System.Drawing.Point(799, 56);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 15);
+            this.label4.Size = new System.Drawing.Size(20, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "~";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(494, 41);
+            this.label3.Location = new System.Drawing.Point(556, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "보낸날짜";
             // 
             // dtpNoticeEnd
             // 
-            this.dtpNoticeEnd.Location = new System.Drawing.Point(732, 35);
-            this.dtpNoticeEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpNoticeEnd.Location = new System.Drawing.Point(824, 47);
+            this.dtpNoticeEnd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticeEnd.Name = "dtpNoticeEnd";
-            this.dtpNoticeEnd.Size = new System.Drawing.Size(143, 25);
+            this.dtpNoticeEnd.Size = new System.Drawing.Size(160, 27);
             this.dtpNoticeEnd.TabIndex = 5;
             this.dtpNoticeEnd.Value = new System.DateTime(2021, 5, 31, 0, 0, 0, 0);
             // 
             // dtpNoticStart
             // 
-            this.dtpNoticStart.Location = new System.Drawing.Point(566, 35);
-            this.dtpNoticStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dtpNoticStart.Location = new System.Drawing.Point(637, 47);
+            this.dtpNoticStart.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticStart.Name = "dtpNoticStart";
-            this.dtpNoticStart.Size = new System.Drawing.Size(141, 25);
+            this.dtpNoticStart.Size = new System.Drawing.Size(158, 27);
             this.dtpNoticStart.TabIndex = 4;
             this.dtpNoticStart.Value = new System.DateTime(2021, 5, 31, 0, 0, 0, 0);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(253, 41);
+            this.label2.Location = new System.Drawing.Point(285, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "작성자";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 41);
+            this.label1.Location = new System.Drawing.Point(44, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 15);
+            this.label1.Size = new System.Drawing.Size(24, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "반";
             // 
             // FM_Notice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(914, 562);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "FM_Notice";
             this.Text = "FM_Notice";
             this.groupBox1.ResumeLayout(false);
