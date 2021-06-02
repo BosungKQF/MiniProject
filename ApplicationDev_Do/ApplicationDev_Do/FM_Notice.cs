@@ -144,6 +144,12 @@ namespace ApplicationDev_Do
 
         private void cboSNoticeMaker_SelectedValueChanged(object sender, EventArgs e)
         {
+ 
+        }
+
+        private void cboSNoticeClass_SelectedValueChanged(object sender, EventArgs e)
+        {
+            cboSNoticeMaker.Items.Clear();
             #region Connection Open
             Conn = new SqlConnection(ConnInfo);
             Conn.Open();
@@ -151,14 +157,14 @@ namespace ApplicationDev_Do
 
             string sNoticeClass = cboSNoticeClass.SelectedItem.ToString();
             if (sNoticeClass == "전체") sNoticeClass = "";
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT  NAME FROM TB_5_STUDENT WHERE CLASS LIKE '%" + sNoticeClass + "%' ORDER BY CLASS, NAME", Conn);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT NAME FROM TB_5_STUDENT WHERE CLASS LIKE '%" + sNoticeClass + "%' ORDER BY CLASS, NAME", Conn);
             DataTable dtTemp = new DataTable();
             adapter.Fill(dtTemp);
 
 
             for (int i = 0; i < dtTemp.Rows.Count; i++)
             {
-                cboSNoticeMaker.Items.Add(dtTemp.Rows[i]["STUDENT"].ToString());
+                cboSNoticeMaker.Items.Add(dtTemp.Rows[i]["NAME"].ToString());
             }
 
             Conn.Close();
