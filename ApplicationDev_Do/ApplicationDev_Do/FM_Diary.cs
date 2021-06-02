@@ -42,7 +42,6 @@ namespace ApplicationDev_Do
                 if (rdB1.Checked == true) sCLASS = "스마트팩토리";
                 else if (rdB2.Checked == true) sCLASS = "빅데이터";
 
-
                 #region Fill Data
                 SqlDataAdapter Adapter = new SqlDataAdapter("SELECT USERCODE, " +
                                                                    "DIARYDATE, " +
