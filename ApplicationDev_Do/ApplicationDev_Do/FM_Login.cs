@@ -132,7 +132,7 @@ namespace ApplicationDev_Do
         private void label3_Click(object sender, EventArgs e)
         {
             FM_Credit credit = new FM_Credit();
-            credit.ShowDialog();
+            credit.Show();
         }
     }
 }

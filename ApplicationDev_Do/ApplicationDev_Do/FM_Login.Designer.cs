@@ -98,7 +98,6 @@ namespace ApplicationDev_Do
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "만든 사람";
-/*            this.label3.Click += new System.EventHandler(this.label3_Click);*/
             // 
             // FM_Login
             // 
@@ -106,7 +105,7 @@ namespace ApplicationDev_Do
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApplicationDev_Do.Properties.Resources.LoginDesign;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(404, 768);
+            this.ClientSize = new System.Drawing.Size(399, 768);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
