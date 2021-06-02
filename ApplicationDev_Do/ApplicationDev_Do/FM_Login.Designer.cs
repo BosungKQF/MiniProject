@@ -72,11 +72,11 @@ namespace ApplicationDev_Do
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("바탕", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(79, 98);
+            this.label1.Location = new System.Drawing.Point(95, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 33);
+            this.label1.Size = new System.Drawing.Size(203, 33);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Learner\'s Web";
+            this.label1.Text = "Angaram IT";
             // 
             // label2
             // 
@@ -106,7 +106,7 @@ namespace ApplicationDev_Do
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApplicationDev_Do.Properties.Resources.LoginDesign;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(399, 768);
+            this.ClientSize = new System.Drawing.Size(393, 768);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

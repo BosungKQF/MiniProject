@@ -110,7 +110,7 @@ namespace ApplicationDev_Do
                 Common.Permission = DtTemp.Rows[0]["PERMISSION"].ToString();
                 Common.Ucode = DtTemp.Rows[0]["USERCODE"].ToString();
                 Common.Class = DtTemp.Rows[0]["CLASS"].ToString();
-                //this.Tag = DtTemp.Rows[0]["PERMISSION"].ToString(); //요건 종료될때까지 살아있나? 아니다.
+               
                 this.Tag = DtTemp.Rows[0]["NAME"].ToString();
                 this.Close();
 
