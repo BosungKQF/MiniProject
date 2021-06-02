@@ -44,9 +44,12 @@ namespace ApplicationDev_Do
             this.btnAttend = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelNoticeSubMenu.SuspendLayout();
             this.panelInfoSubMenu.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -262,12 +265,22 @@ namespace ApplicationDev_Do
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.Transparent;
+            this.panelChildForm.BackColor = System.Drawing.Color.White;
+            this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1144, 775);
             this.panelChildForm.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ApplicationDev_Do.Properties.Resources.다운로드;
+            this.pictureBox1.Location = new System.Drawing.Point(904, 553);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 222);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FM_Main
             // 
@@ -282,6 +295,8 @@ namespace ApplicationDev_Do
             this.panelSideMenu.ResumeLayout(false);
             this.panelNoticeSubMenu.ResumeLayout(false);
             this.panelInfoSubMenu.ResumeLayout(false);
+            this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,5 +318,6 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.Panel panelNoticeSubMenu;
         private System.Windows.Forms.Button btnSearch_noti;
         private System.Windows.Forms.Button btnSend_noti;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

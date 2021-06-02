@@ -78,6 +78,7 @@ namespace ApplicationDev_Do
         private void button9_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Score());
+
         }
 
         private Form activeForm = null;
@@ -117,19 +118,19 @@ namespace ApplicationDev_Do
         private void btnSend_noti_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_NoticeSend());
-            hideSubMenu();
+            
         }
 
         private void btnSearch_noti_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Notice());
-            hideSubMenu();
+            
         }
 
         private void btnAttend_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Atte());
-            hideSubMenu();
+            
 
         }
 
@@ -142,7 +143,6 @@ namespace ApplicationDev_Do
         private void btnDiary_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Diary());
-            hideSubMenu();
         }
     }
 }
