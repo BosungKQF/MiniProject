@@ -68,7 +68,7 @@ namespace ApplicationDev_Do
             // 
             // btnNoticeSearch
             // 
-            this.btnNoticeSearch.Location = new System.Drawing.Point(456, 112);
+            this.btnNoticeSearch.Location = new System.Drawing.Point(452, 101);
             this.btnNoticeSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnNoticeSearch.Name = "btnNoticeSearch";
             this.btnNoticeSearch.Size = new System.Drawing.Size(125, 47);
@@ -81,12 +81,12 @@ namespace ApplicationDev_Do
             // 
             this.dgvNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotice.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvNotice.Location = new System.Drawing.Point(3, 188);
+            this.dgvNotice.Location = new System.Drawing.Point(3, 158);
             this.dgvNotice.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dgvNotice.Name = "dgvNotice";
             this.dgvNotice.RowHeadersWidth = 51;
             this.dgvNotice.RowTemplate.Height = 23;
-            this.dgvNotice.Size = new System.Drawing.Size(1022, 539);
+            this.dgvNotice.Size = new System.Drawing.Size(1022, 569);
             this.dgvNotice.TabIndex = 10;
             // 
             // cboSNoticeMaker
@@ -111,11 +111,12 @@ namespace ApplicationDev_Do
             this.cboSNoticeClass.Name = "cboSNoticeClass";
             this.cboSNoticeClass.Size = new System.Drawing.Size(159, 28);
             this.cboSNoticeClass.TabIndex = 8;
+            this.cboSNoticeClass.SelectedValueChanged += new System.EventHandler(this.cboSNoticeClass_SelectedValueChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(799, 56);
+            this.label4.Location = new System.Drawing.Point(792, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 20);
             this.label4.TabIndex = 7;
@@ -135,7 +136,7 @@ namespace ApplicationDev_Do
             this.dtpNoticeEnd.Location = new System.Drawing.Point(824, 47);
             this.dtpNoticeEnd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticeEnd.Name = "dtpNoticeEnd";
-            this.dtpNoticeEnd.Size = new System.Drawing.Size(160, 27);
+            this.dtpNoticeEnd.Size = new System.Drawing.Size(147, 27);
             this.dtpNoticeEnd.TabIndex = 5;
             this.dtpNoticeEnd.Value = new System.DateTime(2021, 5, 31, 0, 0, 0, 0);
             // 
@@ -144,7 +145,7 @@ namespace ApplicationDev_Do
             this.dtpNoticStart.Location = new System.Drawing.Point(637, 47);
             this.dtpNoticStart.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticStart.Name = "dtpNoticStart";
-            this.dtpNoticStart.Size = new System.Drawing.Size(158, 27);
+            this.dtpNoticStart.Size = new System.Drawing.Size(142, 27);
             this.dtpNoticStart.TabIndex = 4;
             this.dtpNoticStart.Value = new System.DateTime(2021, 5, 31, 0, 0, 0, 0);
             // 

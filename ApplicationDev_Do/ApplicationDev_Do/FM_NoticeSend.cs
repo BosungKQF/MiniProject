@@ -22,36 +22,7 @@ namespace ApplicationDev_Do
         private void FM_Notice_Load(object sender, EventArgs e)
         {
 
-            try
-            {
-
-                Conn = new SqlConnection(ConnInfo);
-                Conn.Open();
-
-                if (Conn.State != System.Data.ConnectionState.Open)
-                {
-                    MessageBox.Show("데이터 베이스 연결에 실패 하였습니다.");
-                    return;
-                }
-
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT DISTINCT CLASS FROM TB_5_STUDENT", Conn);
-                DataTable dtTemp = new DataTable();
-                adapter.Fill(dtTemp);
-
-
-                cboNoticeClass.DataSource = dtTemp;
-                cboNoticeClass.DisplayMember = "CLASS";
-                cboNoticeClass.ValueMember = "CLASS";
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-
-            }
+           
 
         }
 
