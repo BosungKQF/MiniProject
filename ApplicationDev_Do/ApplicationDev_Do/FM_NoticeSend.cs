@@ -64,7 +64,7 @@ namespace ApplicationDev_Do
         private void btnSend_Click(object sender, EventArgs e)
         {
             if (rtxtNotice.Text.Length == 0) { MessageBox.Show("내용을 입력하세요"); return; }
-            if (MessageBox.Show("알림장을 보내시겠습니까?", "취소하였습니다",
+            if (MessageBox.Show("알림장을 보내시겠습니까?", "알림장전송",
                                  MessageBoxButtons.YesNo) == DialogResult.No) return;
 
 
@@ -72,6 +72,7 @@ namespace ApplicationDev_Do
             string sUserCode = string.Empty;
             string sMaker = string.Empty;
             string sNotice = string.Empty;
+            
             foreach (int i in lbStudent.SelectedIndices)
             {
 

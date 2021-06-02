@@ -69,6 +69,13 @@ namespace ApplicationDev_Do
             // cboSNoticeMaker
             // 
             this.cboSNoticeMaker.FormattingEnabled = true;
+            this.cboSNoticeMaker.Items.AddRange(new object[] {
+            "전체",
+            "김현희",
+            "양기식",
+            "이시경",
+            "양경민",
+            "이상권"});
             this.cboSNoticeMaker.Location = new System.Drawing.Point(345, 46);
             this.cboSNoticeMaker.Name = "cboSNoticeMaker";
             this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 28);
@@ -109,7 +116,6 @@ namespace ApplicationDev_Do
             this.cboSNoticeClass.Name = "cboSNoticeClass";
             this.cboSNoticeClass.Size = new System.Drawing.Size(159, 28);
             this.cboSNoticeClass.TabIndex = 8;
-            this.cboSNoticeClass.SelectedValueChanged += new System.EventHandler(this.cboSNoticeClass_SelectedValueChanged);
             // 
             // label4
             // 
@@ -131,21 +137,23 @@ namespace ApplicationDev_Do
             // 
             // dtpNoticeEnd
             // 
+            this.dtpNoticeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNoticeEnd.Location = new System.Drawing.Point(824, 47);
             this.dtpNoticeEnd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticeEnd.Name = "dtpNoticeEnd";
             this.dtpNoticeEnd.Size = new System.Drawing.Size(147, 27);
             this.dtpNoticeEnd.TabIndex = 5;
-            this.dtpNoticeEnd.Value = new System.DateTime(2021, 5, 31, 0, 0, 0, 0);
+            this.dtpNoticeEnd.Value = new System.DateTime(2021, 6, 2, 0, 0, 0, 0);
             // 
             // dtpNoticStart
             // 
+            this.dtpNoticStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNoticStart.Location = new System.Drawing.Point(637, 47);
             this.dtpNoticStart.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticStart.Name = "dtpNoticStart";
             this.dtpNoticStart.Size = new System.Drawing.Size(142, 27);
             this.dtpNoticStart.TabIndex = 4;
-            this.dtpNoticStart.Value = new System.DateTime(2021, 5, 31, 0, 0, 0, 0);
+            this.dtpNoticStart.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             // 
             // label2
             // 
