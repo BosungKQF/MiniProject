@@ -7,6 +7,7 @@ namespace ApplicationDev_Do
 {
     public partial class NoticeDetail : Form
     {
+        
         #region Connection Init
         private SqlConnection Conn = null;
         private string ConnInfo = Common.DbPath;
@@ -24,6 +25,7 @@ namespace ApplicationDev_Do
                 Conn = new SqlConnection(ConnInfo);
                 Conn.Open();
 
+                rtxtNoticeDetail.ReadOnly = false;
                 if (Conn.State != System.Data.ConnectionState.Open)
                 {
                     MessageBox.Show("Failed to connect to database.");
