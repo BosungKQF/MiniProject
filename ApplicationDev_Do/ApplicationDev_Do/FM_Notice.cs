@@ -30,13 +30,10 @@ namespace ApplicationDev_Do
                     return;
                 }
 
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT N.NOTICEDATE" + 
-                                                            "     , N.USERNAME" + 
-                                                            "     , N.USERCODE" + 
-                                                            "     , S.CLASS" + 
-                                                            "     , N.MAKER" +
-                                                            "     , N.NOTICE " + 
-                                                            "  FROM TB_5_NOTICE AS N " + 
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT MAKER" +
+                                                            "     , CLASS" + 
+                                                            "     , MAKER" +
+                                                            "  FROM TB_5_STUDENT AS N " + 
                                                             "  LEFT OUTER JOIN TB_5_STUDENT AS S " +
                                                             "    ON N.USERCODE = S.USERCODE", Conn);
                 DataTable dtTemp = new DataTable();
@@ -44,8 +41,12 @@ namespace ApplicationDev_Do
 
                 cboNoticeClass.DataSource = dtTemp;
                 cboNoticeClass.DisplayMember = "CLASS"; 
-                cboNoticeClass.ValueMember = "USERCODE";   
-  
+                cboNoticeClass.ValueMember = "CLASS";
+
+                cboNoticeMaker.DataSource = dtTemp;
+                cboNoticeMaker.DisplayMember = "MAKER";
+                cboNoticeMaker.ValueMember = "MAKER";
+
 
 
                 dtpNoticStart.Text = string.Format("{0:yyyy-MM-01}", DateTime.Now);
@@ -87,10 +88,7 @@ namespace ApplicationDev_Do
                                                             "       USERNAME,  " +
                                                             "       MAKER, " +
                                                             "       NOTICE  " +
-                                                            "  FROM TB_5_NOTICE WITH(NOLOCK) " +
-                                                            " WHERE CLASS LIKE '%" + sNoticeClass + "%' " +
-                                                            "   AND MAKER LIKE '%" + sNoticeMaker + "%' " +
-                                                            "   AND NOTICEDATE BETWEEN '" + sNoticeStart + "' AND '" + sNoticeEnd + "'", Conn);
+                                                            "  FROM TB_5_NOTICE ", Conn);
 
                 DataTable dtTemp = new DataTable();
                 Adapter.Fill(dtTemp);
@@ -134,6 +132,11 @@ namespace ApplicationDev_Do
             {
                 Conn.Close();
             }
+        }
+
+        private void cboNoticeClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

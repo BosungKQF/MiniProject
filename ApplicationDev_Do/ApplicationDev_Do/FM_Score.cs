@@ -120,6 +120,7 @@ namespace ApplicationDev_Do
                 {
                     dgvScore.Columns["USERCODE"].ReadOnly = true;
                     dgvScore.Columns["SEMESTER"].ReadOnly = true;
+                    dgvScore.Columns["NAME"].ReadOnly = true;
                     dgvScore.Columns["HW"].ReadOnly = true;
                     dgvScore.Columns["PROJECT"].ReadOnly = true;
                     dgvScore.Columns["FINAL"].ReadOnly = true;
