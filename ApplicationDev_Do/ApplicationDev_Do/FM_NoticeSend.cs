@@ -68,10 +68,6 @@ namespace ApplicationDev_Do
             DataTable dtTemp = new DataTable();
             adapter.Fill(dtTemp);
 
-            //lbStudent.DataSource = dtTemp;
-
-            //lbStudent.DisplayMember = "NAME";
-            //lbStudent.ValueMember = "NAME";
 
             for (int i = 0; i < dtTemp.Rows.Count; i++)
             {
@@ -86,16 +82,11 @@ namespace ApplicationDev_Do
         {
             lbStudent.Size = new System.Drawing.Size(136, 280);
             lbStudent.BringToFront();
-            textBox1.ReadOnly = false;
         }
 
         private void rtxtNotice_Click(object sender, EventArgs e)
         {
-
             lbStudent.Size = new System.Drawing.Size(136, 28);
-
-            textBox1.ReadOnly = true;
-
         }
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -119,8 +110,8 @@ namespace ApplicationDev_Do
                 adapter.Fill(dtTemp);
 
                 sStudent = lbStudent.Items[i].ToString();
-                sUserCode = dtTemp.Columns[0].ToString();
-                sMaker = Common.LogInId;
+                sUserCode = dtTemp.Rows[0]["USERCODE"].ToString();
+                sMaker = Common.LogInName;
                 sNotice = rtxtNotice.Text;
 
                 SqlCommand cmd = new SqlCommand();

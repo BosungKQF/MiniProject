@@ -32,8 +32,8 @@ namespace ApplicationDev_Do
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNoticeSearch = new System.Windows.Forms.Button();
             this.dgvNotice = new System.Windows.Forms.DataGridView();
-            this.cboNoticeMaker = new System.Windows.Forms.ComboBox();
-            this.cboNoticeClass = new System.Windows.Forms.ComboBox();
+            this.cboSNoticeMaker = new System.Windows.Forms.ComboBox();
+            this.cboSNoticeClass = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpNoticeEnd = new System.Windows.Forms.DateTimePicker();
@@ -48,8 +48,8 @@ namespace ApplicationDev_Do
             // 
             this.groupBox1.Controls.Add(this.btnNoticeSearch);
             this.groupBox1.Controls.Add(this.dgvNotice);
-            this.groupBox1.Controls.Add(this.cboNoticeMaker);
-            this.groupBox1.Controls.Add(this.cboNoticeClass);
+            this.groupBox1.Controls.Add(this.cboSNoticeMaker);
+            this.groupBox1.Controls.Add(this.cboSNoticeClass);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtpNoticeEnd);
@@ -89,24 +89,28 @@ namespace ApplicationDev_Do
             this.dgvNotice.Size = new System.Drawing.Size(1022, 539);
             this.dgvNotice.TabIndex = 10;
             // 
-            // cboNoticeMaker
+            // cboSNoticeMaker
             // 
-            this.cboNoticeMaker.FormattingEnabled = true;
-            this.cboNoticeMaker.Location = new System.Drawing.Point(344, 48);
-            this.cboNoticeMaker.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.cboNoticeMaker.Name = "cboNoticeMaker";
-            this.cboNoticeMaker.Size = new System.Drawing.Size(159, 28);
-            this.cboNoticeMaker.TabIndex = 9;
+            this.cboSNoticeMaker.FormattingEnabled = true;
+            this.cboSNoticeMaker.Location = new System.Drawing.Point(344, 48);
+            this.cboSNoticeMaker.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.cboSNoticeMaker.Name = "cboSNoticeMaker";
+            this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 28);
+            this.cboSNoticeMaker.TabIndex = 9;
+            this.cboSNoticeMaker.SelectedValueChanged += new System.EventHandler(this.cboSNoticeMaker_SelectedValueChanged);
             // 
-            // cboNoticeClass
+            // cboSNoticeClass
             // 
-            this.cboNoticeClass.FormattingEnabled = true;
-            this.cboNoticeClass.Location = new System.Drawing.Point(73, 47);
-            this.cboNoticeClass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.cboNoticeClass.Name = "cboNoticeClass";
-            this.cboNoticeClass.Size = new System.Drawing.Size(159, 28);
-            this.cboNoticeClass.TabIndex = 8;
-            this.cboNoticeClass.SelectedIndexChanged += new System.EventHandler(this.cboNoticeClass_SelectedIndexChanged);
+            this.cboSNoticeClass.FormattingEnabled = true;
+            this.cboSNoticeClass.Items.AddRange(new object[] {
+            "전체",
+            "스마트팩토리",
+            "빅데이터"});
+            this.cboSNoticeClass.Location = new System.Drawing.Point(73, 47);
+            this.cboSNoticeClass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.cboSNoticeClass.Name = "cboSNoticeClass";
+            this.cboSNoticeClass.Size = new System.Drawing.Size(159, 28);
+            this.cboSNoticeClass.TabIndex = 8;
             // 
             // label4
             // 
@@ -190,8 +194,8 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.DateTimePicker dtpNoticeEnd;
         private System.Windows.Forms.DateTimePicker dtpNoticStart;
         private System.Windows.Forms.DataGridView dgvNotice;
-        private System.Windows.Forms.ComboBox cboNoticeMaker;
-        private System.Windows.Forms.ComboBox cboNoticeClass;
+        private System.Windows.Forms.ComboBox cboSNoticeMaker;
+        private System.Windows.Forms.ComboBox cboSNoticeClass;
         private System.Windows.Forms.Button btnNoticeSearch;
     }
 }
