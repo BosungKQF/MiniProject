@@ -40,11 +40,6 @@ namespace ApplicationDev_Do
                 
             }
         }
-    
-
-
-      
-
         #region customizeDesign
 
         private void customizeDesign()
@@ -57,6 +52,10 @@ namespace ApplicationDev_Do
             if (panelInfoSubMenu.Visible == true)
             {
                 panelInfoSubMenu.Visible = false;
+            }
+            if (panelNoticeSubMenu.Visible = true)
+            {
+                panelNoticeSubMenu.Visible = false;
             }
         }
         private void showSubMenu(Panel subMenu)
@@ -95,7 +94,7 @@ namespace ApplicationDev_Do
             childForm.Show();
 
         }
-        #endregion
+
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
@@ -117,13 +116,11 @@ namespace ApplicationDev_Do
         private void btnSend_noti_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_NoticeSend());
-            hideSubMenu();
         }
 
         private void btnSearch_noti_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Notice());
-            hideSubMenu();
         }
 
         private void btnAttend_Click(object sender, EventArgs e)
@@ -144,5 +141,6 @@ namespace ApplicationDev_Do
             openChildForm(new FM_Diary());
             hideSubMenu();
         }
+        #endregion
     }
 }

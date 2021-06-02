@@ -217,7 +217,7 @@ namespace ApplicationDev_Do
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(146, 27);
             this.dtpStart.TabIndex = 20;
-            this.dtpStart.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtpStart.Value = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
             // 
             // groupBox3
             // 
