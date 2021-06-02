@@ -43,8 +43,6 @@ namespace ApplicationDev_Do
                 cboNoticeClass.DisplayMember = "CLASS";
                 cboNoticeClass.ValueMember = "CLASS";
 
-
-
             }
             catch (Exception ex)
             {
