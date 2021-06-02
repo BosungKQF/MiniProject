@@ -112,7 +112,6 @@ namespace ApplicationDev_Do
 
         private void btnNotice_Click(object sender, EventArgs e)
         {
-            openChildForm(new FM_Notice());
             showSubMenu(panelNoticeSubMenu);
         }
 

@@ -30,6 +30,7 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cmbStudent_atte = new System.Windows.Forms.ComboBox();
             this.cmbClass_atte = new System.Windows.Forms.ComboBox();
             this.dtpEnd_atte = new System.Windows.Forms.DateTimePicker();
@@ -46,7 +47,6 @@ namespace ApplicationDev_Do
             this.rbAbs = new System.Windows.Forms.RadioButton();
             this.rbAtte = new System.Windows.Forms.RadioButton();
             this.txtExtra = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Groupbox_ATTE.SuspendLayout();
@@ -70,6 +70,15 @@ namespace ApplicationDev_Do
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(592, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "~";
+            // 
             // cmbStudent_atte
             // 
             this.cmbStudent_atte.FormattingEnabled = true;
@@ -82,12 +91,15 @@ namespace ApplicationDev_Do
             // 
             this.cmbClass_atte.FormattingEnabled = true;
             this.cmbClass_atte.Items.AddRange(new object[] {
+            "전체",
             "스마트팩토리",
             "빅데이터"});
             this.cmbClass_atte.Location = new System.Drawing.Point(86, 20);
             this.cmbClass_atte.Name = "cmbClass_atte";
             this.cmbClass_atte.Size = new System.Drawing.Size(329, 28);
             this.cmbClass_atte.TabIndex = 5;
+            this.cmbClass_atte.SelectedIndexChanged += new System.EventHandler(this.cmbClass_atte_SelectedValueChanged);
+            this.cmbClass_atte.SelectedValueChanged += new System.EventHandler(this.cmbClass_atte_SelectedValueChanged_1);
             // 
             // dtpEnd_atte
             // 
@@ -225,15 +237,6 @@ namespace ApplicationDev_Do
             this.txtExtra.Name = "txtExtra";
             this.txtExtra.Size = new System.Drawing.Size(298, 27);
             this.txtExtra.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(592, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "~";
             // 
             // FM_Atte
             // 
