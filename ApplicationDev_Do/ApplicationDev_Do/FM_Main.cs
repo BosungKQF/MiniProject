@@ -11,7 +11,8 @@ namespace ApplicationDev_Do
         {
             InitializeComponent();
             customizeDesign();
-            FM_Login Login = new FM_Login();
+            //FM_Login Login = new FM_Login();
+            LogIN Login = new LogIN();
 
             Login.ShowDialog();
 

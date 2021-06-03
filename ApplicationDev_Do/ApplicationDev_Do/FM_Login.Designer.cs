@@ -33,7 +33,7 @@ namespace ApplicationDev_Do
             this.txtUID = new System.Windows.Forms.TextBox();
             this.txtPW = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@ namespace ApplicationDev_Do
             // txtUID
             // 
             this.txtUID.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUID.Location = new System.Drawing.Point(69, 175);
+            this.txtUID.Location = new System.Drawing.Point(66, 202);
             this.txtUID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUID.Name = "txtUID";
             this.txtUID.Size = new System.Drawing.Size(237, 27);
@@ -52,7 +52,7 @@ namespace ApplicationDev_Do
             // 
             // txtPW
             // 
-            this.txtPW.Location = new System.Drawing.Point(69, 251);
+            this.txtPW.Location = new System.Drawing.Point(66, 272);
             this.txtPW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPW.Name = "txtPW";
             this.txtPW.PasswordChar = '*';
@@ -62,7 +62,7 @@ namespace ApplicationDev_Do
             // 
             // btn_login
             // 
-            this.btn_login.Location = new System.Drawing.Point(132, 359);
+            this.btn_login.Location = new System.Drawing.Point(129, 366);
             this.btn_login.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(119, 32);
@@ -71,16 +71,16 @@ namespace ApplicationDev_Do
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(363, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "X";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(363, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "X";
+            this.label6.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -97,9 +97,9 @@ namespace ApplicationDev_Do
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ApplicationDev_Do.Properties.Resources.qqemge_nmjq_h08kbt_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(240, 543);
+            this.pictureBox1.Location = new System.Drawing.Point(248, 556);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(152, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -110,7 +110,7 @@ namespace ApplicationDev_Do
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(69, 139);
+            this.label1.Location = new System.Drawing.Point(66, 166);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 28);
             this.label1.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace ApplicationDev_Do
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(69, 218);
+            this.label4.Location = new System.Drawing.Point(66, 239);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 28);
             this.label4.TabIndex = 8;
@@ -139,7 +139,7 @@ namespace ApplicationDev_Do
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txtPW);
             this.Controls.Add(this.txtUID);
@@ -160,7 +160,7 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.TextBox txtUID;
         private System.Windows.Forms.TextBox txtPW;
         private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
