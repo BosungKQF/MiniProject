@@ -61,7 +61,7 @@ namespace ApplicationDev_Do
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 136);
+            this.dataGridView1.Size = new System.Drawing.Size(827, 223);
             this.dataGridView1.TabIndex = 1;
             // 
             // Groupbox_ATTE
@@ -69,15 +69,15 @@ namespace ApplicationDev_Do
             this.Groupbox_ATTE.Controls.Add(this.btnAtte_Atte);
             this.Groupbox_ATTE.Controls.Add(this.btnSearch_Atte);
             this.Groupbox_ATTE.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Groupbox_ATTE.Location = new System.Drawing.Point(0, 249);
+            this.Groupbox_ATTE.Location = new System.Drawing.Point(0, 336);
             this.Groupbox_ATTE.Name = "Groupbox_ATTE";
-            this.Groupbox_ATTE.Size = new System.Drawing.Size(800, 89);
+            this.Groupbox_ATTE.Size = new System.Drawing.Size(827, 117);
             this.Groupbox_ATTE.TabIndex = 2;
             this.Groupbox_ATTE.TabStop = false;
             // 
             // btnAtte_Atte
             // 
-            this.btnAtte_Atte.Location = new System.Drawing.Point(291, 23);
+            this.btnAtte_Atte.Location = new System.Drawing.Point(430, 41);
             this.btnAtte_Atte.Name = "btnAtte_Atte";
             this.btnAtte_Atte.Size = new System.Drawing.Size(240, 50);
             this.btnAtte_Atte.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace ApplicationDev_Do
             // 
             // btnSearch_Atte
             // 
-            this.btnSearch_Atte.Location = new System.Drawing.Point(25, 23);
+            this.btnSearch_Atte.Location = new System.Drawing.Point(119, 41);
             this.btnSearch_Atte.Name = "btnSearch_Atte";
             this.btnSearch_Atte.Size = new System.Drawing.Size(243, 50);
             this.btnSearch_Atte.TabIndex = 0;
@@ -97,7 +97,7 @@ namespace ApplicationDev_Do
             // 
             // btnSave_Atte
             // 
-            this.btnSave_Atte.Location = new System.Drawing.Point(554, 26);
+            this.btnSave_Atte.Location = new System.Drawing.Point(518, 26);
             this.btnSave_Atte.Name = "btnSave_Atte";
             this.btnSave_Atte.Size = new System.Drawing.Size(242, 47);
             this.btnSave_Atte.TabIndex = 2;
@@ -112,9 +112,9 @@ namespace ApplicationDev_Do
             this.groupBox2.Controls.Add(this.txtExtra);
             this.groupBox2.Controls.Add(this.btnSave_Atte);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 338);
+            this.groupBox2.Location = new System.Drawing.Point(0, 453);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(800, 112);
+            this.groupBox2.Size = new System.Drawing.Size(827, 97);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -142,7 +142,7 @@ namespace ApplicationDev_Do
             // 
             // txtExtra
             // 
-            this.txtExtra.Location = new System.Drawing.Point(233, 45);
+            this.txtExtra.Location = new System.Drawing.Point(171, 36);
             this.txtExtra.Name = "txtExtra";
             this.txtExtra.Size = new System.Drawing.Size(298, 27);
             this.txtExtra.TabIndex = 3;
@@ -234,7 +234,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 113);
+            this.groupBox1.Size = new System.Drawing.Size(827, 113);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -242,7 +242,7 @@ namespace ApplicationDev_Do
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(827, 550);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Groupbox_ATTE);
             this.Controls.Add(this.dataGridView1);

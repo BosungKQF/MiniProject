@@ -114,9 +114,9 @@ namespace ApplicationDev_Do
             // CbSemester
             // 
             this.CbSemester.FormattingEnabled = true;
-            this.CbSemester.Location = new System.Drawing.Point(150, 125);
+            this.CbSemester.Location = new System.Drawing.Point(146, 125);
             this.CbSemester.Name = "CbSemester";
-            this.CbSemester.Size = new System.Drawing.Size(151, 28);
+            this.CbSemester.Size = new System.Drawing.Size(155, 28);
             this.CbSemester.TabIndex = 7;
             // 
             // groupBox2

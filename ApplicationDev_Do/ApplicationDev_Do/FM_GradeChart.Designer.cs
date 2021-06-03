@@ -75,6 +75,7 @@ namespace ApplicationDev_Do
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1137, 210);
             this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FM_GradeChart";
             this.Text = "FM_GradeChart";
             this.Load += new System.EventHandler(this.FM_GradeChart_Load);
