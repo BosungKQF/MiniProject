@@ -21,13 +21,7 @@ namespace ApplicationDev_Do
         }
 
         public int failcount = 0;
-        private void txtPW_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btn_login_Click_1(null, null);
-            }
-        }
+        
 
 
         private void label3_Click(object sender, EventArgs e)
@@ -124,6 +118,47 @@ namespace ApplicationDev_Do
 
                 Connect.Close();
 
+            }
+        }
+        private Point mousePoint;
+        private void LogIN_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void LogIN_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
+            }
+        }
+
+        private void LogIN_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtPW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login_Click_1(null, null);
+            }
+        }
+        
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mousePoint = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            {
+                Location = new Point(this.Left - (mousePoint.X - e.X),
+                    this.Top - (mousePoint.Y - e.Y));
             }
         }
     }
