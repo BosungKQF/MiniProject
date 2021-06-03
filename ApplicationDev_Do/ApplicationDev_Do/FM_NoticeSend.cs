@@ -19,12 +19,6 @@ namespace ApplicationDev_Do
             InitializeComponent();
 
         }
-        private void FM_Notice_Load(object sender, EventArgs e)
-        {
-
-           
-
-        }
 
         private void cboNoticeClass_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -87,7 +81,6 @@ namespace ApplicationDev_Do
                 sMaker = Common.LogInName;
                 sNotice = rtxtNotice.Text;
                 string sNoticedate = System.DateTime.Now.ToString("yyyy-MM-dd");
-
                 SqlCommand cmd = new SqlCommand();
                 SqlTransaction Tran;
                 Tran = Conn.BeginTransaction("TestTran");

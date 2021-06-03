@@ -33,8 +33,12 @@ namespace ApplicationDev_Do
 
         private void FM_Atte_Load(object sender, EventArgs e)
         {
+            if (Common.Permission == "M" || Common.Permission == "T")
+            {
+                btnAtte_Atte.Visible = false;
+            }
 
-            
+
             try
             {
 
@@ -52,16 +56,11 @@ namespace ApplicationDev_Do
 
 
 
-                //cmbStudent_atte.DataSource = dtTemp;
-                //cmbStudent_atte.DisplayMember = "NAME"; // 눈으로 보여줄 항목
-                //cmbStudent_atte.ValueMember = "NAME"; // 실제 데이터를 처리할 코드 항목 
-                //cmbStudent_atte.Text = "";
+               
 
             }
 
-            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT DISTINCT ITEMDETAIL FROM TB_TESTITEM_KBS ", connect);
-            //DataTable dtTemp = new DataTable();
-            //adapter.Fill(dtTemp);
+            
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
@@ -74,11 +73,7 @@ namespace ApplicationDev_Do
 
         private void btnAtte_Atte_Click(object sender, EventArgs e)
         {
-            if (Common.Permission == "M" ||Common.Permission== "T")
-            {
-                MessageBox.Show("선생님께서는 출석하지 않으셔도 됩니다.");
-                return;
-            }
+            
             
             
             
