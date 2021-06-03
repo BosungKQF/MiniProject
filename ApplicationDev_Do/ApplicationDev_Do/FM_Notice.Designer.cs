@@ -80,6 +80,7 @@ namespace ApplicationDev_Do
             this.cboSNoticeMaker.Name = "cboSNoticeMaker";
             this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 28);
             this.cboSNoticeMaker.TabIndex = 12;
+            this.cboSNoticeMaker.Text = "전체";
             // 
             // btnNoticeSearch
             // 
@@ -117,6 +118,7 @@ namespace ApplicationDev_Do
             this.cboSNoticeClass.Name = "cboSNoticeClass";
             this.cboSNoticeClass.Size = new System.Drawing.Size(159, 28);
             this.cboSNoticeClass.TabIndex = 8;
+            this.cboSNoticeClass.Text = "전체";
             // 
             // label4
             // 

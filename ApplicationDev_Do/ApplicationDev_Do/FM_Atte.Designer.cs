@@ -77,32 +77,35 @@ namespace ApplicationDev_Do
             // 
             // btnAtte_Atte
             // 
-            this.btnAtte_Atte.Location = new System.Drawing.Point(430, 41);
+            this.btnAtte_Atte.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAtte_Atte.Location = new System.Drawing.Point(291, 23);
             this.btnAtte_Atte.Name = "btnAtte_Atte";
             this.btnAtte_Atte.Size = new System.Drawing.Size(240, 50);
             this.btnAtte_Atte.TabIndex = 1;
             this.btnAtte_Atte.Text = "출석";
-            this.btnAtte_Atte.UseVisualStyleBackColor = true;
+            this.btnAtte_Atte.UseVisualStyleBackColor = false;
             this.btnAtte_Atte.Click += new System.EventHandler(this.btnAtte_Atte_Click);
             // 
             // btnSearch_Atte
             // 
-            this.btnSearch_Atte.Location = new System.Drawing.Point(119, 41);
+            this.btnSearch_Atte.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSearch_Atte.Location = new System.Drawing.Point(25, 23);
             this.btnSearch_Atte.Name = "btnSearch_Atte";
             this.btnSearch_Atte.Size = new System.Drawing.Size(243, 50);
             this.btnSearch_Atte.TabIndex = 0;
             this.btnSearch_Atte.Text = "조회";
-            this.btnSearch_Atte.UseVisualStyleBackColor = true;
+            this.btnSearch_Atte.UseVisualStyleBackColor = false;
             this.btnSearch_Atte.Click += new System.EventHandler(this.btnSearch_Atte_Click);
             // 
             // btnSave_Atte
             // 
-            this.btnSave_Atte.Location = new System.Drawing.Point(518, 26);
+            this.btnSave_Atte.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSave_Atte.Location = new System.Drawing.Point(554, 26);
             this.btnSave_Atte.Name = "btnSave_Atte";
             this.btnSave_Atte.Size = new System.Drawing.Size(242, 47);
             this.btnSave_Atte.TabIndex = 2;
             this.btnSave_Atte.Text = "변경사항 저장";
-            this.btnSave_Atte.UseVisualStyleBackColor = true;
+            this.btnSave_Atte.UseVisualStyleBackColor = false;
             this.btnSave_Atte.Click += new System.EventHandler(this.btnSave_Atte_Click);
             // 
             // groupBox2
@@ -242,7 +245,8 @@ namespace ApplicationDev_Do
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 550);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Groupbox_ATTE);
             this.Controls.Add(this.dataGridView1);

@@ -193,8 +193,11 @@ namespace ApplicationDev_Do
 
         private void dgvNotice_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            
+            Common.notice = dgvNotice.Rows[e.RowIndex].Cells[4].Value.ToString();
             NoticeDetail ND = new NoticeDetail();
-            ND.Show();
+            ND.ShowDialog();
+            
         }
     }
 }
