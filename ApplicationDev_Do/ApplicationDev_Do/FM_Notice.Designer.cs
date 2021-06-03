@@ -76,7 +76,7 @@ namespace ApplicationDev_Do
             "이시경",
             "양경민",
             "이상권"});
-            this.cboSNoticeMaker.Location = new System.Drawing.Point(345, 46);
+            this.cboSNoticeMaker.Location = new System.Drawing.Point(326, 47);
             this.cboSNoticeMaker.Name = "cboSNoticeMaker";
             this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 28);
             this.cboSNoticeMaker.TabIndex = 12;
@@ -84,7 +84,7 @@ namespace ApplicationDev_Do
             // 
             // btnNoticeSearch
             // 
-            this.btnNoticeSearch.Location = new System.Drawing.Point(452, 101);
+            this.btnNoticeSearch.Location = new System.Drawing.Point(488, 96);
             this.btnNoticeSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnNoticeSearch.Name = "btnNoticeSearch";
             this.btnNoticeSearch.Size = new System.Drawing.Size(125, 47);
@@ -113,7 +113,7 @@ namespace ApplicationDev_Do
             "전체",
             "스마트팩토리",
             "빅데이터"});
-            this.cboSNoticeClass.Location = new System.Drawing.Point(73, 47);
+            this.cboSNoticeClass.Location = new System.Drawing.Point(73, 48);
             this.cboSNoticeClass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cboSNoticeClass.Name = "cboSNoticeClass";
             this.cboSNoticeClass.Size = new System.Drawing.Size(159, 28);
@@ -123,7 +123,7 @@ namespace ApplicationDev_Do
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(792, 52);
+            this.label4.Location = new System.Drawing.Point(278, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 20);
             this.label4.TabIndex = 7;
@@ -132,7 +132,7 @@ namespace ApplicationDev_Do
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(556, 55);
+            this.label3.Location = new System.Drawing.Point(42, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 6;
@@ -141,7 +141,7 @@ namespace ApplicationDev_Do
             // dtpNoticeEnd
             // 
             this.dtpNoticeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNoticeEnd.Location = new System.Drawing.Point(824, 47);
+            this.dtpNoticeEnd.Location = new System.Drawing.Point(310, 104);
             this.dtpNoticeEnd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticeEnd.Name = "dtpNoticeEnd";
             this.dtpNoticeEnd.Size = new System.Drawing.Size(147, 27);
@@ -151,7 +151,7 @@ namespace ApplicationDev_Do
             // dtpNoticStart
             // 
             this.dtpNoticStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNoticStart.Location = new System.Drawing.Point(637, 47);
+            this.dtpNoticStart.Location = new System.Drawing.Point(123, 104);
             this.dtpNoticStart.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticStart.Name = "dtpNoticStart";
             this.dtpNoticStart.Size = new System.Drawing.Size(142, 27);
@@ -161,7 +161,7 @@ namespace ApplicationDev_Do
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(285, 55);
+            this.label2.Location = new System.Drawing.Point(266, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 2;
@@ -170,7 +170,7 @@ namespace ApplicationDev_Do
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 55);
+            this.label1.Location = new System.Drawing.Point(43, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 20);
             this.label1.TabIndex = 0;

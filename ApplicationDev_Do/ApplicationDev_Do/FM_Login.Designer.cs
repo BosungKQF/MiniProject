@@ -82,7 +82,7 @@ namespace ApplicationDev_Do
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(372, 12);
+            this.label2.Location = new System.Drawing.Point(363, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 20);
             this.label2.TabIndex = 4;
