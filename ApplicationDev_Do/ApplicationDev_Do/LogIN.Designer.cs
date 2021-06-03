@@ -40,7 +40,7 @@ namespace ApplicationDev_Do
             this.txtUID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_login = new System.Windows.Forms.Button();
+            this.btn_login_Real = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,6 +60,8 @@ namespace ApplicationDev_Do
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 209);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // pictureBox3
             // 
@@ -122,6 +124,7 @@ namespace ApplicationDev_Do
             this.txtPW.PasswordChar = '*';
             this.txtPW.Size = new System.Drawing.Size(215, 25);
             this.txtPW.TabIndex = 2;
+            this.txtPW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPW_KeyDown);
             // 
             // txtUID
             // 
@@ -153,26 +156,26 @@ namespace ApplicationDev_Do
             this.label4.TabIndex = 5;
             this.label4.Text = "Password";
             // 
-            // btn_login
+            // btn_login_Real
             // 
-            this.btn_login.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_login.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_login.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_login.Location = new System.Drawing.Point(100, 437);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(121, 61);
-            this.btn_login.TabIndex = 3;
-            this.btn_login.Text = "Login";
-            this.btn_login.UseVisualStyleBackColor = false;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click_1);
+            this.btn_login_Real.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_login_Real.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_login_Real.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_login_Real.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_login_Real.Location = new System.Drawing.Point(100, 437);
+            this.btn_login_Real.Name = "btn_login_Real";
+            this.btn_login_Real.Size = new System.Drawing.Size(121, 61);
+            this.btn_login_Real.TabIndex = 3;
+            this.btn_login_Real.Text = "Log In";
+            this.btn_login_Real.UseVisualStyleBackColor = false;
+            this.btn_login_Real.Click += new System.EventHandler(this.btn_login_Click_1);
             // 
             // LogIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 531);
-            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.btn_login_Real);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUID);
@@ -184,6 +187,9 @@ namespace ApplicationDev_Do
             this.Name = "LogIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIN";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LogIN_KeyDown);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LogIN_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LogIN_MouseMove);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -204,7 +210,7 @@ namespace ApplicationDev_Do
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button btn_login_Real;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
