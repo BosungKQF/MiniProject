@@ -270,13 +270,13 @@ namespace ApplicationDev_Do
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1144, 775);
+            this.panelChildForm.Size = new System.Drawing.Size(1011, 775);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ApplicationDev_Do.Properties.Resources.다운로드;
-            this.pictureBox1.Location = new System.Drawing.Point(904, 553);
+            this.pictureBox1.Location = new System.Drawing.Point(771, 553);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(240, 222);
             this.pictureBox1.TabIndex = 0;
@@ -286,7 +286,7 @@ namespace ApplicationDev_Do
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1394, 775);
+            this.ClientSize = new System.Drawing.Size(1261, 775);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

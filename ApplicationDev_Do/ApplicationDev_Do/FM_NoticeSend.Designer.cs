@@ -70,7 +70,7 @@ namespace ApplicationDev_Do
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(721, 28);
+            this.btnSend.Location = new System.Drawing.Point(664, 28);
             this.btnSend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(129, 59);

@@ -32,6 +32,8 @@ namespace ApplicationDev_Do
             this.label1 = new System.Windows.Forms.Label();
             this.txtDiary = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.rdB3 = new System.Windows.Forms.RadioButton();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@ namespace ApplicationDev_Do
             this.rdB2 = new System.Windows.Forms.RadioButton();
             this.rdB1 = new System.Windows.Forms.RadioButton();
             this.dtpDiary = new System.Windows.Forms.DateTimePicker();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDiary = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -51,7 +51,7 @@ namespace ApplicationDev_Do
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 67);
+            this.label1.Location = new System.Drawing.Point(394, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 0;
@@ -63,11 +63,13 @@ namespace ApplicationDev_Do
             this.txtDiary.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDiary.Multiline = true;
             this.txtDiary.Name = "txtDiary";
-            this.txtDiary.Size = new System.Drawing.Size(553, 261);
+            this.txtDiary.Size = new System.Drawing.Size(429, 261);
             this.txtDiary.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.rdB3);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.label4);
@@ -82,10 +84,32 @@ namespace ApplicationDev_Do
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1040, 372);
+            this.groupBox1.Size = new System.Drawing.Size(944, 372);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "근무일지 작성";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(336, 263);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(97, 39);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(222, 205);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(97, 39);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "조회";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // rdB3
             // 
@@ -102,7 +126,7 @@ namespace ApplicationDev_Do
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(233, 301);
+            this.btnAdd.Location = new System.Drawing.Point(222, 263);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(97, 39);
@@ -122,7 +146,7 @@ namespace ApplicationDev_Do
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(336, 254);
+            this.btnSave.Location = new System.Drawing.Point(336, 205);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 39);
@@ -162,28 +186,6 @@ namespace ApplicationDev_Do
             this.dtpDiary.Size = new System.Drawing.Size(178, 27);
             this.dtpDiary.TabIndex = 2;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(336, 303);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(97, 39);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "삭제";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(233, 254);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(97, 39);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "조회";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvDiary);
@@ -192,7 +194,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox2.Size = new System.Drawing.Size(1040, 232);
+            this.groupBox2.Size = new System.Drawing.Size(944, 232);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "근무일지 목록";
@@ -213,9 +215,7 @@ namespace ApplicationDev_Do
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 960);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnDelete);
+            this.ClientSize = new System.Drawing.Size(944, 960);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

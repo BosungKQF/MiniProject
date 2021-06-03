@@ -150,7 +150,7 @@ namespace ApplicationDev_Do
             // lblClass
             // 
             this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(54, 26);
+            this.lblClass.Location = new System.Drawing.Point(54, 23);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(24, 20);
             this.lblClass.TabIndex = 0;
@@ -159,7 +159,7 @@ namespace ApplicationDev_Do
             // lblStudent
             // 
             this.lblStudent.AutoSize = true;
-            this.lblStudent.Location = new System.Drawing.Point(447, 23);
+            this.lblStudent.Location = new System.Drawing.Point(430, 23);
             this.lblStudent.Name = "lblStudent";
             this.lblStudent.Size = new System.Drawing.Size(39, 20);
             this.lblStudent.TabIndex = 1;
@@ -168,7 +168,7 @@ namespace ApplicationDev_Do
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(406, 66);
+            this.label3.Location = new System.Drawing.Point(405, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 20);
             this.label3.TabIndex = 2;
@@ -197,9 +197,9 @@ namespace ApplicationDev_Do
             "전체",
             "스마트팩토리",
             "빅데이터"});
-            this.cmbClass_atte.Location = new System.Drawing.Point(86, 20);
+            this.cmbClass_atte.Location = new System.Drawing.Point(84, 18);
             this.cmbClass_atte.Name = "cmbClass_atte";
-            this.cmbClass_atte.Size = new System.Drawing.Size(329, 28);
+            this.cmbClass_atte.Size = new System.Drawing.Size(242, 28);
             this.cmbClass_atte.TabIndex = 5;
             this.cmbClass_atte.SelectedIndexChanged += new System.EventHandler(this.cmbClass_atte_SelectedValueChanged);
             this.cmbClass_atte.SelectedValueChanged += new System.EventHandler(this.cmbClass_atte_SelectedValueChanged_1);
@@ -207,15 +207,15 @@ namespace ApplicationDev_Do
             // cmbStudent_atte
             // 
             this.cmbStudent_atte.FormattingEnabled = true;
-            this.cmbStudent_atte.Location = new System.Drawing.Point(505, 20);
+            this.cmbStudent_atte.Location = new System.Drawing.Point(475, 18);
             this.cmbStudent_atte.Name = "cmbStudent_atte";
-            this.cmbStudent_atte.Size = new System.Drawing.Size(226, 28);
+            this.cmbStudent_atte.Size = new System.Drawing.Size(242, 28);
             this.cmbStudent_atte.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(592, 66);
+            this.label1.Location = new System.Drawing.Point(595, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.TabIndex = 6;
