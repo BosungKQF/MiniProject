@@ -67,8 +67,6 @@ namespace ApplicationDev_Do
                 }
 
                 string sSemester = CbSemester.Text;
-                
-
 
                 #endregion
 
@@ -92,7 +90,7 @@ namespace ApplicationDev_Do
                 #endregion
 
                 #region Show Data
-                if (DtTemp.Rows.Count == 0)
+                if (DtTemp.Rows.Count == 0) 
                 {
                     MessageBox.Show("검색 조건에 맞는 데이터가 없습니다.");
                     dgvScore.DataSource = null;
@@ -114,11 +112,13 @@ namespace ApplicationDev_Do
 
 
 
-                dgvScore.Columns[0].Width = 150;
-                dgvScore.Columns[1].Width = 150;
-                dgvScore.Columns[2].Width = 100;
-                dgvScore.Columns[3].Width = 100;
-                dgvScore.Columns[4].Width = 100;
+                dgvScore.Columns[0].Width = 120;
+                dgvScore.Columns[1].Width = 120;
+                dgvScore.Columns[2].Width = 80;
+                dgvScore.Columns[3].Width = 80;
+                dgvScore.Columns[4].Width = 120;
+                dgvScore.Columns[5].Width = 120;
+                dgvScore.Columns[6].Width = 80;
 
 
                 if (Common.Permission == "S")
@@ -135,14 +135,15 @@ namespace ApplicationDev_Do
                 }
                 else
                 {
-                    dgvScore.Columns["USERCODE"].ReadOnly = false;
+                    dgvScore.Columns["NAME"].ReadOnly = true;
+                    dgvScore.Columns["GRADE"].ReadOnly = true;
+                    dgvScore.Columns["USERCODE"].ReadOnly = true;
                     dgvScore.Columns["SEMESTER"].ReadOnly = false;
                     dgvScore.Columns["HW"].ReadOnly = false;
                     dgvScore.Columns["PROJECT"].ReadOnly = false;
                     dgvScore.Columns["FINAL"].ReadOnly = false;
                     dgvScore.Columns["ATTENDANCE"].ReadOnly = false;
                     dgvScore.Columns["SCORE"].ReadOnly = false;
-                    dgvScore.Columns["GRADE"].ReadOnly = false;
                 }
             }
             #endregion
@@ -164,13 +165,14 @@ namespace ApplicationDev_Do
 
             #region Variable Init
             string sSTCODE = dgvScore.CurrentRow.Cells["USERCODE"].Value.ToString();
+            string sUSERNAME = dgvScore.CurrentRow.Cells["NAME"].Value.ToString();
             string sSEMESTER = dgvScore.CurrentRow.Cells["SEMESTER"].Value.ToString();
             string sHW = dgvScore.CurrentRow.Cells["HW"].Value.ToString();
             string sPROJECT = dgvScore.CurrentRow.Cells["PROJECT"].Value.ToString();
             string sFINAL = dgvScore.CurrentRow.Cells["FINAL"].Value.ToString();
             string sATTENDANCE = dgvScore.CurrentRow.Cells["ATTENDANCE"].Value.ToString();
             string sSCORE = dgvScore.CurrentRow.Cells["SCORE"].Value.ToString();
-            string sGRADE = dgvScore.CurrentRow.Cells["GRADE"].Value.ToString();
+            string sGRADE;
 
             try
             {
@@ -217,7 +219,11 @@ namespace ApplicationDev_Do
                 MessageBox.Show("숫자로만 입력하세요");
                 return;
             }
-
+            if (sSEMESTER != "1분기" || sSEMESTER != "2분기" || sSEMESTER != "3분기" || sSEMESTER != "4분기")
+            {
+                MessageBox.Show("1분기, 2분기, 3분기, 4분기 중에 입력해주세요.");
+                return;
+            }
 
 
 
@@ -254,6 +260,19 @@ namespace ApplicationDev_Do
                              " IF (@@ROWCOUNT =0)                     " +
                              " INSERT INTO TB_5_SCORE (USERCODE,SEMESTER,HW,PROJECT,FINAL,ATTENDANCE,SCORE,GRADE)" +
                              $"VALUES ('{sSTCODE}','{sSEMESTER}','{sHW}','{sPROJECT}','{sFINAL}','{sATTENDANCE}','{sSCORE}','{sGRADE}')";
+/*            String sSql = "SELECT A.USERCODE," +
+                          " FROM TB_5_SCORE A WITH(NOLOCK) " +
+                          " LEFT JOIN TB_5_STUDENT B WITH (NOLOCK) ON A.USERCODE = B.USERCODE" +
+                          " WHERE B.NAME LIKE '%" + sUSERNAME + "%' " +
+                           " AND A.SEMESTER LIKE '%" + sSEMESTER + "%' ";
+            SqlDataAdapter ERROR = new SqlDataAdapter(sSql, Conn);
+
+            if (ERROR = null)
+            {
+                MessageBox.Show("학생 정보를 먼저 입력해주세요.");
+                return;
+            }
+*/
             Cmd.ExecuteNonQuery();
             Txn.Commit();
             #endregion
