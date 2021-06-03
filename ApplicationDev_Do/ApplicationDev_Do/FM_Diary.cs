@@ -153,17 +153,17 @@ namespace ApplicationDev_Do
             Cmd.Transaction = Txn;
             Cmd.Connection = Conn;
             #endregion
-
+            
             #region Transaction Commit
-            Cmd.CommandText = "UPDATE TB_5_DIARY                     " +
+            Cmd.CommandText = "UPDATE TB_5_DIARY                           " +
                              $"   SET USERCODE   = '{sTEACHERCODE}',       " +
-                             $"       DIARYDATE   = '{sDIARYDATE}',       " +
-                             $"       CLASS    = '{sCLASS}',        " +
-                             $"       DIARY  = '{txtDiary.Text}',      " +
-                             $"       EDITOR     = '{Common.LogInName}'," +
-                             $"       EDITDATE   = GETDATE()           " +
+                             $"       DIARYDATE   = '{sDIARYDATE}',        " +
+                             $"       CLASS    = '{sCLASS}',               " +
+                             $"       DIARY  = '{txtDiary.Text}',          " +
+                             $"       EDITOR     = '{Common.LogInName}',   " +
+                             $"       EDITDATE   = GETDATE()               " +
                              $" WHERE USERCODE  = '{sTEACHERCODE}' AND DIARYDATE = '{sDIARYDATE}' " +
-                             " IF (@@ROWCOUNT =0)                     " +
+                             " IF (@@ROWCOUNT =0)                          " +
                              " INSERT INTO TB_5_DIARY (USERCODE,     DIARYDATE,     CLASS,     DIARY,     MAKER,     MAKEDATE) " +
                              $"VALUES (               '{sTEACHERCODE}', '{sDIARYDATE}', '{sCLASS}', '{txtDiary.Text}', '{Common.LogInName}', GETDATE())";
             Cmd.ExecuteNonQuery();
@@ -221,7 +221,7 @@ namespace ApplicationDev_Do
 
         private void dgvDiary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-/*            txtDiary.Text = (string)dgvDiary.Columns.DataBoundItem;
-*/        }
+                     
+        }
     }
 }
