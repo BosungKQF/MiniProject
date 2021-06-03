@@ -61,7 +61,7 @@ namespace ApplicationDev_Do
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(827, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 223);
             this.dataGridView1.TabIndex = 1;
             // 
             // Groupbox_ATTE
@@ -71,7 +71,7 @@ namespace ApplicationDev_Do
             this.Groupbox_ATTE.Dock = System.Windows.Forms.DockStyle.Top;
             this.Groupbox_ATTE.Location = new System.Drawing.Point(0, 336);
             this.Groupbox_ATTE.Name = "Groupbox_ATTE";
-            this.Groupbox_ATTE.Size = new System.Drawing.Size(827, 117);
+            this.Groupbox_ATTE.Size = new System.Drawing.Size(800, 117);
             this.Groupbox_ATTE.TabIndex = 2;
             this.Groupbox_ATTE.TabStop = false;
             // 
@@ -117,7 +117,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 453);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(827, 97);
+            this.groupBox2.Size = new System.Drawing.Size(800, 0);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -237,7 +237,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(827, 113);
+            this.groupBox1.Size = new System.Drawing.Size(800, 113);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 

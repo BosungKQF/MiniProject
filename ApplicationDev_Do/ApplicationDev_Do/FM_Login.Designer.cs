@@ -95,9 +95,9 @@ namespace ApplicationDev_Do
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(12, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "만든 사람";
+            this.label3.Text = "만든사람";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FM_Login

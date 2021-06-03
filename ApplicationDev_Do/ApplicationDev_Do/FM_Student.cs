@@ -223,7 +223,11 @@ namespace ApplicationDev_Do
             Common.sCode = this.dataGridView1Grid.CurrentRow.Cells["USERCODE"].Value.ToString();
 
             FM_GradeChart grade = new FM_GradeChart();
-            grade.ShowDialog();
+            if (dataGridView1Grid.Rows.Count == 0) return;
+            else
+            {
+                grade.ShowDialog();
+            }
         }
     }
 }
