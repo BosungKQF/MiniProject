@@ -15,5 +15,6 @@ namespace ApplicationDev_Do
         public static string Permission = string.Empty;
         public static string Ucode = string.Empty;
         public static string sCode = string.Empty;
+        public static string notice = string.Empty;
     }
 }
