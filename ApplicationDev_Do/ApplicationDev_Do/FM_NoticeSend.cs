@@ -19,12 +19,6 @@ namespace ApplicationDev_Do
             InitializeComponent();
 
         }
-        private void FM_Notice_Load(object sender, EventArgs e)
-        {
-
-           
-
-        }
 
         private void cboNoticeClass_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -86,7 +80,7 @@ namespace ApplicationDev_Do
                 sUserCode = dtTemp.Rows[0]["USERCODE"].ToString();
                 sMaker = Common.LogInName;
                 sNotice = rtxtNotice.Text;
-
+                
                 SqlCommand cmd = new SqlCommand();
                 SqlTransaction Tran;
                 Tran = Conn.BeginTransaction("TestTran");
