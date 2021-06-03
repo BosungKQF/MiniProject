@@ -7,6 +7,7 @@ namespace ApplicationDev_Do
 {
     public partial class NoticeDetail : Form
     {
+        
         #region Connection Init
         private SqlConnection Conn = null;
         private string ConnInfo = Common.DbPath;
@@ -18,47 +19,14 @@ namespace ApplicationDev_Do
 
         private void NoticeDetail_Load(object sender, EventArgs e)
         {
-            try
-            {
-                #region Connection Open
-                Conn = new SqlConnection(ConnInfo);
-                Conn.Open();
-
-                if (Conn.State != System.Data.ConnectionState.Open)
-                {
-                    MessageBox.Show("Failed to connect to database.");
-                    return;
-                }
-                #endregion
-                string name = Common.LogInName;
-                string code = Common.Ucode;
-                #region Fill Data
-                SqlDataAdapter Adapter = new SqlDataAdapter("SELECT NOTICE " +
-                                                            "  FROM TB_5_NOTICE " +
-                                                           $"WHERE USERNAME LIKE '%{name}%' " +
-                                                           $"AND USERCODE LIKE '%{code}%' ",Conn);
-                DataTable DtTemp = new DataTable();
-                Adapter.Fill(DtTemp);
-                #endregion
-
-                #region Show Data
-                if (DtTemp.Rows.Count == 0)
-                {
-                    return;
-                }
-                rtxtNoticeDetail.Text = DtTemp.Rows[0]["NOTICE"].ToString();
-                #endregion
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                Conn.Close();
-            }
+            rtxtNoticeDetail.ReadOnly = false;
+            rtxtNoticeDetail.Text = Common.notice;
             rtxtNoticeDetail.ReadOnly = true;
+        }
+
+        private void rtxtNoticeDetail_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

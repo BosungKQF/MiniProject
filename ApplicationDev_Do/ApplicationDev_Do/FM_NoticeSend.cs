@@ -80,14 +80,14 @@ namespace ApplicationDev_Do
                 sUserCode = dtTemp.Rows[0]["USERCODE"].ToString();
                 sMaker = Common.LogInName;
                 sNotice = rtxtNotice.Text;
-                
+                string sNoticedate = System.DateTime.Now.ToString("yyyy-MM-dd");
                 SqlCommand cmd = new SqlCommand();
                 SqlTransaction Tran;
                 Tran = Conn.BeginTransaction("TestTran");
                 cmd.Transaction = Tran;
                 cmd.Connection = Conn;
                 cmd.CommandText = "INSERT INTO TB_5_NOTICE(USERCODE, USERNAME, NOTICEDATE, MAKER, NOTICE) " +
-                              "VALUES ('" + sUserCode + "','" + sStudent + "',GETDATE(),'" + sMaker + "','" + sNotice + "')";
+                              "VALUES ('" + sUserCode + "','" + sStudent + "','" + sNoticedate + "','" + sMaker + "','" + sNotice + "')";
 
                 cmd.ExecuteNonQuery();
 
