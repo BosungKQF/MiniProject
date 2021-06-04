@@ -20,7 +20,25 @@ namespace ApplicationDev_Do
         public FM_Diary()
         {
             InitializeComponent();
+            if (Common.Permission == "T")
+            {
+                if (Common.LogInId == "TEACHER1" || Common.LogInId == "TEACHER3")
+                {
+                    rdB1.Checked = true;
+                    rdB2.Enabled = false;
+                    rdB3.Enabled = false;
+                }
+                else
+                {
+                    rdB2.Checked = true;
+                    rdB1.Enabled = false;
+                    rdB3.Enabled = false;
+
+                }
+            }
+
         }
+
 
 
         private void btnSearch_Click(object sender, EventArgs e)

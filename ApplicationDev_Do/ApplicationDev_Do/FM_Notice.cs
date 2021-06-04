@@ -175,6 +175,7 @@ namespace ApplicationDev_Do
                     dgvNotice.Columns["NOTICEDATE"].ReadOnly = true;
                     dgvNotice.Columns["CLASS"].ReadOnly = true;
                     dgvNotice.Columns["USERNAME"].ReadOnly = true;
+
                     dgvNotice.Columns["MAKER"].ReadOnly = true;
                     dgvNotice.Columns["NOTICE"].ReadOnly = true;
 
@@ -193,10 +194,7 @@ namespace ApplicationDev_Do
         }
 
         private void dgvNotice_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            
-            Common.notice = dgvNotice.Rows[e.RowIndex].Cells[4].Value.ToString();
-            NoticeDetail ND = new NoticeDetail();
+        {          NoticeDetail ND = new NoticeDetail();
             ND.ShowDialog();
             
         }
