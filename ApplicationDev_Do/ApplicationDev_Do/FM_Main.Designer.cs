@@ -77,7 +77,7 @@ namespace ApplicationDev_Do
             this.panelNoticeSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNoticeSubMenu.Location = new System.Drawing.Point(0, 420);
             this.panelNoticeSubMenu.Name = "panelNoticeSubMenu";
-            this.panelNoticeSubMenu.Size = new System.Drawing.Size(250, 86);
+            this.panelNoticeSubMenu.Size = new System.Drawing.Size(250, 82);
             this.panelNoticeSubMenu.TabIndex = 6;
             // 
             // btnSend_noti
