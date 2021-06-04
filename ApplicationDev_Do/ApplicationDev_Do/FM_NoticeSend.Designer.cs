@@ -41,6 +41,7 @@ namespace ApplicationDev_Do
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.lbStudent);
             this.groupBox2.Controls.Add(this.btnSend);
             this.groupBox2.Controls.Add(this.cboNoticeClass);
@@ -70,6 +71,7 @@ namespace ApplicationDev_Do
             // 
             // btnSend
             // 
+            this.btnSend.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSend.Location = new System.Drawing.Point(664, 28);
             this.btnSend.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSend.Name = "btnSend";
@@ -96,18 +98,20 @@ namespace ApplicationDev_Do
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(76, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 20);
+            this.label2.Size = new System.Drawing.Size(25, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "반";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(356, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.Size = new System.Drawing.Size(40, 21);
             this.label1.TabIndex = 6;
             this.label1.Text = "학생";
             // 

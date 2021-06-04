@@ -86,6 +86,7 @@ namespace ApplicationDev_Do
             this.btnSend_noti.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSend_noti.FlatAppearance.BorderSize = 0;
             this.btnSend_noti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSend_noti.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSend_noti.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSend_noti.Location = new System.Drawing.Point(0, 40);
             this.btnSend_noti.Name = "btnSend_noti";
@@ -102,6 +103,7 @@ namespace ApplicationDev_Do
             this.btnSearch_noti.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearch_noti.FlatAppearance.BorderSize = 0;
             this.btnSearch_noti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch_noti.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSearch_noti.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSearch_noti.Location = new System.Drawing.Point(0, 0);
             this.btnSearch_noti.Name = "btnSearch_noti";
@@ -117,6 +119,7 @@ namespace ApplicationDev_Do
             this.btnNotice.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNotice.FlatAppearance.BorderSize = 0;
             this.btnNotice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotice.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnNotice.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnNotice.Image = global::ApplicationDev_Do.Properties.Resources.chat;
             this.btnNotice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,6 +138,7 @@ namespace ApplicationDev_Do
             this.btnDiary.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDiary.FlatAppearance.BorderSize = 0;
             this.btnDiary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDiary.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnDiary.Image = global::ApplicationDev_Do.Properties.Resources.pen;
             this.btnDiary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,6 +170,7 @@ namespace ApplicationDev_Do
             this.btnEquipment.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEquipment.FlatAppearance.BorderSize = 0;
             this.btnEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEquipment.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEquipment.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEquipment.Location = new System.Drawing.Point(0, 120);
             this.btnEquipment.Name = "btnEquipment";
@@ -181,6 +186,7 @@ namespace ApplicationDev_Do
             this.btnTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeacher.FlatAppearance.BorderSize = 0;
             this.btnTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeacher.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnTeacher.ForeColor = System.Drawing.SystemColors.Control;
             this.btnTeacher.Location = new System.Drawing.Point(0, 80);
             this.btnTeacher.Name = "btnTeacher";
@@ -196,6 +202,7 @@ namespace ApplicationDev_Do
             this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStudent.FlatAppearance.BorderSize = 0;
             this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudent.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnStudent.ForeColor = System.Drawing.SystemColors.Control;
             this.btnStudent.Location = new System.Drawing.Point(0, 40);
             this.btnStudent.Name = "btnStudent";
@@ -211,6 +218,7 @@ namespace ApplicationDev_Do
             this.btnScore.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnScore.FlatAppearance.BorderSize = 0;
             this.btnScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScore.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnScore.ForeColor = System.Drawing.SystemColors.Control;
             this.btnScore.Location = new System.Drawing.Point(0, 0);
             this.btnScore.Name = "btnScore";
@@ -226,6 +234,7 @@ namespace ApplicationDev_Do
             this.btnInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInfo.FlatAppearance.BorderSize = 0;
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnInfo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnInfo.Image = global::ApplicationDev_Do.Properties.Resources.user;
             this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,6 +253,7 @@ namespace ApplicationDev_Do
             this.btnAttend.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAttend.FlatAppearance.BorderSize = 0;
             this.btnAttend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAttend.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAttend.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAttend.Image = global::ApplicationDev_Do.Properties.Resources.calendar;
             this.btnAttend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

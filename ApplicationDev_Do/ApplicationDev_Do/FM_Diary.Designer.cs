@@ -51,9 +51,10 @@ namespace ApplicationDev_Do
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(394, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 20);
+            this.label1.Size = new System.Drawing.Size(40, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "내용";
             // 
@@ -80,6 +81,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Controls.Add(this.txtDiary);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
@@ -91,6 +93,7 @@ namespace ApplicationDev_Do
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(336, 263);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDelete.Name = "btnDelete";
@@ -102,6 +105,7 @@ namespace ApplicationDev_Do
             // 
             // btnSearch
             // 
+            this.btnSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.Location = new System.Drawing.Point(222, 205);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearch.Name = "btnSearch";
@@ -115,10 +119,11 @@ namespace ApplicationDev_Do
             // 
             this.rdB3.AutoSize = true;
             this.rdB3.Checked = true;
+            this.rdB3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdB3.Location = new System.Drawing.Point(38, 156);
             this.rdB3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdB3.Name = "rdB3";
-            this.rdB3.Size = new System.Drawing.Size(60, 24);
+            this.rdB3.Size = new System.Drawing.Size(61, 25);
             this.rdB3.TabIndex = 8;
             this.rdB3.TabStop = true;
             this.rdB3.Text = "전체";
@@ -126,6 +131,7 @@ namespace ApplicationDev_Do
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.Location = new System.Drawing.Point(222, 263);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnAdd.Name = "btnAdd";
@@ -138,14 +144,16 @@ namespace ApplicationDev_Do
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(38, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.Size = new System.Drawing.Size(70, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "근무일자";
             // 
             // btnSave
             // 
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.Location = new System.Drawing.Point(336, 205);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSave.Name = "btnSave";
@@ -158,10 +166,11 @@ namespace ApplicationDev_Do
             // rdB2
             // 
             this.rdB2.AutoSize = true;
+            this.rdB2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdB2.Location = new System.Drawing.Point(38, 220);
             this.rdB2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdB2.Name = "rdB2";
-            this.rdB2.Size = new System.Drawing.Size(90, 24);
+            this.rdB2.Size = new System.Drawing.Size(91, 25);
             this.rdB2.TabIndex = 4;
             this.rdB2.Text = "빅데이터";
             this.rdB2.UseVisualStyleBackColor = true;
@@ -169,10 +178,11 @@ namespace ApplicationDev_Do
             // rdB1
             // 
             this.rdB1.AutoSize = true;
+            this.rdB1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdB1.Location = new System.Drawing.Point(38, 188);
             this.rdB1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdB1.Name = "rdB1";
-            this.rdB1.Size = new System.Drawing.Size(120, 24);
+            this.rdB1.Size = new System.Drawing.Size(121, 25);
             this.rdB1.TabIndex = 3;
             this.rdB1.Text = "스마트팩토리";
             this.rdB1.UseVisualStyleBackColor = true;
@@ -183,13 +193,14 @@ namespace ApplicationDev_Do
             this.dtpDiary.Location = new System.Drawing.Point(120, 76);
             this.dtpDiary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDiary.Name = "dtpDiary";
-            this.dtpDiary.Size = new System.Drawing.Size(178, 27);
+            this.dtpDiary.Size = new System.Drawing.Size(178, 28);
             this.dtpDiary.TabIndex = 2;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvDiary);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(0, 372);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox2.Name = "groupBox2";
