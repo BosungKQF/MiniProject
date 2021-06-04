@@ -73,7 +73,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1921, 197);
+        
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "학생 조회";
@@ -232,7 +232,7 @@ namespace ApplicationDev_Do
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1921, 546);
+        
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "학생 정보";
@@ -248,7 +248,7 @@ namespace ApplicationDev_Do
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox4.Size = new System.Drawing.Size(1915, 142);
+          
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
             // 
@@ -299,7 +299,7 @@ namespace ApplicationDev_Do
             this.dataGridView1Grid.Name = "dataGridView1Grid";
             this.dataGridView1Grid.RowHeadersWidth = 51;
             this.dataGridView1Grid.RowTemplate.Height = 27;
-            this.dataGridView1Grid.Size = new System.Drawing.Size(1915, 368);
+          
             this.dataGridView1Grid.TabIndex = 17;
             this.dataGridView1Grid.DoubleClick += new System.EventHandler(this.dataGridView1Grid_DoubleClick);
             // 
@@ -308,7 +308,7 @@ namespace ApplicationDev_Do
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1942, 653);
+           
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -30,6 +30,7 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+
             this.panelNoticeSubMenu = new System.Windows.Forms.Panel();
             this.btnSend_noti = new System.Windows.Forms.Button();
             this.btnSearch_noti = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace ApplicationDev_Do
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnlogout = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelNoticeSubMenu.SuspendLayout();
             this.panelInfoSubMenu.SuspendLayout();
@@ -71,6 +71,7 @@ namespace ApplicationDev_Do
             this.panelSideMenu.Size = new System.Drawing.Size(250, 775);
             this.panelSideMenu.TabIndex = 0;
             // 
+        
             // panelNoticeSubMenu
             // 
             this.panelNoticeSubMenu.BackColor = System.Drawing.Color.RoyalBlue;
@@ -298,25 +299,6 @@ namespace ApplicationDev_Do
             this.pictureBox1.Size = new System.Drawing.Size(240, 222);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnlogout.FlatAppearance.BorderSize = 0;
-            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogout.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnlogout.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnlogout.Image = global::ApplicationDev_Do.Properties.Resources.content_reply_24px_rounded;
-            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.Location = new System.Drawing.Point(0, 502);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnlogout.Size = new System.Drawing.Size(250, 45);
-            this.btnlogout.TabIndex = 7;
-            this.btnlogout.Text = "      로그아웃";
-            this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.UseVisualStyleBackColor = true;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // FM_Main
             // 
