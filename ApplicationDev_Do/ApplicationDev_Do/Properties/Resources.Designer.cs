@@ -123,6 +123,16 @@ namespace ApplicationDev_Do.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20210603_172910892 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20210603_172910892", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap LoginDesign {
             get {
                 object obj = ResourceManager.GetObject("LoginDesign", resourceCulture);
@@ -136,6 +146,16 @@ namespace ApplicationDev_Do.Properties {
         internal static System.Drawing.Bitmap qqemge_nmjq_h08kbt_logo {
             get {
                 object obj = ResourceManager.GetObject("qqemge_nmjq-h08kbt_logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap 그라데이션 {
+            get {
+                object obj = ResourceManager.GetObject("그라데이션", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

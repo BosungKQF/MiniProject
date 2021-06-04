@@ -30,7 +30,10 @@ namespace ApplicationDev_Do
                 btnDiary.Visible = false;
                 btnEquipment.Visible = false;
                 btnSend_noti.Visible = false;
-
+                
+                panelSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFA500");
+                panelInfoSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF9100");
+                panelNoticeSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF9100");
 
             }
 
@@ -38,7 +41,10 @@ namespace ApplicationDev_Do
             {
                 
                 btnTeacher.Visible = false;
-                
+                panelSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#4AB34A");
+                panelInfoSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#369F36");
+                panelNoticeSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#369F36");
+
             }
         }
         #region customizeDesign
@@ -140,10 +146,7 @@ namespace ApplicationDev_Do
         {
             openChildForm(new FM_Diary());
         }
-
-
-        #endregion
-
+#endregion
         private void panelLogo_Click(object sender, EventArgs e)
         {
             if (activeForm != null)
@@ -152,5 +155,8 @@ namespace ApplicationDev_Do
                 hideSubMenu();
             }
         }
+
+
+
     }
 }

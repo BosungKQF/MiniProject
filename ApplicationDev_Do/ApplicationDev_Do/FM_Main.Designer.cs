@@ -262,8 +262,7 @@ namespace ApplicationDev_Do
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(250, 78);
             this.panelLogo.TabIndex = 0;
-            this.panelLogo.Click += new System.EventHandler(this.panelLogo_Click);
-            // 
+            this.panelLogo.Click += new System.EventHandler(this.panelLogo_Click);            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
