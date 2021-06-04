@@ -128,8 +128,6 @@ namespace ApplicationDev_Do
         private void btnAttend_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_Atte());
-            
-
         }
 
         private void btnTeacher_Click(object sender, EventArgs e)
@@ -142,8 +140,17 @@ namespace ApplicationDev_Do
         {
             openChildForm(new FM_Diary());
         }
+
+
         #endregion
 
-
+        private void panelLogo_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                hideSubMenu();
+            }
+        }
     }
 }
