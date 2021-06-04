@@ -31,9 +31,18 @@ namespace ApplicationDev_Do
                 btnEquipment.Visible = false;
                 btnSend_noti.Visible = false;
                 
-                panelSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFA500");
-                panelInfoSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF9100");
-                panelNoticeSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF9100");
+                panelSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#F8D948");
+                panelInfoSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#dec44b");
+                panelNoticeSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#dec44b");
+                btnSearch_noti.BackColor = System.Drawing.ColorTranslator.FromHtml("#dec44b");
+                panelSideMenu.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
+                btnAttend.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
+                btnInfo.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
+                btnDiary.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
+                btnNotice.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
+                btnScore.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
+                btnSearch_noti.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
+
 
             }
 
@@ -44,6 +53,8 @@ namespace ApplicationDev_Do
                 panelSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#4AB34A");
                 panelInfoSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#369F36");
                 panelNoticeSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#369F36");
+                btnSearch_noti.BackColor = System.Drawing.ColorTranslator.FromHtml("#369F36");
+                btnSend_noti.BackColor = System.Drawing.ColorTranslator.FromHtml("#369F36");
 
             }
         }
@@ -124,11 +135,7 @@ namespace ApplicationDev_Do
         private void btnSend_noti_Click(object sender, EventArgs e)
         {
             openChildForm(new FM_NoticeSend());
-        }
-
-        private void btnSearch_noti_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FM_Notice());
+            
         }
 
         private void btnAttend_Click(object sender, EventArgs e)
@@ -156,7 +163,9 @@ namespace ApplicationDev_Do
             }
         }
 
-
-
+        private void btnSearch_noti_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FM_Notice());
+        }
     }
 }
