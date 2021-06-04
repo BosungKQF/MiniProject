@@ -57,6 +57,7 @@ namespace ApplicationDev_Do
                 if (Conn.State != System.Data.ConnectionState.Open)
                 {
                     MessageBox.Show("Failed to connect to database.");
+                    
                     return;
                 }
                 #endregion
@@ -81,6 +82,7 @@ namespace ApplicationDev_Do
                 {
                     MessageBox.Show("검색 조건에 맞는 데이터가 없습니다.");
                     dgvGrade.DataSource = null;
+                    this.Close();
                     return;
                 }
                 dgvGrade.DataSource = DtTemp;

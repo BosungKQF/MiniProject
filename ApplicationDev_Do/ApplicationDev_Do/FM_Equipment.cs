@@ -87,11 +87,10 @@ namespace ApplicationDev_Do
                 dataGridView1Grid.Columns["EDITDATE"].HeaderText = "수정일시";
                 dataGridView1Grid.Columns["EDITOR"].HeaderText = "수정자";
 
-                dataGridView1Grid.Columns[0].Width = 100;
-                dataGridView1Grid.Columns[1].Width = 100;
+                dataGridView1Grid.Columns[0].Width = 150;
+                dataGridView1Grid.Columns[1].Width = 150;
                 dataGridView1Grid.Columns[2].Width = 200;
-                dataGridView1Grid.Columns[3].Width = 200;
-                dataGridView1Grid.Columns[4].Width = 100;
+                dataGridView1Grid.Columns[3].Width = 50;
 
                 dataGridView1Grid.Columns["EQUIPCODE"].ReadOnly = true;
                 dataGridView1Grid.Columns["MAKER"].ReadOnly = true;
@@ -140,6 +139,14 @@ namespace ApplicationDev_Do
                 MessageBox.Show("'비품코드', '구매일자' 는 빈칸으로 남겨둘 수 없습니다.");
                 return;
             }
+
+            int returnVal = 0;
+            bool bl = int.TryParse(count, out returnVal);
+            if (bl == false)
+            {
+                MessageBox.Show("'개수'는 숫자로만 입력해주세요.");
+                return;
+            }
             #endregion
 
             #region Transaction Decl
@@ -160,15 +167,16 @@ namespace ApplicationDev_Do
 
             #region Transaction Commit
             string sDate =  purchaseDate.Substring(0, 10);
-            Cmd.CommandText = "UPDATE TB_5_EQUIPMENT                      " +
-                             $"   SET EQUIPNAME   = '{equipName}',       " +
+            Cmd.CommandText = "UPDATE TB_5_EQUIPMENT                     " +
+                             $"   SET EQUIPCODE = '{equipCode}',         " +
+                             $"       EQUIPNAME   = '{equipName}',       " +
                              $"       EQUIPTYPE   = '{equipType}',       " +
-                             $"       COUNT   = '{count}',       " +
-                             $"       PURCHASEDATE  = '{sDate}',      " +
-                             $"       EDITOR     = '{Common.LogInId}'," +
-                             $"       EDITDATE   = GETDATE()           " +
+                             $"       COUNT   = '{count}',               " +
+                             $"       PURCHASEDATE  = '{sDate}',         " +
+                             $"       EDITOR     = '{Common.LogInId}',   " +
+                             $"       EDITDATE   = GETDATE()             " +
                              $" WHERE EQUIPCODE  = '{equipCode}'         " +
-                             " IF (@@ROWCOUNT =0)                     " +
+                             " IF (@@ROWCOUNT =0)                        " +
                              " INSERT INTO TB_5_EQUIPMENT (EQUIPCODE,     EQUIPTYPE,    COUNT,     EQUIPNAME,     PURCHASEDATE,   MAKEDATE,   MAKER) " +
 
                              $"VALUES (               '{equipCode}', '{equipType}',  '{count}', '{equipName}', '{sDate}', GETDATE(), '{Common.LogInId}')";  
