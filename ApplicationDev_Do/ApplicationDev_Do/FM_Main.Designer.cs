@@ -55,7 +55,7 @@ namespace ApplicationDev_Do
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
-            this.panelSideMenu.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panelSideMenu.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panelSideMenu.Controls.Add(this.panelNoticeSubMenu);
             this.panelSideMenu.Controls.Add(this.btnNotice);
             this.panelSideMenu.Controls.Add(this.btnDiary);
@@ -71,7 +71,7 @@ namespace ApplicationDev_Do
             // 
             // panelNoticeSubMenu
             // 
-            this.panelNoticeSubMenu.BackColor = System.Drawing.Color.CadetBlue;
+            this.panelNoticeSubMenu.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelNoticeSubMenu.Controls.Add(this.btnSearch_noti);
             this.panelNoticeSubMenu.Controls.Add(this.btnSend_noti);
             this.panelNoticeSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,6 +82,7 @@ namespace ApplicationDev_Do
             // 
             // btnSearch_noti
             // 
+            this.btnSearch_noti.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSearch_noti.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSearch_noti.FlatAppearance.BorderSize = 0;
             this.btnSearch_noti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -93,11 +94,12 @@ namespace ApplicationDev_Do
             this.btnSearch_noti.TabIndex = 1;
             this.btnSearch_noti.Text = "조회";
             this.btnSearch_noti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch_noti.UseVisualStyleBackColor = true;
+            this.btnSearch_noti.UseVisualStyleBackColor = false;
             this.btnSearch_noti.Click += new System.EventHandler(this.btnSearch_noti_Click);
             // 
             // btnSend_noti
             // 
+            this.btnSend_noti.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSend_noti.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSend_noti.FlatAppearance.BorderSize = 0;
             this.btnSend_noti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,7 +111,7 @@ namespace ApplicationDev_Do
             this.btnSend_noti.TabIndex = 0;
             this.btnSend_noti.Text = "보내기";
             this.btnSend_noti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSend_noti.UseVisualStyleBackColor = true;
+            this.btnSend_noti.UseVisualStyleBackColor = false;
             this.btnSend_noti.Click += new System.EventHandler(this.btnSend_noti_Click);
             // 
             // btnNotice
@@ -148,7 +150,7 @@ namespace ApplicationDev_Do
             // 
             // panelInfoSubMenu
             // 
-            this.panelInfoSubMenu.BackColor = System.Drawing.Color.CadetBlue;
+            this.panelInfoSubMenu.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelInfoSubMenu.Controls.Add(this.btnEquipment);
             this.panelInfoSubMenu.Controls.Add(this.btnTeacher);
             this.panelInfoSubMenu.Controls.Add(this.btnStudent);
