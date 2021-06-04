@@ -18,6 +18,7 @@ namespace ApplicationDev_Do
         }
         private void FM_Notice_Load(object sender, EventArgs e)
         {
+            dtpNoticeEnd.Value = System.DateTime.Now;
         }
 
         private void btnNoticeSearch_Click(object sender, EventArgs e)
