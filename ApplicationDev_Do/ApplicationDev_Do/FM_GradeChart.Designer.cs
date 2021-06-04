@@ -44,7 +44,7 @@ namespace ApplicationDev_Do
             this.dgvGrade.Name = "dgvGrade";
             this.dgvGrade.RowHeadersWidth = 51;
             this.dgvGrade.RowTemplate.Height = 29;
-            this.dgvGrade.Size = new System.Drawing.Size(941, 170);
+            this.dgvGrade.Size = new System.Drawing.Size(943, 170);
             this.dgvGrade.TabIndex = 0;
             // 
             // groupBox2
@@ -55,7 +55,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(947, 199);
+            this.groupBox2.Size = new System.Drawing.Size(949, 199);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "성적";
@@ -74,7 +74,7 @@ namespace ApplicationDev_Do
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(947, 199);
+            this.ClientSize = new System.Drawing.Size(949, 199);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FM_GradeChart";

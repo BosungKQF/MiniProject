@@ -198,6 +198,7 @@ namespace ApplicationDev_Do
             // 
             // groupBox2
             // 
+            this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.dgvDiary);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -205,7 +206,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox2.Size = new System.Drawing.Size(944, 232);
+            this.groupBox2.Size = new System.Drawing.Size(944, 508);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "근무일지 목록";
@@ -218,7 +219,7 @@ namespace ApplicationDev_Do
             this.dgvDiary.Name = "dgvDiary";
             this.dgvDiary.RowHeadersWidth = 51;
             this.dgvDiary.RowTemplate.Height = 23;
-            this.dgvDiary.Size = new System.Drawing.Size(1386, 448);
+            this.dgvDiary.Size = new System.Drawing.Size(935, 448);
             this.dgvDiary.TabIndex = 0;
             this.dgvDiary.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiary_CellClick);
             // 
@@ -226,6 +227,7 @@ namespace ApplicationDev_Do
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(944, 960);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -239,6 +241,7 @@ namespace ApplicationDev_Do
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

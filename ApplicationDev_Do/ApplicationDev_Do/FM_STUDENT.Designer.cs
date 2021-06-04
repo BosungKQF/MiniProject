@@ -73,7 +73,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-        
+            this.groupBox1.Size = new System.Drawing.Size(1267, 192);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "학생 조회";
@@ -228,11 +228,11 @@ namespace ApplicationDev_Do
             this.groupBox3.Controls.Add(this.dataGridView1Grid);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(0, 197);
+            this.groupBox3.Location = new System.Drawing.Point(0, 192);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-        
+            this.groupBox3.Size = new System.Drawing.Size(1267, 493);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "학생 정보";
@@ -248,7 +248,7 @@ namespace ApplicationDev_Do
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-          
+            this.groupBox4.Size = new System.Drawing.Size(1261, 143);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
             // 
@@ -294,12 +294,12 @@ namespace ApplicationDev_Do
             this.dataGridView1Grid.AllowUserToDeleteRows = false;
             this.dataGridView1Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1Grid.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1Grid.Location = new System.Drawing.Point(3, 174);
+            this.dataGridView1Grid.Location = new System.Drawing.Point(3, 176);
             this.dataGridView1Grid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1Grid.Name = "dataGridView1Grid";
             this.dataGridView1Grid.RowHeadersWidth = 51;
             this.dataGridView1Grid.RowTemplate.Height = 27;
-          
+            this.dataGridView1Grid.Size = new System.Drawing.Size(1261, 313);
             this.dataGridView1Grid.TabIndex = 17;
             this.dataGridView1Grid.DoubleClick += new System.EventHandler(this.dataGridView1Grid_DoubleClick);
             // 
@@ -308,7 +308,7 @@ namespace ApplicationDev_Do
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-           
+            this.ClientSize = new System.Drawing.Size(1267, 776);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

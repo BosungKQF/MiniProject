@@ -30,7 +30,8 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
-            this.btnlogout = new System.Windows.Forms.Button();            this.panelNoticeSubMenu = new System.Windows.Forms.Panel();
+            this.btnlogout = new System.Windows.Forms.Button();
+            this.panelNoticeSubMenu = new System.Windows.Forms.Panel();
             this.btnSend_noti = new System.Windows.Forms.Button();
             this.btnSearch_noti = new System.Windows.Forms.Button();
             this.btnNotice = new System.Windows.Forms.Button();
@@ -88,7 +89,8 @@ namespace ApplicationDev_Do
             this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnlogout.UseVisualStyleBackColor = true;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
-            //             // panelNoticeSubMenu
+            // 
+            // panelNoticeSubMenu
             // 
             this.panelNoticeSubMenu.BackColor = System.Drawing.Color.RoyalBlue;
             this.panelNoticeSubMenu.Controls.Add(this.btnSend_noti);
@@ -330,6 +332,7 @@ namespace ApplicationDev_Do
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FM_Main";
             this.Text = "안가람IT 통합관리시스템";
             this.panelSideMenu.ResumeLayout(false);
