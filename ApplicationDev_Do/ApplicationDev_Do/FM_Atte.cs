@@ -150,7 +150,10 @@ namespace ApplicationDev_Do
                 string sClass = null;
                 string sName = null;
                 sClass = cmbClass_atte.Text;
-
+                if (sClass == "전체")
+                {
+                    sClass = "";
+                }
                 sName = cmbStudent_atte.Text;
                 //SQL 제어구문 
                 SqlDataAdapter Adapter = new SqlDataAdapter("SELECT NAME,  " +

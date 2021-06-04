@@ -142,8 +142,12 @@ namespace ApplicationDev_Do
         {
             openChildForm(new FM_Diary());
         }
+
         #endregion
 
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }
