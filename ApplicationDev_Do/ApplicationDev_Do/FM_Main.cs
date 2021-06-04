@@ -167,5 +167,11 @@ namespace ApplicationDev_Do
         {
             openChildForm(new FM_Notice());
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Restart();
+        }
     }
 }
