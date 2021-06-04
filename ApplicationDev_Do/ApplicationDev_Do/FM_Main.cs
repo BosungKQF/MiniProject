@@ -30,9 +30,10 @@ namespace ApplicationDev_Do
                 btnDiary.Visible = false;
                 btnEquipment.Visible = false;
                 btnSend_noti.Visible = false;
-                System.Drawing.ColorTranslator.FromHtml("#FFA500");
+                
+                panelSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FFA500");
                 panelInfoSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF9100");
-
+                panelNoticeSubMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF9100");
 
             }
 

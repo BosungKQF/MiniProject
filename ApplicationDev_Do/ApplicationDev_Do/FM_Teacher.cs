@@ -91,11 +91,10 @@ namespace ApplicationDev_Do
                 dataGridView1Grid.Columns["PHONE"].HeaderText = "핸드폰번호";
                 dataGridView1Grid.Columns["ADDRESS"].HeaderText = "주소";
 
-                dataGridView1Grid.Columns[0].Width = 100;
+                dataGridView1Grid.Columns[0].Width = 120;
                 dataGridView1Grid.Columns[1].Width = 100;
-                dataGridView1Grid.Columns[2].Width = 200;
-                dataGridView1Grid.Columns[3].Width = 200;
-                dataGridView1Grid.Columns[4].Width = 100;
+                dataGridView1Grid.Columns[2].Width = 100;
+                dataGridView1Grid.Columns[3].Width = 120;
 
                 dataGridView1Grid.Columns["USERCODE"].ReadOnly = true;
                 #endregion
@@ -185,6 +184,11 @@ namespace ApplicationDev_Do
                 MessageBox.Show("'교사코드', '등록일자' 는 빈칸으로 남겨둘 수 없습니다.");
                 return;
             }
+            if (permission != "T")
+            {
+                MessageBox.Show("'권한'은 T로 설정해 주십시오.");
+                return;
+            }
             #endregion
 
             #region Transaction Decl
@@ -206,11 +210,12 @@ namespace ApplicationDev_Do
             #region Transaction Commit
             string sDate = regiDate.Substring(0, 10);
             Cmd.CommandText = "UPDATE TB_5_TEACHER                     " +
-                             $"   SET NAME   = '{userName}',           " +
+                             $"   SET USERCODE = '{userCode}',         " +
+                             $"       NAME   = '{userName}',           " +
                              $"       USERID   = '{userId}',           " +
                              $"       CLASS   = '{sClass}',            " +
                              $"       PASSWORD   = '{userPw}',         " +
-                             $"       REGISTDATE  = '{sDate}',          " +
+                             $"       REGISTDATE  = '{sDate}',         " +
                              $"       PERMISSION  = '{permission}'     " +
                              $" WHERE USERCODE  = '{userCode}'         " +
                              " IF (@@ROWCOUNT =0)                      " +
