@@ -118,13 +118,14 @@ namespace ApplicationDev_Do
             this.btnNotice.FlatAppearance.BorderSize = 0;
             this.btnNotice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotice.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnNotice.Image = global::ApplicationDev_Do.Properties.Resources.chat;
+            this.btnNotice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotice.Location = new System.Drawing.Point(0, 375);
             this.btnNotice.Name = "btnNotice";
             this.btnNotice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnNotice.Size = new System.Drawing.Size(250, 45);
             this.btnNotice.TabIndex = 5;
             this.btnNotice.Text = "알림장";
-            this.btnNotice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNotice.UseVisualStyleBackColor = true;
             this.btnNotice.Click += new System.EventHandler(this.btnNotice_Click);
             // 
@@ -134,13 +135,14 @@ namespace ApplicationDev_Do
             this.btnDiary.FlatAppearance.BorderSize = 0;
             this.btnDiary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiary.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDiary.Image = global::ApplicationDev_Do.Properties.Resources.pen;
+            this.btnDiary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiary.Location = new System.Drawing.Point(0, 330);
             this.btnDiary.Name = "btnDiary";
             this.btnDiary.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDiary.Size = new System.Drawing.Size(250, 45);
             this.btnDiary.TabIndex = 4;
             this.btnDiary.Text = "근무일지";
-            this.btnDiary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDiary.UseVisualStyleBackColor = true;
             this.btnDiary.Click += new System.EventHandler(this.btnDiary_Click);
             // 
@@ -227,13 +229,14 @@ namespace ApplicationDev_Do
             this.btnInfo.FlatAppearance.BorderSize = 0;
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfo.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnInfo.Image = global::ApplicationDev_Do.Properties.Resources.user;
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.Location = new System.Drawing.Point(0, 123);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInfo.Size = new System.Drawing.Size(250, 45);
             this.btnInfo.TabIndex = 2;
             this.btnInfo.Text = "개인정보관리";
-            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.UseVisualStyleBackColor = true;
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
@@ -243,13 +246,14 @@ namespace ApplicationDev_Do
             this.btnAttend.FlatAppearance.BorderSize = 0;
             this.btnAttend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAttend.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnAttend.Image = global::ApplicationDev_Do.Properties.Resources.calendar;
+            this.btnAttend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAttend.Location = new System.Drawing.Point(0, 78);
             this.btnAttend.Name = "btnAttend";
             this.btnAttend.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAttend.Size = new System.Drawing.Size(250, 45);
             this.btnAttend.TabIndex = 0;
             this.btnAttend.Text = "출결관리";
-            this.btnAttend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAttend.UseVisualStyleBackColor = true;
             this.btnAttend.Click += new System.EventHandler(this.btnAttend_Click);
             // 
@@ -262,7 +266,8 @@ namespace ApplicationDev_Do
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(250, 78);
             this.panelLogo.TabIndex = 0;
-            this.panelLogo.Click += new System.EventHandler(this.panelLogo_Click);            // 
+            this.panelLogo.Click += new System.EventHandler(this.panelLogo_Click);
+            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.White;
