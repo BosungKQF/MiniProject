@@ -42,7 +42,8 @@ namespace ApplicationDev_Do
                 btnNotice.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
                 btnScore.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
                 btnSearch_noti.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
-
+                btnlogout.BackColor = System.Drawing.ColorTranslator.FromHtml("#F8D948");
+                btnlogout.ForeColor = System.Drawing.ColorTranslator.FromHtml("controltext");
 
             }
 
@@ -170,6 +171,7 @@ namespace ApplicationDev_Do
 
         private void btnlogout_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("로그아웃 하시겠습니까?","Log out", MessageBoxButtons.YesNo)== DialogResult.No) return;
             this.Close();
             Application.Restart();
         }
