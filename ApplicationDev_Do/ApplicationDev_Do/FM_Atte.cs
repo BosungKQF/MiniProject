@@ -73,10 +73,6 @@ namespace ApplicationDev_Do
 
         private void btnAtte_Atte_Click(object sender, EventArgs e)
         {
-            
-            
-            
-            
             if (dataGridView1.Rows.Count == 0) return;
             if (MessageBox.Show($"환영합니다,{Common.LogInName}님 ", "출석 완료!", MessageBoxButtons.YesNo) == DialogResult.No) return; //VCVC
             string sSC = Common.Ucode;

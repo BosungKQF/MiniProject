@@ -89,11 +89,10 @@ namespace ApplicationDev_Do
                 dataGridView1Grid.Columns["EDITDATE"].HeaderText = "수정일시";
                 dataGridView1Grid.Columns["EDITOR"].HeaderText = "수정자";
 
-                dataGridView1Grid.Columns[0].Width = 100;
+                dataGridView1Grid.Columns[0].Width = 120;
                 dataGridView1Grid.Columns[1].Width = 100;
                 dataGridView1Grid.Columns[2].Width = 200;
-                dataGridView1Grid.Columns[3].Width = 200;
-                dataGridView1Grid.Columns[4].Width = 100;
+
 
                 dataGridView1Grid.Columns["USERCODE"].ReadOnly = true;
                 dataGridView1Grid.Columns["MAKER"].ReadOnly = true;
@@ -161,14 +160,15 @@ namespace ApplicationDev_Do
 
             #region Transaction Commit
             string sDate = firstDate.Substring(0,10);
-            Cmd.CommandText = "UPDATE TB_5_STUDENT                      " +
-                             $"   SET NAME   = '{studName}',       " +
-                             $"       CLASS   = '{sClass}',       " +
-                             $"       FIRSTDATE  = '{sDate}',      " +
-                             $"       EDITOR     = '{Common.LogInId}'," +
+            Cmd.CommandText = "UPDATE TB_5_STUDENT                     " +
+                             $"   SET USERCODE = '{studCode}',         " +
+                             $"       NAME   = '{studName}',           " +
+                             $"       CLASS   = '{sClass}',            " +
+                             $"       FIRSTDATE  = '{sDate}',          " +
+                             $"       EDITOR     = '{Common.LogInId}', " +
                              $"       EDITDATE   = GETDATE()           " +
                              $" WHERE USERCODE  = '{studCode}'         " +
-                             " IF (@@ROWCOUNT =0)                     " +
+                             " IF (@@ROWCOUNT =0)                      " +
                              " INSERT INTO TB_5_STUDENT (USERCODE,     NAME,     CLASS,    FIRSTDATE,   MAKEDATE,   MAKER) " +
                              $"VALUES (               '{studCode}','{studName}', '{sClass}', '{sDate}', GETDATE(), '{Common.LogInId}')";
             Cmd.ExecuteNonQuery();
