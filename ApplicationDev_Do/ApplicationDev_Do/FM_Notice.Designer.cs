@@ -146,7 +146,7 @@ namespace ApplicationDev_Do
             this.dtpNoticeEnd.Name = "dtpNoticeEnd";
             this.dtpNoticeEnd.Size = new System.Drawing.Size(147, 27);
             this.dtpNoticeEnd.TabIndex = 5;
-            this.dtpNoticeEnd.Value = new System.DateTime(2021, 6, 2, 0, 0, 0, 0);
+            this.dtpNoticeEnd.Value = new System.DateTime(2021, 6, 4, 9, 3, 35, 0);
             // 
             // dtpNoticStart
             // 
