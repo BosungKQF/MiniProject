@@ -30,6 +30,7 @@ namespace ApplicationDev_Do
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.panelNoticeSubMenu = new System.Windows.Forms.Panel();
             this.btnSend_noti = new System.Windows.Forms.Button();
             this.btnSearch_noti = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace ApplicationDev_Do
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnlogout = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelNoticeSubMenu.SuspendLayout();
             this.panelInfoSubMenu.SuspendLayout();
@@ -71,6 +71,25 @@ namespace ApplicationDev_Do
             this.panelSideMenu.Size = new System.Drawing.Size(250, 775);
             this.panelSideMenu.TabIndex = 0;
             // 
+            // btnlogout
+            // 
+            this.btnlogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlogout.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnlogout.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnlogout.Image = global::ApplicationDev_Do.Properties.Resources.content_reply_24px_rounded;
+            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogout.Location = new System.Drawing.Point(0, 502);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnlogout.Size = new System.Drawing.Size(250, 45);
+            this.btnlogout.TabIndex = 7;
+            this.btnlogout.Text = "      로그아웃";
+            this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
             // panelNoticeSubMenu
             // 
             this.panelNoticeSubMenu.BackColor = System.Drawing.Color.RoyalBlue;
@@ -95,7 +114,8 @@ namespace ApplicationDev_Do
             this.btnSend_noti.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnSend_noti.Size = new System.Drawing.Size(250, 40);
             this.btnSend_noti.TabIndex = 1;
-            this.btnSend_noti.Text = "보내기    ";
+            this.btnSend_noti.Text = "    보내기    ";
+            this.btnSend_noti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSend_noti.UseVisualStyleBackColor = false;
             this.btnSend_noti.Click += new System.EventHandler(this.btnSend_noti_Click);
             // 
@@ -112,7 +132,8 @@ namespace ApplicationDev_Do
             this.btnSearch_noti.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnSearch_noti.Size = new System.Drawing.Size(250, 40);
             this.btnSearch_noti.TabIndex = 0;
-            this.btnSearch_noti.Text = "조회      ";
+            this.btnSearch_noti.Text = "    조회      ";
+            this.btnSearch_noti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch_noti.UseVisualStyleBackColor = false;
             this.btnSearch_noti.Click += new System.EventHandler(this.btnSearch_noti_Click);
             // 
@@ -179,7 +200,8 @@ namespace ApplicationDev_Do
             this.btnEquipment.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnEquipment.Size = new System.Drawing.Size(250, 40);
             this.btnEquipment.TabIndex = 3;
-            this.btnEquipment.Text = "비품관리";
+            this.btnEquipment.Text = "    비품관리";
+            this.btnEquipment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEquipment.UseVisualStyleBackColor = true;
             this.btnEquipment.Click += new System.EventHandler(this.btnequipment_Click);
             // 
@@ -195,7 +217,8 @@ namespace ApplicationDev_Do
             this.btnTeacher.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnTeacher.Size = new System.Drawing.Size(250, 40);
             this.btnTeacher.TabIndex = 2;
-            this.btnTeacher.Text = "교사관리";
+            this.btnTeacher.Text = "    교사관리";
+            this.btnTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeacher.UseVisualStyleBackColor = true;
             this.btnTeacher.Click += new System.EventHandler(this.btnTeacher_Click);
             // 
@@ -211,7 +234,8 @@ namespace ApplicationDev_Do
             this.btnStudent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnStudent.Size = new System.Drawing.Size(250, 40);
             this.btnStudent.TabIndex = 1;
-            this.btnStudent.Text = "학생관리";
+            this.btnStudent.Text = "    학생관리";
+            this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStudent.UseVisualStyleBackColor = true;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
             // 
@@ -227,7 +251,8 @@ namespace ApplicationDev_Do
             this.btnScore.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnScore.Size = new System.Drawing.Size(250, 40);
             this.btnScore.TabIndex = 0;
-            this.btnScore.Text = "성적관리";
+            this.btnScore.Text = "    성적관리";
+            this.btnScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnScore.UseVisualStyleBackColor = true;
             this.btnScore.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -298,25 +323,6 @@ namespace ApplicationDev_Do
             this.pictureBox1.Size = new System.Drawing.Size(240, 222);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnlogout.FlatAppearance.BorderSize = 0;
-            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogout.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnlogout.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnlogout.Image = global::ApplicationDev_Do.Properties.Resources.content_reply_24px_rounded;
-            this.btnlogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.Location = new System.Drawing.Point(0, 502);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnlogout.Size = new System.Drawing.Size(250, 45);
-            this.btnlogout.TabIndex = 7;
-            this.btnlogout.Text = "      로그아웃";
-            this.btnlogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlogout.UseVisualStyleBackColor = true;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // FM_Main
             // 
