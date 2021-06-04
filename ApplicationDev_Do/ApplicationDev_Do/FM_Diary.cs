@@ -221,7 +221,8 @@ namespace ApplicationDev_Do
 
         private void dgvDiary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                     
+            txtDiary.Text = dgvDiary.Rows[e.RowIndex].Cells[3].Value.ToString();
+
         }
     }
 }

@@ -88,7 +88,7 @@ namespace ApplicationDev_Do
             // 
             // btnSearch_Atte
             // 
-            this.btnSearch_Atte.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSearch_Atte.BackColor = System.Drawing.Color.White;
             this.btnSearch_Atte.Location = new System.Drawing.Point(25, 23);
             this.btnSearch_Atte.Name = "btnSearch_Atte";
             this.btnSearch_Atte.Size = new System.Drawing.Size(243, 50);
