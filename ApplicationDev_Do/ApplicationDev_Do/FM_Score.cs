@@ -284,8 +284,15 @@ namespace ApplicationDev_Do
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DataRow Dr = ((DataTable)dgvScore.DataSource).NewRow();
-            ((DataTable)dgvScore.DataSource).Rows.Add(Dr);
+            try
+            {
+                DataRow Dr = ((DataTable)dgvScore.DataSource).NewRow();
+                ((DataTable)dgvScore.DataSource).Rows.Add(Dr);
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -114,9 +114,15 @@ namespace ApplicationDev_Do
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            DataRow Dr = ((DataTable)dataGridView1Grid.DataSource).NewRow();
-            ((DataTable)dataGridView1Grid.DataSource).Rows.Add(Dr);
-            dataGridView1Grid.Columns["USERCODE"].ReadOnly = false;
+            try
+            {
+                DataRow Dr = ((DataTable)dataGridView1Grid.DataSource).NewRow();
+                ((DataTable)dataGridView1Grid.DataSource).Rows.Add(Dr);
+                dataGridView1Grid.Columns["USERCODE"].ReadOnly = false;
+            }
+            catch(Exception ex)
+            {
+            }
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
