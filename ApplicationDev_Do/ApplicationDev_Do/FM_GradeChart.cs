@@ -100,8 +100,8 @@ namespace ApplicationDev_Do
 
                 dgvGrade.Columns[0].Width = 100;
                 dgvGrade.Columns[1].Width = 100;
-                dgvGrade.Columns[2].Width = 200;
-                dgvGrade.Columns[3].Width = 200;
+                dgvGrade.Columns[2].Width = 100;
+                dgvGrade.Columns[3].Width = 100;
                 dgvGrade.Columns[4].Width = 100;
 
                 #endregion
