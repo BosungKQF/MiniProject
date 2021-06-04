@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ApplicationDev_Do
 {
- 
+
     public partial class FM_Score : Form
     {
 
@@ -22,6 +22,8 @@ namespace ApplicationDev_Do
         public FM_Score()
         {
             InitializeComponent();
+
+
             if (Common.Permission == "S")
             {
                 txtName.Enabled = false;
@@ -137,7 +139,6 @@ namespace ApplicationDev_Do
                 {
                     dgvScore.Columns["NAME"].ReadOnly = true;
                     dgvScore.Columns["GRADE"].ReadOnly = true;
-                    dgvScore.Columns["USERCODE"].ReadOnly = true;
                     dgvScore.Columns["SEMESTER"].ReadOnly = false;
                     dgvScore.Columns["HW"].ReadOnly = false;
                     dgvScore.Columns["PROJECT"].ReadOnly = false;
@@ -219,7 +220,11 @@ namespace ApplicationDev_Do
                 MessageBox.Show("숫자로만 입력하세요");
                 return;
             }
-            if (sSEMESTER != "1분기" || sSEMESTER != "2분기" || sSEMESTER != "3분기" || sSEMESTER != "4분기")
+            if (sSEMESTER == "1분기" || sSEMESTER == "2분기" || sSEMESTER == "3분기" || sSEMESTER == "4분기")
+            {
+
+            }
+            else
             {
                 MessageBox.Show("1분기, 2분기, 3분기, 4분기 중에 입력해주세요.");
                 return;
@@ -260,20 +265,10 @@ namespace ApplicationDev_Do
                              " IF (@@ROWCOUNT =0)                     " +
                              " INSERT INTO TB_5_SCORE (USERCODE,SEMESTER,HW,PROJECT,FINAL,ATTENDANCE,SCORE,GRADE)" +
                              $"VALUES ('{sSTCODE}','{sSEMESTER}','{sHW}','{sPROJECT}','{sFINAL}','{sATTENDANCE}','{sSCORE}','{sGRADE}')";
-/*            String sSql = "SELECT A.USERCODE," +
-                          " FROM TB_5_SCORE A WITH(NOLOCK) " +
-                          " LEFT JOIN TB_5_STUDENT B WITH (NOLOCK) ON A.USERCODE = B.USERCODE" +
-                          " WHERE B.NAME LIKE '%" + sUSERNAME + "%' " +
-                           " AND A.SEMESTER LIKE '%" + sSEMESTER + "%' ";
-            SqlDataAdapter ERROR = new SqlDataAdapter(sSql, Conn);
 
-            if (ERROR = null)
-            {
-                MessageBox.Show("학생 정보를 먼저 입력해주세요.");
-                return;
-            }
-*/
             Cmd.ExecuteNonQuery();
+
+            
             Txn.Commit();
             #endregion
 

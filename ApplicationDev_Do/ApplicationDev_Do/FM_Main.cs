@@ -142,8 +142,13 @@ namespace ApplicationDev_Do
         {
             openChildForm(new FM_Diary());
         }
+
         #endregion
 
-
+        private void panelLogo_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+        }
     }
 }
