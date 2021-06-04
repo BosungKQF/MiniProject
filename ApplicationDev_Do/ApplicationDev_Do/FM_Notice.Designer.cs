@@ -46,6 +46,7 @@ namespace ApplicationDev_Do
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.cboSNoticeMaker);
             this.groupBox1.Controls.Add(this.btnNoticeSearch);
             this.groupBox1.Controls.Add(this.dgvNotice);
@@ -57,6 +58,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
@@ -78,7 +80,7 @@ namespace ApplicationDev_Do
             "이상권"});
             this.cboSNoticeMaker.Location = new System.Drawing.Point(326, 47);
             this.cboSNoticeMaker.Name = "cboSNoticeMaker";
-            this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 28);
+            this.cboSNoticeMaker.Size = new System.Drawing.Size(159, 29);
             this.cboSNoticeMaker.TabIndex = 12;
             this.cboSNoticeMaker.Text = "전체";
             // 
@@ -95,6 +97,7 @@ namespace ApplicationDev_Do
             // 
             // dgvNotice
             // 
+            this.dgvNotice.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotice.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvNotice.Location = new System.Drawing.Point(3, 158);
@@ -116,7 +119,7 @@ namespace ApplicationDev_Do
             this.cboSNoticeClass.Location = new System.Drawing.Point(73, 48);
             this.cboSNoticeClass.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cboSNoticeClass.Name = "cboSNoticeClass";
-            this.cboSNoticeClass.Size = new System.Drawing.Size(159, 28);
+            this.cboSNoticeClass.Size = new System.Drawing.Size(159, 29);
             this.cboSNoticeClass.TabIndex = 8;
             this.cboSNoticeClass.Text = "전체";
             // 
@@ -125,16 +128,17 @@ namespace ApplicationDev_Do
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(278, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 20);
+            this.label4.Size = new System.Drawing.Size(18, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "~";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(42, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(70, 21);
             this.label3.TabIndex = 6;
             this.label3.Text = "보낸날짜";
             // 
@@ -144,7 +148,7 @@ namespace ApplicationDev_Do
             this.dtpNoticeEnd.Location = new System.Drawing.Point(310, 104);
             this.dtpNoticeEnd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticeEnd.Name = "dtpNoticeEnd";
-            this.dtpNoticeEnd.Size = new System.Drawing.Size(147, 27);
+            this.dtpNoticeEnd.Size = new System.Drawing.Size(147, 28);
             this.dtpNoticeEnd.TabIndex = 5;
             this.dtpNoticeEnd.Value = new System.DateTime(2021, 6, 4, 9, 3, 35, 0);
             // 
@@ -154,25 +158,27 @@ namespace ApplicationDev_Do
             this.dtpNoticStart.Location = new System.Drawing.Point(123, 104);
             this.dtpNoticStart.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpNoticStart.Name = "dtpNoticStart";
-            this.dtpNoticStart.Size = new System.Drawing.Size(142, 27);
+            this.dtpNoticStart.Size = new System.Drawing.Size(142, 28);
             this.dtpNoticStart.TabIndex = 4;
             this.dtpNoticStart.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(266, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(55, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "작성자";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(43, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 20);
+            this.label1.Size = new System.Drawing.Size(25, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "반";
             // 
@@ -181,6 +187,7 @@ namespace ApplicationDev_Do
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(217)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

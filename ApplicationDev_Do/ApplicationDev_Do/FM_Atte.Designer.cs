@@ -78,6 +78,7 @@ namespace ApplicationDev_Do
             // btnAtte_Atte
             // 
             this.btnAtte_Atte.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAtte_Atte.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAtte_Atte.Location = new System.Drawing.Point(291, 23);
             this.btnAtte_Atte.Name = "btnAtte_Atte";
             this.btnAtte_Atte.Size = new System.Drawing.Size(240, 50);
@@ -89,6 +90,7 @@ namespace ApplicationDev_Do
             // btnSearch_Atte
             // 
             this.btnSearch_Atte.BackColor = System.Drawing.Color.White;
+            this.btnSearch_Atte.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSearch_Atte.Location = new System.Drawing.Point(25, 23);
             this.btnSearch_Atte.Name = "btnSearch_Atte";
             this.btnSearch_Atte.Size = new System.Drawing.Size(243, 50);
@@ -153,27 +155,30 @@ namespace ApplicationDev_Do
             // lblClass
             // 
             this.lblClass.AutoSize = true;
+            this.lblClass.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblClass.Location = new System.Drawing.Point(54, 23);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(24, 20);
+            this.lblClass.Size = new System.Drawing.Size(25, 21);
             this.lblClass.TabIndex = 0;
             this.lblClass.Text = "반";
             // 
             // lblStudent
             // 
             this.lblStudent.AutoSize = true;
+            this.lblStudent.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblStudent.Location = new System.Drawing.Point(430, 23);
             this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(39, 20);
+            this.lblStudent.Size = new System.Drawing.Size(40, 21);
             this.lblStudent.TabIndex = 1;
             this.lblStudent.Text = "학생";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(405, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 20);
+            this.label3.Size = new System.Drawing.Size(40, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "날짜";
             // 

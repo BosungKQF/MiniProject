@@ -36,6 +36,7 @@ namespace ApplicationDev_Do
             // 
             this.rtxtNoticeDetail.BackColor = System.Drawing.SystemColors.Control;
             this.rtxtNoticeDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtxtNoticeDetail.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rtxtNoticeDetail.Location = new System.Drawing.Point(0, 0);
             this.rtxtNoticeDetail.Name = "rtxtNoticeDetail";
             this.rtxtNoticeDetail.Size = new System.Drawing.Size(800, 450);

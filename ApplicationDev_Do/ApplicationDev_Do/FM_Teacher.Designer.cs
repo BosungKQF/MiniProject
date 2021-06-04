@@ -69,6 +69,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Controls.Add(this.txtUserName);
             this.groupBox1.Controls.Add(this.dtpStart);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
@@ -92,7 +93,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Controls.Add(this.rdoALL);
             this.groupBox2.Controls.Add(this.rdoSF);
             this.groupBox2.Controls.Add(this.rdoBD);
-            this.groupBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(29, 85);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
@@ -105,10 +106,11 @@ namespace ApplicationDev_Do
             // rdoALL
             // 
             this.rdoALL.AutoSize = true;
+            this.rdoALL.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdoALL.Location = new System.Drawing.Point(274, 30);
             this.rdoALL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoALL.Name = "rdoALL";
-            this.rdoALL.Size = new System.Drawing.Size(60, 24);
+            this.rdoALL.Size = new System.Drawing.Size(61, 25);
             this.rdoALL.TabIndex = 15;
             this.rdoALL.Text = "전체";
             this.rdoALL.UseVisualStyleBackColor = true;
@@ -117,10 +119,11 @@ namespace ApplicationDev_Do
             // 
             this.rdoSF.AutoSize = true;
             this.rdoSF.Checked = true;
+            this.rdoSF.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdoSF.Location = new System.Drawing.Point(22, 30);
             this.rdoSF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoSF.Name = "rdoSF";
-            this.rdoSF.Size = new System.Drawing.Size(120, 24);
+            this.rdoSF.Size = new System.Drawing.Size(121, 25);
             this.rdoSF.TabIndex = 11;
             this.rdoSF.TabStop = true;
             this.rdoSF.Text = "스마트팩토리";
@@ -129,10 +132,11 @@ namespace ApplicationDev_Do
             // rdoBD
             // 
             this.rdoBD.AutoSize = true;
+            this.rdoBD.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdoBD.Location = new System.Drawing.Point(160, 30);
             this.rdoBD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoBD.Name = "rdoBD";
-            this.rdoBD.Size = new System.Drawing.Size(90, 24);
+            this.rdoBD.Size = new System.Drawing.Size(91, 25);
             this.rdoBD.TabIndex = 12;
             this.rdoBD.Text = "빅데이터";
             this.rdoBD.UseVisualStyleBackColor = true;
@@ -150,10 +154,10 @@ namespace ApplicationDev_Do
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(39, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(70, 21);
             this.label1.TabIndex = 16;
             this.label1.Text = "교사코드";
             // 
@@ -169,7 +173,7 @@ namespace ApplicationDev_Do
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.Location = new System.Drawing.Point(545, 104);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
@@ -182,20 +186,20 @@ namespace ApplicationDev_Do
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(428, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(70, 21);
             this.label3.TabIndex = 21;
             this.label3.Text = "등록일자";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(228, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(55, 21);
             this.label2.TabIndex = 18;
             this.label2.Text = "교사명";
             // 
@@ -239,6 +243,7 @@ namespace ApplicationDev_Do
             this.groupBox4.Controls.Add(this.btnDelete);
             this.groupBox4.Controls.Add(this.btnSave);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox4.Location = new System.Drawing.Point(3, 24);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
@@ -249,6 +254,7 @@ namespace ApplicationDev_Do
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.Location = new System.Drawing.Point(10, 32);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
@@ -260,6 +266,7 @@ namespace ApplicationDev_Do
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(249, 32);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
@@ -271,6 +278,7 @@ namespace ApplicationDev_Do
             // 
             // btnSave
             // 
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.Location = new System.Drawing.Point(129, 32);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";

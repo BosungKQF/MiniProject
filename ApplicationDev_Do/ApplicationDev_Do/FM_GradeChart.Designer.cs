@@ -52,6 +52,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.dgvGrade);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(947, 199);
@@ -64,7 +65,7 @@ namespace ApplicationDev_Do
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(-30, -89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 20);
+            this.label1.Size = new System.Drawing.Size(18, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "+";
             // 

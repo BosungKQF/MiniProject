@@ -70,11 +70,12 @@ namespace ApplicationDev_Do
             this.groupBox1.Controls.Add(this.txtEquipName);
             this.groupBox1.Controls.Add(this.dtpStart);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1942, 197);
+            this.groupBox1.Size = new System.Drawing.Size(1921, 197);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "비품 조회";
@@ -94,7 +95,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Controls.Add(this.rdoALL);
             this.groupBox2.Controls.Add(this.rdoBook);
             this.groupBox2.Controls.Add(this.rdoTool);
-            this.groupBox2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(29, 85);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
@@ -107,10 +108,11 @@ namespace ApplicationDev_Do
             // rdoEquip
             // 
             this.rdoEquip.AutoSize = true;
+            this.rdoEquip.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdoEquip.Location = new System.Drawing.Point(197, 29);
             this.rdoEquip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoEquip.Name = "rdoEquip";
-            this.rdoEquip.Size = new System.Drawing.Size(60, 24);
+            this.rdoEquip.Size = new System.Drawing.Size(61, 26);
             this.rdoEquip.TabIndex = 16;
             this.rdoEquip.Text = "비품";
             this.rdoEquip.UseVisualStyleBackColor = true;
@@ -118,10 +120,11 @@ namespace ApplicationDev_Do
             // rdoALL
             // 
             this.rdoALL.AutoSize = true;
+            this.rdoALL.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdoALL.Location = new System.Drawing.Point(275, 29);
             this.rdoALL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoALL.Name = "rdoALL";
-            this.rdoALL.Size = new System.Drawing.Size(60, 24);
+            this.rdoALL.Size = new System.Drawing.Size(61, 26);
             this.rdoALL.TabIndex = 15;
             this.rdoALL.Text = "전체";
             this.rdoALL.UseVisualStyleBackColor = true;
@@ -130,10 +133,11 @@ namespace ApplicationDev_Do
             // 
             this.rdoBook.AutoSize = true;
             this.rdoBook.Checked = true;
+            this.rdoBook.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdoBook.Location = new System.Drawing.Point(22, 29);
             this.rdoBook.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoBook.Name = "rdoBook";
-            this.rdoBook.Size = new System.Drawing.Size(60, 24);
+            this.rdoBook.Size = new System.Drawing.Size(61, 26);
             this.rdoBook.TabIndex = 11;
             this.rdoBook.TabStop = true;
             this.rdoBook.Text = "교재";
@@ -142,10 +146,11 @@ namespace ApplicationDev_Do
             // rdoTool
             // 
             this.rdoTool.AutoSize = true;
+            this.rdoTool.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdoTool.Location = new System.Drawing.Point(103, 29);
             this.rdoTool.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdoTool.Name = "rdoTool";
-            this.rdoTool.Size = new System.Drawing.Size(75, 24);
+            this.rdoTool.Size = new System.Drawing.Size(76, 26);
             this.rdoTool.TabIndex = 12;
             this.rdoTool.Text = "교보재";
             this.rdoTool.UseVisualStyleBackColor = true;
@@ -163,10 +168,10 @@ namespace ApplicationDev_Do
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(36, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(70, 22);
             this.label1.TabIndex = 16;
             this.label1.Text = "비품코드";
             // 
@@ -182,7 +187,7 @@ namespace ApplicationDev_Do
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.Location = new System.Drawing.Point(525, 104);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
@@ -195,20 +200,20 @@ namespace ApplicationDev_Do
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(408, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(70, 22);
             this.label3.TabIndex = 21;
             this.label3.Text = "구매일자";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(224, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(55, 22);
             this.label2.TabIndex = 18;
             this.label2.Text = "비품명";
             // 
@@ -241,7 +246,7 @@ namespace ApplicationDev_Do
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1942, 867);
+            this.groupBox3.Size = new System.Drawing.Size(1921, 867);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "비품 정보";
@@ -252,16 +257,18 @@ namespace ApplicationDev_Do
             this.groupBox4.Controls.Add(this.btnDelete);
             this.groupBox4.Controls.Add(this.btnSave);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox4.Location = new System.Drawing.Point(3, 24);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox4.Size = new System.Drawing.Size(1936, 142);
+            this.groupBox4.Size = new System.Drawing.Size(1915, 142);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.Location = new System.Drawing.Point(10, 32);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
@@ -273,6 +280,7 @@ namespace ApplicationDev_Do
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(249, 32);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
@@ -284,6 +292,7 @@ namespace ApplicationDev_Do
             // 
             // btnSave
             // 
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.Location = new System.Drawing.Point(129, 32);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
@@ -304,7 +313,7 @@ namespace ApplicationDev_Do
             this.dataGridView1Grid.Name = "dataGridView1Grid";
             this.dataGridView1Grid.RowHeadersWidth = 51;
             this.dataGridView1Grid.RowTemplate.Height = 27;
-            this.dataGridView1Grid.Size = new System.Drawing.Size(1936, 697);
+            this.dataGridView1Grid.Size = new System.Drawing.Size(1915, 697);
             this.dataGridView1Grid.TabIndex = 17;
             // 
             // FM_Equipment
@@ -312,7 +321,7 @@ namespace ApplicationDev_Do
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1963, 653);
+            this.ClientSize = new System.Drawing.Size(1942, 653);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

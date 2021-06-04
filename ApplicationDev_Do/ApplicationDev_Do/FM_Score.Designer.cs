@@ -48,18 +48,20 @@ namespace ApplicationDev_Do
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(48, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "학생 이름";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(72, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 20);
+            this.label4.Size = new System.Drawing.Size(40, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "분기";
             // 
@@ -68,11 +70,12 @@ namespace ApplicationDev_Do
             this.txtName.Location = new System.Drawing.Point(146, 60);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(155, 27);
+            this.txtName.Size = new System.Drawing.Size(155, 28);
             this.txtName.TabIndex = 4;
             // 
             // btnSearch
             // 
+            this.btnSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.Location = new System.Drawing.Point(389, 125);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearch.Name = "btnSearch";
@@ -85,6 +88,7 @@ namespace ApplicationDev_Do
             // 
             // btnSave
             // 
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSave.Location = new System.Drawing.Point(118, 51);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSave.Name = "btnSave";
@@ -102,6 +106,7 @@ namespace ApplicationDev_Do
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
@@ -116,7 +121,7 @@ namespace ApplicationDev_Do
             this.CbSemester.FormattingEnabled = true;
             this.CbSemester.Location = new System.Drawing.Point(146, 125);
             this.CbSemester.Name = "CbSemester";
-            this.CbSemester.Size = new System.Drawing.Size(155, 28);
+            this.CbSemester.Size = new System.Drawing.Size(155, 29);
             this.CbSemester.TabIndex = 7;
             // 
             // groupBox2
@@ -126,6 +131,7 @@ namespace ApplicationDev_Do
             this.groupBox2.Controls.Add(this.btnAdd);
             this.groupBox2.Controls.Add(this.dgvScore);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(0, 233);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox2.Name = "groupBox2";
@@ -137,6 +143,7 @@ namespace ApplicationDev_Do
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(222, 51);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
@@ -148,6 +155,7 @@ namespace ApplicationDev_Do
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdd.Location = new System.Drawing.Point(27, 51);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
